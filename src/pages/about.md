@@ -3,29 +3,5 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-안녕하세요! iOS 개발자 김주희입니다.
-
-## 경력
-
-(주)뉴넥스에서 서비스하고 있는 브랜디, 하이버, 서울스토어 iOS 개발 및 유지 보수 작업을 했습니다. 2018년부터 2023년까지 iOS 개발자로 일했고 현재는 쉬면서 새로운 도전과 경험을 하고 있습니다.
-
-## 현재
-
-최근에는 사이드 프로젝트로 앱 개발하고 있으며, 개발 과정에서 얻은 경험과 배움을 이 블로그에 기록하고 있습니다.
-
-## 기술 스택
-
-주로 다음과 같은 기술들을 사용하여 개발합니다:
-
-- **언어**: Swift
-- **프레임워크**: UIKit, SwiftUI
-- **도구**: Xcode, Instruments
-- **라이브러리**: Core Data, Firebase
-- **기타**: Auto Layout, MVC/MVVM 패턴
-
-## 관심사
-
-- iOS 앱 개발
-- 사용자 경험 (UX/UI) 개선
-- 새로운 기술 학습 및 적용
-- 개발 커뮤니티 활동
+I'm an iOS engineer living in South Korea.
+Currently exploring new challenges and building side projects while sharing my development experiences through this blog.
