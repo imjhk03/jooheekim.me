@@ -45,8 +45,9 @@ override func viewDidAppear(_ animated: Bool) {
 
 Adding this will fix the problem. Maybe the swipe back gesture was troubling, even though the navigation controller does not have view controllers to pop. One of our apps was having some trouble about the view freezing, and we had produced this bug somehow. And it was related to this bug. Adding this code had solved the freezing bug.
 
-<br>
-Reference:<br>
+
+Reference:
+
 [Apple Documentation](https://developer.apple.com/documentation/uikit/uinavigationcontroller/1621847-interactivepopgesturerecognizer)
-<br>
+
 [StackOverflow](https://stackoverflow.com/questions/34698018/interactivepopgesturerecognizer-corrupts-navigation-stack-on-root-view-controlle)

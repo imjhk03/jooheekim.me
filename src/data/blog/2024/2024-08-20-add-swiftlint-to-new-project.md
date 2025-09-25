@@ -6,7 +6,7 @@ tags: [optimization]
 ogImage: /images/2024/08/20/image1.png
 ---
 
-새로운 프로젝트 시작할 때 개발하기 전에 설정하는 것들이 있다. 최소 운영체제 버전을 설정하거나 지원되는 기기 등 여러 가지가 있다. 그중 하나는 스위프트 스타일이나 코드 포맷을 맞추기 위한 도구인 [SwiftLint](https://github.com/realm/SwiftLint){:target="_blank"}를 추가하는 경우가 있다. 시간이 지나 다시 신규 프로젝트를 만들 때 SwiftLint 추가하는 방법이 까먹을 때가 있다. 그래서 설정하는 것을 다시 볼 수 있게 기록해서 나중에 참고하고 싶다는 마음에 글을 쓰게 되었다.
+새로운 프로젝트 시작할 때 개발하기 전에 설정하는 것들이 있다. 최소 운영체제 버전을 설정하거나 지원되는 기기 등 여러 가지가 있다. 그중 하나는 스위프트 스타일이나 코드 포맷을 맞추기 위한 도구인 [SwiftLint](https://github.com/realm/SwiftLint)를 추가하는 경우가 있다. 시간이 지나 다시 신규 프로젝트를 만들 때 SwiftLint 추가하는 방법이 까먹을 때가 있다. 그래서 설정하는 것을 다시 볼 수 있게 기록해서 나중에 참고하고 싶다는 마음에 글을 쓰게 되었다.
 
 이 블로그 포스트는 신규 프로젝트 생성할 때마다 SwiftLint를 적용하는 방법을 다루겠다.
 
@@ -19,7 +19,7 @@ ogImage: /images/2024/08/20/image1.png
 brew install swiftlint
 ```
 
-Homebrew 이외 설치 방법은 [SwiftLint 깃헙](https://github.com/realm/SwiftLint/?tab=readme-ov-file#installation){:target="_blank"}에 가면 볼 수 있다.
+Homebrew 이외 설치 방법은 [SwiftLint 깃헙](https://github.com/realm/SwiftLint/?tab=readme-ov-file#installation)에 가면 볼 수 있다.
 
 ## 2. 프로젝트에 SwiftLint 추가하기
 프로젝트에 새로운 파일 생성해서 `'.swiftlint.yml'` 파일을 만든다. 이 파일에서는 프로젝트에 맞게 규칙들을 설정하면 된다.
@@ -32,7 +32,7 @@ Homebrew 이외 설치 방법은 [SwiftLint 깃헙](https://github.com/realm/Swi
 * included: Linting 중에 포함할 경로. 대소문자를 구분한다.
 * excluded: Linting 중 무시할 경로. 대소문자를 구분한다. included보다 우선 적용된다.
 
-아래는 [SwiftLint 깃헙에서 제공하는 규칙](https://github.com/realm/SwiftLint?tab=readme-ov-file#configuration){:target="_blank"}에 나온 `.swiftlint.yml` 파일의 예시다. 자주 쓰는 규칙들이 있다면 깃헙 레포에 저장하거나 gist 만들어서 복사 붙이기 하면 편하다. 나는 편하게 secret gist 파일 만들어서 썼다.
+아래는 [SwiftLint 깃헙에서 제공하는 규칙](https://github.com/realm/SwiftLint?tab=readme-ov-file#configuration)에 나온 `.swiftlint.yml` 파일의 예시다. 자주 쓰는 규칙들이 있다면 깃헙 레포에 저장하거나 gist 만들어서 복사 붙이기 하면 편하다. 나는 편하게 secret gist 파일 만들어서 썼다.
 
 ```yml
 # By default, SwiftLint uses a set of sensible default rules you can adjust:
@@ -128,7 +128,7 @@ else
 fi
 ```
 
-설치 방법에 따라 Run Script Build Phase의 셸 명령어 구문이 다를 수 있기 때문에 SwiftLint 깃헙에 [Xcode Run Script Build Phase](https://github.com/realm/SwiftLint?tab=readme-ov-file#xcode-run-script-build-phase){:target="_blank"} 부분을 참고해서 작성해야 한다.
+설치 방법에 따라 Run Script Build Phase의 셸 명령어 구문이 다를 수 있기 때문에 SwiftLint 깃헙에 [Xcode Run Script Build Phase](https://github.com/realm/SwiftLint?tab=readme-ov-file#xcode-run-script-build-phase) 부분을 참고해서 작성해야 한다.
 
 스크립트를 작성하고 빌드를 하면 아래와 같이 처음에 에러가 발생할 수 있다.
 
@@ -143,7 +143,7 @@ fi
 추가적으로 아래와 같은 경고가 뜬다.
 >warning build: Run script build phase 'SwiftLint' will be run during every build because it does not specify any outputs. To address this warning, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase.
 
-Xcode 14부터 발생하는 경고인데 빌드 할 때 마다 스크립트를 돌린다는 내용이다. 모든 파일을 항상 lint 하지 않도록 설정할 수 있지만, SwiftLint는 이미 꽤 빨라서 굳이 할 필요는 없다. 아래 Build Run Script Phase에서 체크 박스를 해제함으로써 경고를 없앨 수 있다. 추가적인 내용은 [realm/SwiftLint\#4015](https://github.com/realm/SwiftLint/issues/4015){:target="_blank"}에서 볼 수 있다.
+Xcode 14부터 발생하는 경고인데 빌드 할 때 마다 스크립트를 돌린다는 내용이다. 모든 파일을 항상 lint 하지 않도록 설정할 수 있지만, SwiftLint는 이미 꽤 빨라서 굳이 할 필요는 없다. 아래 Build Run Script Phase에서 체크 박스를 해제함으로써 경고를 없앨 수 있다. 추가적인 내용은 [realm/SwiftLint\#4015](https://github.com/realm/SwiftLint/issues/4015)에서 볼 수 있다.
 
 ![](/images/2024/08/20/image4.png)
 
@@ -153,4 +153,9 @@ Xcode 14부터 발생하는 경고인데 빌드 할 때 마다 스크립트를 �
 이 글에서 Homebrew를 이용해서 SwiftLint를 설치하고 프로젝트에 SwiftLint 적용하는 과정을 살펴봤다. SwiftLint는 팀의 코드 품질을 일관되게 유지하고, 개발자 간의 협업을 촉진하는 중요하고 좋은 도구이다. 코드 일관성을 유지하고 새로운 Swift 문법에 익숙해지도록 옵션을 설정하여 개발자를 지원할 수 있다. 새 프로젝트를 자주 시작하지 않더라도, 이 가이드를 참고하면 SwiftLint 설정 과정을 빠르고 정확하게 적용할 수 있을 것이다.
 
 **참고**
-[realm/SwiftLint: A tool to enforce Swift style and conventions.](https://github.com/realm/SwiftLint)[SwiftLintCore Reference](https://realm.github.io/SwiftLint/)[코드 리뷰를 개선할 수 있는 Danger + SwiftLint Plugin](https://imjhk03.github.io/posts/improve-code-review-with-danger/){:target="_blank"}
+
+[realm/SwiftLint: A tool to enforce Swift style and conventions.](https://github.com/realm/SwiftLint)
+
+[SwiftLintCore Reference](https://realm.github.io/SwiftLint/)
+
+[코드 리뷰를 개선할 수 있는 Danger + SwiftLint Plugin](https://imjhk03.github.io/posts/improve-code-review-with-danger/)

@@ -21,22 +21,9 @@ struct ContentView: View {
 }
 ```
 
-<table>
-  <tr>
-    <td> <img src="/images/2022/01/03/image1.png" alt="Plain text saying Hello SwiftUI" width="400"> </td>
-
-    <td> <img src="/images/2022/01/03/image2.png" alt="Navigation View is added so the text move below" width="400"> </td>
-   </tr> 
-   <tr>
-      <td>NavigationView가 없는 Text</td>
-
-      <td>NavigationView가 있는 Text </td>
-  </tr>
-</table>
-
-<!-- <img src="/images/2022/01/03/image1.png" alt="Plain text saying Hello SwiftUI" width="200"/>
-
-<img src="/images/2022/01/03/image1.png" alt="Navigation View is added so the text move below" width="400"/> -->
+| <img src="/images/2022/01/03/image1.png" alt="Plain text saying Hello SwiftUI" width="400"> | <img src="/images/2022/01/03/image2.png" alt="Navigation View is added so the text move below" width="400"> |
+|---|---|
+| NavigationView가 없는 Text | NavigationView가 있는 Text |
 
 하지만 네비게이션의 타이틀 영역에 아무것도 안 나타나고 있습니다. 네비게이션의 타이틀을 보여주고 싶다면 `navigationTitle(_:)` modifier를 사용해야 합니다.
 

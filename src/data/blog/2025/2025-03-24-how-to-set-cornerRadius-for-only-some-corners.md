@@ -7,7 +7,7 @@ tags: [uikit, ui development]
 
 [ENG](https://imjhk03.github.io/posts/round-corners-specific-view/)
 
-UIView에서 모서리를 둥글게 하려면 레이어의 **`cornerRadius`** 값을 설정하면 된다. 다음과 같이 사용하면 된다:
+UIView에서 모서리를 둥글게 하려면 레이어의 `cornerRadius` 값을 설정하면 된다. 다음과 같이 사용하면 된다:
 
 ```swift
 cornerView.layer.cornerRadius = 8
@@ -16,7 +16,7 @@ cornerView.layer.cornerRadius = 8
 >서브뷰가 둥근 모서리로 잘리도록 하려면 다음을 한다: 'view.clipsToBounds = true'
 
 
-하지만 상단 또는 하단으로만 모서리를 처리해야 한다면 어떻게 해야 할까? `CALayer`의 **`maskedCorners`** 속성을 설정해야 한다. 이렇게 둥근 모서리를 만들기 위한 extension을 만들 수 있습니다:
+하지만 상단 또는 하단으로만 모서리를 처리해야 한다면 어떻게 해야 할까? `CALayer`의 `maskedCorners` 속성을 설정해야 한다. 이렇게 둥근 모서리를 만들기 위한 extension을 만들 수 있습니다:
 
 ```swift
 extension UIView {

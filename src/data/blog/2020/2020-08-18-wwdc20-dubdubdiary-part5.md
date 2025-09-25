@@ -8,7 +8,7 @@ tags: [wwdc]
 
 The last day of WWDC20, ended well with many amazing sessions. This day had an interesting session, which many of developers waited. For the last article of WWDC20, let's see the details and my last thoughts.
 
-<br>
+
 
 # Data Essentials in SwifUI
 
@@ -147,7 +147,7 @@ They are three types of `ObservableObject`, and I recommend seeing the documenta
 - `@StateObject` ties an `ObservableObject` to a view's life cycle
 - `@EnvironmentObject` adds ergonomics to access `ObservableObject`
 
-[State and Data Flow - Apple Developer Documentation](https://developer.apple.com/documentation/swiftui/state-and-data-flow){:target="_blank"}
+[State and Data Flow - Apple Developer Documentation](https://developer.apple.com/documentation/swiftui/state-and-data-flow)
 
 ## Source of Truth Lifetime
 
@@ -195,9 +195,9 @@ struct BookClubSettings: View {
 - Make `body` a pure function
 - Avoid assumptions
 
-[Data Essentials in SwiftUI - WWDC 2020 - Videos - Apple Developer](https://developer.apple.com/videos/play/wwdc2020/10040/){:target="_blank"}
+[Data Essentials in SwiftUI - WWDC 2020 - Videos - Apple Developer](https://developer.apple.com/videos/play/wwdc2020/10040/)
 
-<br>
+
 
 # Wrap Up
 

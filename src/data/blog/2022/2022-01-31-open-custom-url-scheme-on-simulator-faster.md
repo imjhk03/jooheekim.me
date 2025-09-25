@@ -11,19 +11,15 @@ ogImage: /images/2022/01/31/image3.gif
 
 애플에서 커스텀 URL 스키마(이하 custom URL scheme)를 이용하여 앱의 특정 페이지를 여는 방법을 제공합니다. 특정 custom URL scheme을 탭 하면 앱이 열리게 되는데, 테스트하는 방법은 주로 메모 앱에 custom URL scheme 주소들을 저장해서 누르는 방식으로 테스트했습니다. 혹은 사파리에서 직접 주소를 입력하여 앱을 실행했습니다.
 
-<table>
-  <tr>
-    <td> <img src="/images/2022/01/31/image1.PNG" alt="메모 앱에 4개의 custom URL scheme이 있다" width="400"> </td>
-
-    <td> <img src="/images/2022/01/31/image2.PNG" alt="앱의 일부 화면이 나타나 있는 화면. Custom URL scheme을 지정한 화면 중 하나." width="400"> </td>
-   </tr>
-</table>
+| Custom URL | App View |
+|---|---|
+| <img src="/images/2022/01/31/image1.PNG" alt="메모 앱에 4개의 custom URL scheme이 있다" width="400"> | <img src="/images/2022/01/31/image2.PNG" alt="앱의 일부 화면이 나타나 있는 화면. Custom URL scheme을 지정한 화면 중 하나." width="400"> |
 
 사파리에서 직접 입력하거나 메모 앱에서 하나씩 눌러서 테스트해도 괜찮으나, custom URL scheme이 너무 많을 경우 하나씩 확인하는 작업이 귀찮거나 느릴 수 있습니다.
 
 ## 터미널 명령어를 이용해서 시뮬레이터에서 열기
 
-Xcode 안에 있는 도구를 사용할 수 있는 command line인 **`xcrun`**을 사용하면, 시뮬레이터에서 빠르게 custom URL scheme을 열 수 있습니다.
+Xcode 안에 있는 도구를 사용할 수 있는 command line인 `xcrun`을 사용하면, 시뮬레이터에서 빠르게 custom URL scheme을 열 수 있습니다.
 
 ```zsh
 xcrun simctl openurl booted {custom URL Scheme}

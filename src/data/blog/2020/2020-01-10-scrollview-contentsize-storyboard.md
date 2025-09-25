@@ -57,6 +57,6 @@ Thanks for reading!
 
 
 ### Reference
-[Calculating contentSize for UIScrollView when using Auto Layout][stackOverFlow]{:target="_blank"}
+[Calculating contentSize for UIScrollView when using Auto Layout][stackOverFlow]
 
 [stackOverFlow]: https://stackoverflow.com/questions/38948904/calculating-contentsize-for-uiscrollview-when-using-auto-layout 

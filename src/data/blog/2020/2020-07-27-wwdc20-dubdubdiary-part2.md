@@ -25,7 +25,7 @@ Widgets and App Clips can be developed with SwiftUI (App Clips can also be devel
 ![Rock Paper Scissor Game SwiftUI](/images/2020/07/27/image2.png)
 Rock Paper Scissor Game SwiftUI App
 
-Although I haven't studied SwiftUI deeply yet, I've developed a [game app](https://github.com/imjhk03/RockPaperScissors){:target="_blank"} that was created simply using SwiftUI this year. At first, it was not difficult to make a screen, but it was really unfamiliar with how data was used and how the screen changed depending on the condition. I had to look for new terms and wondered if it was right to write them like this. I only had a short experience of studying it, so I thought I should study SwiftUI properly this year. If you look at the ["*Integration of SwiftUI*"](https://developer.apple.com/videos/play/wwdc2020/10119/){:target="_blank"} session, you can see the overall SwiftUI content and development process.
+Although I haven't studied SwiftUI deeply yet, I've developed a [game app](https://github.com/imjhk03/RockPaperScissors) that was created simply using SwiftUI this year. At first, it was not difficult to make a screen, but it was really unfamiliar with how data was used and how the screen changed depending on the condition. I had to look for new terms and wondered if it was right to write them like this. I only had a short experience of studying it, so I thought I should study SwiftUI properly this year. If you look at the ["*Integration of SwiftUI*"](https://developer.apple.com/videos/play/wwdc2020/10119/) session, you can see the overall SwiftUI content and development process.
 
 ### Build an app entirely with SwiftUI
 Some of the new feature of SwiftUI is that you can build an app entirely with SwiftUI. On iOS 14, with a new ```App``` protocol and new ```@main``` annotation attribute, the entry point for the app is finish. No app delegate.
@@ -76,7 +76,7 @@ Section {
 
 ```
 
-There are more things that are announced in the session ["*What's new in SwiftUI*"](https://developer.apple.com/videos/play/wwdc2020/10041/){:target="_blank"}. I also recommend this session also.
+There are more things that are announced in the session ["*What's new in SwiftUI*"](https://developer.apple.com/videos/play/wwdc2020/10041/). I also recommend this session also.
 
 ## Wrap Up
 What I noticed that Apple is really building up SwiftUI, to use and support multi-platform, build an entire app, etc. Now is the time to study SwiftUI and build a small app trying new things with it. Wish I could make an app with SwiftUI only, but also do some things that only does with UIKit. Another new stuff to study this year 😆

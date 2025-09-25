@@ -8,16 +8,15 @@ tags: [uikit, ui-development]
 
 [KOR](https://imjhk03.github.io/posts/how-to-set-cornerRadius-for-only-some-corners/)
 
-To round a corner on a UIView, you can set the layer's **`cornerRadius`** value. Simply use it like this:
+To round a corner on a UIView, you can set the layer's `cornerRadius` value. Simply use it like this:
 
 ```swift
 cornerView.layer.cornerRadius = 8
 ```
 
 >To ensures subviews are clipped to the rounded corners, add 'view.clipsToBounds = true'.
-{: .prompt-info}
 
-But what if you need to corner only to top view or bottom? We need to set the `CALayer`'s **`maskedCorners`** property. You can make an extension for making a rounded corner like this:
+But what if you need to corner only to top view or bottom? We need to set the `CALayer`'s `maskedCorners` property. You can make an extension for making a rounded corner like this:
 
 ```swift
 extension UIView {
@@ -79,9 +78,9 @@ circleView.cornerRadius(.topLeft, .bottomLeft, radius: 25)
 circleView.cornerRadius(.topLeft, .bottomRight, radius: 25)
 ```
 
-<br>
-**Related Resources**
-<br>
-[cornerRadius](https://developer.apple.com/documentation/quartzcore/calayer/cornerradius){:target="_blank"}
 
-[maskedCorners](https://developer.apple.com/documentation/quartzcore/calayer/maskedcorners){:target="_blank"}
+**Related Resources**
+
+[cornerRadius](https://developer.apple.com/documentation/quartzcore/calayer/cornerradius)
+
+[maskedCorners](https://developer.apple.com/documentation/quartzcore/calayer/maskedcorners)

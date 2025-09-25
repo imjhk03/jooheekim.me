@@ -114,7 +114,7 @@ label.attributedText = htmlString.asAttributedString(size: 18, color: .systemBlu
 
 > From [Apple Documents](https://developer.apple.com/documentation/foundation/nsattributedstring/1524613-init)
 
-<br>
+
 **참고**
 
 [How to display HTML in UILabel and UITextView](https://sarunw.com/posts/how-to-display-html-in-uilabel-and-uitextview/)

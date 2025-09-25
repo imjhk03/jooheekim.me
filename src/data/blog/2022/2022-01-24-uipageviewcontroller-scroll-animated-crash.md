@@ -19,7 +19,7 @@ setViewControllers:direction:animated:completion:
 
 아예 안 쓰는 거는 다른 페이지들도 영향이 가기 때문에, 2번째 방법을 사용하여 버그를 해결했습니다.
 
-<br>
+
 **참고**
 
 [UIPageViewController navigates to wrong page with Scroll transition style](https://stackoverflow.com/a/12939384)

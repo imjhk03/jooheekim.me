@@ -29,6 +29,6 @@ func textFieldDidChangeSelection(_ textField: UITextField) {
     // handle event
 }
 ```
-<br>
-[Apple Document](https://developer.apple.com/documentation/uikit/uitextfielddelegate/3114542-textfielddidchangeselection?language=objc){:target="_blank"}   
-[stackoverflow](https://stackoverflow.com/questions/28394933/how-do-i-check-when-a-uitextfield-changes){:target="_blank"}
+
+[Apple Document](https://developer.apple.com/documentation/uikit/uitextfielddelegate/3114542-textfielddidchangeselection?language=objc)   
+[stackoverflow](https://stackoverflow.com/questions/28394933/how-do-i-check-when-a-uitextfield-changes)

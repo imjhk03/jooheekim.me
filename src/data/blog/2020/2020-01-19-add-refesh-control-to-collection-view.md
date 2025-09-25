@@ -59,6 +59,6 @@ Add `UIRefreshControl` if you need a pull-to-refresh control for your list page 
 
 
 ### Reference
-[UIRefreshControl - UIKit][appleDoc]{:target="_blank"}
+[UIRefreshControl - UIKit][appleDoc]
 
 [appleDoc]: https://developer.apple.com/documentation/uikit/uirefreshcontrol 

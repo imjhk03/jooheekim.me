@@ -8,7 +8,6 @@ ogImage: /images/2020/10/02/image1.png
 
 
 > 2023.01.20 업데이트: macOS Ventura 13.1 버전 기준으로 업데이트
-{: .prompt-info }
 
 맥os를 사용한 지 6년이 되었고, 항상 새로운 맥북 혹은 초기화 후에는 나한테 맞는 설정을 한다. 새로 설정할 때마다 가끔 까먹을 때도 있어 글을 쓰게 되었다. 혹시나 이 글을 읽게 되었다면, 해당 내용 중에 유용한 거 있으면 적용해 보아도 좋을 것 같다.
 
@@ -20,11 +19,11 @@ ogImage: /images/2020/10/02/image1.png
     - 크기 조절, 왼쪽, 자동으로 Dock 가리기와 보기, 최근 사용한 응용 프로그램 보기 비활성화
     - Dock 빈칸 생성하기 (터미널)
 
-        ```
+    ```
     defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
-        ```
+    ```
     
-    ![Dock with empty space](/images/2020/10/02/image1.png){:height="1000px"}
+    ![Dock with empty space](/images/2020/10/02/image1.png)
 
 5. Mission Control - 핫 코너
     - Spaces를 최근 사용 내역에 따라 자동으로 재정렬 체크 해제

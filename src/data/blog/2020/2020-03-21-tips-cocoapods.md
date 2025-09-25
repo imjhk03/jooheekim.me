@@ -15,7 +15,7 @@ tags: [cocoapods]
 
 **좋은 점**   
 <p>
-- 업데이트 명령어를 실행하면 프로젝트 버전에 맞춰서 설정한 오픈소스 라이브러리를 업데이트해 버전 관리하기가 편하다<br>
+- 업데이트 명령어를 실행하면 프로젝트 버전에 맞춰서 설정한 오픈소스 라이브러리를 업데이트해 버전 관리하기가 편하다
 - 되도록이면 CocoaPods에 등록되어 있는 라이브러리들을 설치 권장
 </p>
 
@@ -57,12 +57,12 @@ target 'MyApp' do
   pod 'SwiftyJSON', '~> 4.0'
 end
 ```
-<br>
+
 설치하면서 로그 보고 싶다면 아래 명령어처럼 뒤에 <code>--verbose</code> 붙이면 된다.   
 ```
 $ pod install --verbose   // Show more debugging information
 ```
-<br>
+
 # CocoaPods 관련 오류
 ## 1. 특정 파일이 안 보인다.
 
@@ -73,7 +73,7 @@ $ pod install --verbose   // Show more debugging information
 $ sudo gem install cocoapods
 $ pod install --verbose
 ```
-<br>
+
 **참고**   
 -> Xcode.app 과 Xcode-beta.app은 다르므로, Xcode 프로그램 이름과 프로그램이 위치해 있는 디렉토리 잘 확인하자! (Xcode 프로그램 응용 프로그램 폴더에 넣기)
 
@@ -99,8 +99,8 @@ $ pod install --verbose
         ---> pod install (new Firebase 설치)    --------> 해결 완료!   
 
 ### Reference
-[stackoverflow](https://stackoverflow.com/questions/41709912/error-could-not-build-objective-c-module-firebase){:target="_blank"}   
-[groups-firebase](https://groups.google.com/forum/#!topic/firebase-talk/Fu51jfAxh-E){:target="_blank"}
+[stackoverflow](https://stackoverflow.com/questions/41709912/error-could-not-build-objective-c-module-firebase)   
+[groups-firebase](https://groups.google.com/forum/#!topic/firebase-talk/Fu51jfAxh-E)
 
 ## 3. CocoaPods 설치 후 콘솔 로그 에러
 
@@ -110,8 +110,8 @@ $ pod install --verbose
 -> pod install
 
 ### Reference
-[CocoaPods Issue](https://github.com/CocoaPods/CocoaPods/issues/5981){:target="_blank"}   
-[stackoverflow](https://stackoverflow.com/questions/41570233/whats-always-embed-swift-standard-libraries-with-cocoapods-swift-3-and-xcode){:target="_blank"}
+[CocoaPods Issue](https://github.com/CocoaPods/CocoaPods/issues/5981)   
+[stackoverflow](https://stackoverflow.com/questions/41570233/whats-always-embed-swift-standard-libraries-with-cocoapods-swift-3-and-xcode)
 
 ## 4. 특정 라이브러리만 업데이트하기
 ```

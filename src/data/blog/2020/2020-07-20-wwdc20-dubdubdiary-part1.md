@@ -9,13 +9,13 @@ ogImage: /images/2020/07/20/image1.png
 
 From June 23 to June 26, WWDC20 was hosted online. I was lucky to win the last WWDC18 and WWDC19 event, and I went to America alone and enjoyed it. So I couldn't feel the heat, the atmosphere and the communication with new people this year. Still, I could see what the developers were talking about on Twitter, so I felt more interactive and closer. Although a lot of time has passed, I wanted to write about WWDC20 as a blog this year, so I wrote the first one.
 
-<br>
+
 
 # Apple Developer Forum
 
 Before starting, the first thing I want to talk about is the redesigned [Apple Developer Forum](https://developer.apple.com/forums/) site. It was first unveiled for WWDC20 so that it can be easily asked and answered. The questions were categorized, and there were labeled by tags. These were useful for finding questions or answers. In fact, many people asked questions through the Forum site during WWDC20, and not only Apple engineers but also other developers were able to answer them, so they were able to get answers a little faster. I thought this kind of redesigned Forum site made WWDC20 more exciting and developers got more into each other faster.
 
-<br>
+
 
 # Keynote
 
@@ -70,7 +70,7 @@ MacOS has changed the design of the UI on a large scale. I felt as if I was look
 
 **Apple Silicon**. ARM Mac products will be available, and iOS/iPadOS apps will be able to run natively. With Apple Silicon in the Mac, it will create a common architecture across all Apple products, developers can optimize apps for all environments. Mac products with Apple Silicon will be released at the end of the year and a complete transition will be made within two years. I want to use Mac products with Apple silicon as soon as possible.
 
-<br>
+
 
 # Platforms State of the Union
 
@@ -78,7 +78,7 @@ MacOS has changed the design of the UI on a large scale. I felt as if I was look
 
 I once thought the Keynote was important, but what I learned after visiting WWDC19 last year is that Platforms State of the Union is a must-see session for developers. This session is for developers to learn more about new features and meet engineering leaders. In this WWDC20, we were able to meet various engineering leaders, and what was interesting was the scene where they talked about Apple Silicon through Facetime. We could briefly see more diverse features, including Sidebar function in iPadOS, color use in macOS, and a simple demonstration of Widget development in iOS 14.
 
-<br>
+
 
 # Wrap up
 

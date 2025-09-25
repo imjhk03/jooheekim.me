@@ -269,7 +269,7 @@ let customView2 = CustomViewBuilder()
 
 빌더 패턴은 복잡한 객체를 생성할 때 차례대로 만들어 사용할 수 있을 때 효과적이다. 스위프트에서는 빌더 패턴이 흔하지 않는 패턴이지만, 필요하다면 충분히 빌더 패턴을 만들어서 적용할 수 있는 것을 볼 수 있다. 작업하는 프로젝트에 빌더 패턴으로 만들어 사용할 수 있는 부분이 있다면 적용해 보는 것을 추천드립니다.
 
-<br>
+
 
 gist: [PizzaBuilder.swift](https://gist.github.com/imjhk03/188cdf0ac899cf767b2ec71bf7ec3399)
 

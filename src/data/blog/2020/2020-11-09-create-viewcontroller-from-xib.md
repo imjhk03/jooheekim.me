@@ -80,7 +80,7 @@ Now build and run, and your app won't crash and show the view controller success
 
 ![A new view controller is successfully presented](/images/2020/11/09/image5.png)
 
-<br>
+
 
 ### How to get the view controller from Storyboard?
 Below code is how to create a view controller from Storyboard.
@@ -90,7 +90,7 @@ let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 let authenticationVC: UIViewController = storyboard.instantiateViewController(withIdentifier: "AuthenticationVC") as UIViewController
 ```
 
-<br>
+
 
 ## Summary
-In this post, I've explained how to create a view controller from xib file. From [Apple's document](https://developer.apple.com/documentation/uikit/uiviewcontroller){:target="_blank"}, if you specify the views for a view controller using a xib(nib) file, you can't define segues or relationships between view controllers. Use wisely when creating a view controller from xib rather than storyboard.
+In this post, I've explained how to create a view controller from xib file. From [Apple's document](https://developer.apple.com/documentation/uikit/uiviewcontroller), if you specify the views for a view controller using a xib(nib) file, you can't define segues or relationships between view controllers. Use wisely when creating a view controller from xib rather than storyboard.

@@ -110,7 +110,6 @@ SwiftLint.lint(inline: true, configFile: ".swiftlint.yml")
 ## Conclusion
 초반에 적용할 때는 시행착오를 많이 겪었지만, 적용하고 나서는 코드 리뷰할 때 코드 스타일이나 컨벤션 등을 덜 신경 쓰고 코드에 더 집중할 수 있는 것을 느꼈다. 앞으로도 좋은 도구들이 있으면 사용해서 더 효율적인 코드 리뷰를 진행할 수 있도록 연구해볼 계획이다.
 
-<br>
 **참고**
 
 [Danger Swift](https://danger.systems/swift/)

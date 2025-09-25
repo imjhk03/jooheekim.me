@@ -42,4 +42,4 @@ In the above example, array will be sorted similar with the enum case list. But 
 
 
 Refrence<br/>
-[Synthesized Comparable conformance for enum types](https://github.com/apple/swift-evolution/blob/master/proposals/0266-synthesized-comparable-for-enumerations.md){:target="_blank"}
+[Synthesized Comparable conformance for enum types](https://github.com/apple/swift-evolution/blob/master/proposals/0266-synthesized-comparable-for-enumerations.md)

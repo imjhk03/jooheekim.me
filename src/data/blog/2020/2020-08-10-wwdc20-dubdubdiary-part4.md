@@ -68,7 +68,7 @@ I just showed small parts from the session, and I recommend seeing the session. 
 
 [Embrace Swift type inference - WWDC 2020 - Videos - Apple Developer](https://developer.apple.com/videos/play/wwdc2020/10165/)
 
-<br>
+
 
 ## Write Tests to Fail
 

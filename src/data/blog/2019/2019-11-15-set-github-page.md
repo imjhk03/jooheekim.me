@@ -9,12 +9,12 @@ ogImage: /images/2019/11/16/image1.png
 
 개발자들이라면 한 번이라도 봤을 만한 블로그 주소는 {username}.github.io 일 것이다. 개인적으로 깃허브 블로그 페이지 만들면서 고생해서 간단하고 최소한의 작업으로 구축하는 방법을 기록하기 위해 포스트를 쓰기로 했다.
 
-먼저 GitHub 계정으로 새로운 리파지토리(repository)를 만들면 된다. 자세한 설명은 [GitHub Pages][githubpage]{:target="_blank"} 사이트 가면 된다.
+먼저 GitHub 계정으로 새로운 리파지토리(repository)를 만들면 된다. 자세한 설명은 [GitHub Pages][githubpage] 사이트 가면 된다.
 
 ![GitHub Page example](/images/2019/11/16/image1.png)
 영어로 되어 있지만, 간단하기 때문에 문제없을 것 같다.
 
-Hello World 까지 찍히는 거 보면 이제부터는 테마를 이용해서 꾸미는 작업이 필요하다. 보통 지킬(jekyll) 이용해서 테마를 입히는데, 테마를 입히기 위해서는 필요한 명령어들이 있다. 먼저 그 명령어들을 사용할 수 있게 기본 세팅을 설정했다. 사용하는 터미널(Terminal) 프로그램 열고 아래와 같은 명령어들을 실행하면 된다. [Jekyll][jekyllPage]{:target="_blank"} 페이지 들어가보면 더 자세한 설치 방법과 적용 방법들이 있다.
+Hello World 까지 찍히는 거 보면 이제부터는 테마를 이용해서 꾸미는 작업이 필요하다. 보통 지킬(jekyll) 이용해서 테마를 입히는데, 테마를 입히기 위해서는 필요한 명령어들이 있다. 먼저 그 명령어들을 사용할 수 있게 기본 세팅을 설정했다. 사용하는 터미널(Terminal) 프로그램 열고 아래와 같은 명령어들을 실행하면 된다. [Jekyll][jekyllPage] 페이지 들어가보면 더 자세한 설치 방법과 적용 방법들이 있다.
 
 ```zsh
 $ gem install bundler jekyll
@@ -31,7 +31,7 @@ $ gem install bundler
 
 웹 페이지에 필요한 jekyll 파일들 설치하고 브라우저로 http://localhost:4000 에 접속하면 확인할 수 있다.
 
-[Jekyll Themes][jekyllThemes]{:target="_blank"} 페이지 혹은 Github에 jekyll 테마 검색해서 마음에 드는 테마를 고르면 된다. 여기서 [Texture][textureTheme]{:target="_blank"} 테마를 입히기로 했다.
+[Jekyll Themes][jekyllThemes] 페이지 혹은 Github에 jekyll 테마 검색해서 마음에 드는 테마를 고르면 된다. 여기서 [Texture][textureTheme] 테마를 입히기로 했다.
 
 ![Texture Jekyll Theme Demo](/images/2019/11/16/image2.png)
 깔끔 깔끔

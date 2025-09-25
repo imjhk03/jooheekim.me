@@ -23,6 +23,6 @@ func collectionView(_ collectionView: UICollectionView, willDisplaySupplementary
 }
 ```
 
-<br>
-Reference:<br>
+
+Reference:
 [StackOverflow](https://stackoverflow.com/a/48088371)

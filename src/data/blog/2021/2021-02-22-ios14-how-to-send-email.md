@@ -155,4 +155,4 @@ private func presentAlertSheetThirdPartyEmailApps(_ availableApps: [AvailableApp
 
 Warning: 이메일 앱을 보내는 것을 테스트하고 싶다면 iOS 시뮬레이터가 아닌 실 기기에서 테스트해야 합니다.
 
-iOS 14에서부터 서드파티 앱을 기본 이메일 앱을 설정할 수 있는데, 이로 인해 대응할 방법을 소개했습니다. 전체 코드를 보고 싶다면 [깃헙](https://github.com/imjhk03/ThirdPartyMailSupport/tree/main){:target="_blank"}에서 확인할 수 있습니다.
+iOS 14에서부터 서드파티 앱을 기본 이메일 앱을 설정할 수 있는데, 이로 인해 대응할 방법을 소개했습니다. 전체 코드를 보고 싶다면 [깃헙](https://github.com/imjhk03/ThirdPartyMailSupport/tree/main)에서 확인할 수 있습니다.

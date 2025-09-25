@@ -41,7 +41,6 @@ ogImage: /images/2022/10/24/image1.jpeg
 
 지금 모니터도 만족하지만 언젠가는 애플에서 만든 모니터를 구매해서 써보고 싶은 의향이 있다. 물론 이때도 지금 쓰고 있는 모니터를 처분하고 하나의 모니터만으로 활용할 생각이다.
 
-<br>
 **참고**
 
 [Why I Stopped Using Multiple Monitors](https://medium.com/@housecor/why-i-stopped-using-multiple-monitors-bfd87efa2e5b)

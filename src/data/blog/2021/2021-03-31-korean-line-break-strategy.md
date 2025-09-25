@@ -75,6 +75,7 @@ attributedLabel.attributedText = NSAttributedString(string: text, attributes: at
 
 이제 iOS 14에서부터 아주 매끄럽게 한글 줄 바꿈이 잘 나오는 것을 확인할 수 있다. 만약 paragraphStyle을 사용한다면, lineBreakStrategy 값을 설정해서 적용하면 잘 나온다.
 
-<br>
-참고: <br>
+
+참고:
+
 [NSParagraphStyle.LineBreakStrategy](https://developer.apple.com/documentation/uikit/nsparagraphstyle/linebreakstrategy?changes=_8)

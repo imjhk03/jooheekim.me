@@ -19,5 +19,6 @@ We also need to set the view’s top anchor to superview’s top anchor. For exa
 
 ![Animated image that shows navigation bar is hidden when scrolled.](/images/2021/04/16/image2.gif)
 
-Reference:<br>
+Reference:
+
 [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uinavigationcontroller/1621883-hidesbarsonswipe)

@@ -15,7 +15,7 @@ Xcode Playground 생성해서 간단한 코드를 실행하려고 하는데, 아
 
 에러가 발생한 이유는 Xcode를 'Rosetta를 사용하여 열기' 설정을 활성화해서 발생했다. 해당 설정을 비활성화하니깐 에러가 발생하지 않았다.
 
-<br>
+
 **참고**
 
 [Xcode Playground Failed to launch](https://stackoverflow.com/questions/69829731/xcode-playground-failed-to-launch)
