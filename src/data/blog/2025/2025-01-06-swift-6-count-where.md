@@ -1,6 +1,6 @@
 ---
 title: "Swift 6의 새로운 기능: count(where:)"
-description: Swift 6의 새로운 count(where:) 메서드 활용법
+description: "Swift 6의 새로운 count(where:) 메서드 활용법"
 pubDatetime: 2025-01-06T09:00:00Z
 tags: [swift, collections]
 ---

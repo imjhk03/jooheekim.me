@@ -1,6 +1,6 @@
 ---
 title: SwiftUI에서 도형을 배경으로 설정하기
-description: background(_:in:fillStyle:) modifier를 사용한 배경 스타일링
+description: "background(_:in:fillStyle:) modifier를 사용한 배경 스타일링"
 pubDatetime: 2025-05-12T09:00:00Z
 ogImage: /images/2025/05/12/image1.png
 tags: [swiftui, ui]
