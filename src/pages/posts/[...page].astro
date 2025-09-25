@@ -6,27 +6,85 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Card from "@/components/Card.astro";
-import Pagination from "@/components/Pagination.astro";
-import getSortedPosts from "@/utils/getSortedPosts";
+import Hr from "@/components/Hr.astro";
+import getPostsByGroupCondition from "@/utils/getPostsByGroupCondition";
 import { SITE } from "@/config";
 
-export const getStaticPaths = (async ({ paginate }) => {
-  const posts = await getCollection("blog", ({ data }) => !data.draft);
-  return paginate(getSortedPosts(posts), { pageSize: SITE.postPerPage });
+export const getStaticPaths = (async () => {
+  // Return single page instead of paginated pages
+  return [{ params: { page: undefined } }];
 }) satisfies GetStaticPaths;
 
-const { page } = Astro.props;
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 ---
 
 <Layout title={`Posts | ${SITE.title}`}>
   <Header />
   <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
-    <ul>
-      {page.data.map(data => <Card {...data} />)}
-    </ul>
+    {
+      Object.entries(
+        getPostsByGroupCondition(posts, post =>
+          post.data.pubDatetime.getFullYear()
+        )
+      )
+        .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
+        .map(([year, yearGroup]) => (
+          <div class="mb-12">
+            <div class="mb-4">
+              <span class="text-2xl font-bold">{year}</span>
+              <sup class="text-sm">{yearGroup.length}</sup>
+            </div>
+            <Hr noPadding />
+            <div class="mt-8">
+              {Object.entries(
+                getPostsByGroupCondition(
+                  yearGroup,
+                  post => post.data.pubDatetime.getMonth() + 1
+                )
+              )
+                .sort(([monthA], [monthB]) => Number(monthB) - Number(monthA))
+                .map(([month, monthGroup]) => (
+                  <div class="mb-8">
+                    <div class="mb-6">
+                      <span class="text-lg font-semibold text-white">{months[Number(month) - 1]}</span>
+                      <sup class="text-xs ml-1">{monthGroup.length}</sup>
+                    </div>
+                    <ul class="space-y-4">
+                      {monthGroup
+                        .sort(
+                          (a, b) =>
+                            Math.floor(
+                              new Date(b.data.pubDatetime).getTime() / 1000
+                            ) -
+                            Math.floor(
+                              new Date(a.data.pubDatetime).getTime() / 1000
+                            )
+                        )
+                        .map(data => (
+                          <Card {...data} />
+                        ))}
+                    </ul>
+                  </div>
+                ))}
+            </div>
+          </div>
+        ))
+    }
   </Main>
-
-  <Pagination {page} />
-
-  <Footer noMarginTop={page.lastPage > 1} />
+  <Footer />
 </Layout>

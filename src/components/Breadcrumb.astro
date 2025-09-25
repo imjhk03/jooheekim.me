@@ -7,9 +7,9 @@ const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
 const breadcrumbList = currentUrlPath.split("/").slice(1);
 
 // if breadcrumb is Home > Posts > 1 <etc>
-// replace Posts with Posts (page number)
-if (breadcrumbList[0] === "posts") {
-  breadcrumbList.splice(0, 2, `Posts (page ${breadcrumbList[1] || 1})`);
+// replace Posts with Posts (page number), but skip if no page number
+if (breadcrumbList[0] === "posts" && breadcrumbList[1] && !isNaN(Number(breadcrumbList[1]))) {
+  breadcrumbList.splice(0, 2, `Posts (page ${breadcrumbList[1]})`);
 }
 
 // if breadcrumb is Home > Tags > [tag] > [page] <etc>
