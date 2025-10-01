@@ -8,6 +8,7 @@ import Footer from "@/components/Footer.astro";
 import Card from "@/components/Card.astro";
 import Hr from "@/components/Hr.astro";
 import getPostsByGroupCondition from "@/utils/getPostsByGroupCondition";
+import postFilter from "@/utils/postFilter";
 import { SITE } from "@/config";
 
 export const getStaticPaths = (async () => {
@@ -15,7 +16,7 @@ export const getStaticPaths = (async () => {
   return [{ params: { page: undefined } }];
 }) satisfies GetStaticPaths;
 
-const posts = await getCollection("blog", ({ data }) => !data.draft);
+const posts = (await getCollection("blog")).filter(postFilter);
 
 const months = [
   "January",
