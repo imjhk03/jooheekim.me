@@ -7,18 +7,49 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0] - 2025-10-01
+
 ### Added
 - Bilingual blog post support with language switcher component
 - Language field (`lang`) in blog schema to specify post language (en/ko)
 - Translations field in blog schema to link between language versions
 - LanguageSwitcher component displaying "ENG / KOR" with underline for active language
 - Automatic filtering to show only English posts in main blog list (Korean posts accessible via language switcher)
+- Test blog posts demonstrating bilingual functionality
 
 ### Changed
 - PostDetails layout now includes language switcher on the right side of metadata line
 - Post filter updated to exclude Korean posts from default listings
+- Posts page now applies postFilter to properly exclude Korean posts
 
-## [2.0.0] - 2024-09-24
+### Removed
+- Tags navigation link from header menu
+
+## [2.0.3] - 2025-09-29
+
+### Added
+- INTW app page with description and links
+- Privacy policy page for INTW app
+
+## [2.0.2] - 2025-09-26
+
+### Changed
+- Removed Jekyll syntax from markdown blog posts for Astro compatibility
+
+## [2.0.1] - 2025-09-25
+
+### Added
+- Blog posts from 2020-2025 with content migration
+- Blog post images and assets
+- Preview images for all blog posts
+- Reading time calculation for posts
+- 2023-2024 blog posts with historical content
+
+### Changed
+- Redesigned posts layout with improved typography
+- Enhanced post details page with reading time display
+
+## [2.0.0] - 2025-09-24
 
 ### Added
 - Complete AstroPaper blog theme integration
@@ -58,7 +89,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cache-related build issues resolved
 - Asset path corrections for avatar and icons
 
-## [1.0.0] - 2024-09-24
+## [1.0.0] - 2025-09-24
 
 ### Added
 - Initial Astro project setup
