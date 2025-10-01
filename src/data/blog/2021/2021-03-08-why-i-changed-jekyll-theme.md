@@ -3,7 +3,7 @@ title: jekyll 블로그 테마를 바꾼 이유
 description: 2019년 연말부터 거의 꾸준히 글 쓰려고 노력하고 있다. 기술 블로그 통해서 많은 것을 배워서 나도 비슷하게 그런 글을 쓰거나, 아니면 개인적으로 공부한 것을 기록하는 용도로 기술 블로그를 시작했다. 물론, 개인 포트폴리오 용도도 좀 있다. 성실하다는 것을 잘 나타나는 지표로 사...
 pubDatetime: 2021-03-08T09:00:00Z
 tags: [blog, jekyll]
-ogImage: /images/2021/03/08/image1.png
+heroImage: /images/2021/03/08/image1.png
 ---
 
 

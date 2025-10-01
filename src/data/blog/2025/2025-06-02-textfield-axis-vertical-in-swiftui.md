@@ -2,7 +2,7 @@
 title: SwiftUI에서 TextField 세로로 쓰기
 description: TextField의 axis 속성으로 세로 스크롤 구현하기
 pubDatetime: 2025-06-02T09:00:00Z
-ogImage: /images/2025/06/02/image1.png
+heroImage: /images/2025/06/02/image1.png
 tags: [swiftui, textfield]
 ---
 

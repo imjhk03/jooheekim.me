@@ -3,7 +3,7 @@ title: Xcode 소소한 팁
 description: Xcode 사용하면서 알게 된 소소한 팁들을 소개한다.
 pubDatetime: 2020-11-02T09:00:00Z
 tags: [xcode]
-ogImage: /images/2020/11/02/image1.png
+heroImage: /images/2020/11/02/image1.png
 ---
 
 

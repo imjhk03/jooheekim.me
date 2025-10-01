@@ -3,7 +3,7 @@ title: WWDC20 Dub Dub Diary, Part 2 - Widget, App clips, and SwiftUI
 description: On the second day of WWDC20, sessions were uploaded all at once and could be viewed immediately without waiting. Before this year, there were sessions by tim...
 pubDatetime: 2020-07-27T09:00:00Z
 tags: [wwdc]
-ogImage: /images/2020/07/27/image1.png
+heroImage: /images/2020/07/27/image1.png
 ---
 
 

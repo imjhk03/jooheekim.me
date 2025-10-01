@@ -3,7 +3,7 @@ title: Info.plist Localization
 description: "Recently, one of our app got rejected by App Store Connect, because it needed to update `NSPhotoLibraryUsageDescription` content. There was not enough reason..."
 pubDatetime: 2020-01-24T09:00:00Z
 tags: [localization]
-ogImage: /images/2020/01/24/image1.png
+heroImage: /images/2020/01/24/image1.png
 ---
 
 

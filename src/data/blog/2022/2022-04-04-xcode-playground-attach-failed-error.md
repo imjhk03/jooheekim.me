@@ -3,7 +3,7 @@ title: Xcode Playground에서 attach failed invalid argument 에러 해결하는
 description: Xcode Playground 생성해서 간단한 코드를 실행하려고 하는데, 아래와 같이 에러가 발생해서 실행이 안 되는 것을 발견했다.
 pubDatetime: 2022-04-04T09:00:00Z
 tags: [swift-playground, developer-tools]
-ogImage: /images/2022/04/04/image1.png
+heroImage: /images/2022/04/04/image1.png
 ---
 
 

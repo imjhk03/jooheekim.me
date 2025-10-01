@@ -3,7 +3,7 @@ title: Use Live View in Swift Playground
 description: Recently I've been using Swift Playground app on iPad for studying Swift language. Personally, I think the playground app is one of the best apps for learnin...
 pubDatetime: 2021-09-21T09:00:00Z
 tags: [swift-playground, developer-tools]
-ogImage: /images/2021/09/21/image1.png
+heroImage: /images/2021/09/21/image1.png
 ---
 
 

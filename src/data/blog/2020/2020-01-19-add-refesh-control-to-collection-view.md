@@ -3,7 +3,7 @@ title: Add Refresh Control to Collection View
 description: "I've been currently rebuilding a project that I'm working on, and there were some UI issues when refreshing datas. `UIRefreshControl` was implied for pulltor..."
 pubDatetime: 2020-01-19T09:00:00Z
 tags: [uikit, ui-development]
-ogImage: /images/2020/01/19/image1.jpeg
+heroImage: /images/2020/01/19/image1.jpeg
 ---
 
 

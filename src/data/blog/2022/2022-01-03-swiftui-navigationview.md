@@ -3,7 +3,7 @@ title: SwiftUI에서 NavigationView 사용하기
 description: SwiftUI에서 를 이용해서 유저가 navigate 하면서 여러 화면들을 이동할 수 있게 할 수 있습니다. 아래 예시 코드에서 `Text`를 `NavigationView`로 감쌌는데, 감싼 후에 `Text`가 아래로 이동한 것을 볼 수 있습니다.
 pubDatetime: 2022-01-03T09:00:00Z
 tags: [swiftui, navigation]
-ogImage: /images/2022/01/03/image4.gif
+heroImage: /images/2022/01/03/image4.gif
 ---
 
 

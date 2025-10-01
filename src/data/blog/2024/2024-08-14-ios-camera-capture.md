@@ -3,7 +3,7 @@ title: iOS에서 카메라 캡처
 description: AVFoundation 프레임워크를 사용한 iOS 커스텀 카메라 UI 구현 방법과 캡처 아키텍처 설명
 pubDatetime: 2024-08-14T09:00:00Z
 tags: [uikit, camera, photo, AVFoundation]
-ogImage: https://images.unsplash.com/photo-1486962532485-55d6645c218e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+heroImage: https://images.unsplash.com/photo-1486962532485-55d6645c218e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ---
 
 ![Image from Unsplash](https://images.unsplash.com/photo-1486962532485-55d6645c218e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)

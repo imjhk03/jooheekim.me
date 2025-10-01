@@ -3,7 +3,7 @@ title: How to show scrollbar over header or footer view
 description: After revisiting my old codes, I found some useful code that helped a bug. Although this bug is solved over iOS 13, if your project deployment target is iOS ...
 pubDatetime: 2021-05-12T09:00:00Z
 tags: [uikit, ui-development]
-ogImage: /images/2021/05/12/image1.png
+heroImage: /images/2021/05/12/image1.png
 ---
 
 

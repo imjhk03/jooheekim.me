@@ -3,7 +3,7 @@ title: '나의 새로운 Mac 설정 목록 (Setup my personal Mac)'
 description: "2023.01.20 업데이트: macOS Ventura 13.1 버전 기준으로 업데이트"
 pubDatetime: 2020-10-02T09:00:00Z
 tags: [workflow]
-ogImage: /images/2020/10/02/image1.png
+heroImage: /images/2020/10/02/image1.png
 ---
 
 

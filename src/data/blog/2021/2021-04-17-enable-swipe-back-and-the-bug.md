@@ -3,7 +3,7 @@ title: Enable swipe back and the bug
 description: In iOS, we can swipe back(left to right) to pop the view controller and navigate back. This is only available when the navigation bar is shown. If we want to...
 pubDatetime: 2021-04-17T09:00:00Z
 tags: [uikit, ui-development]
-ogImage: /images/2021/04/17/image1.gif
+heroImage: /images/2021/04/17/image1.gif
 ---
 
 

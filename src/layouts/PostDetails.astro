@@ -28,7 +28,6 @@ const {
   title,
   author,
   description,
-  ogImage: initOgImage,
   canonicalURL,
   pubDatetime,
   modDatetime,
@@ -46,13 +45,8 @@ const readingTime = getReadingTime(post.body || "");
 
 let ogImageUrl: string | undefined;
 
-// Determine OG image source
-if (initOgImage) {
-  ogImageUrl = initOgImage; // OG image path (string)
-}
-
-// Use dynamic OG image if enabled and no remote|local ogImage
-if (!ogImageUrl && SITE.dynamicOgImage) {
+// Use dynamic OG image if enabled
+if (SITE.dynamicOgImage) {
   ogImageUrl = `${getPath(post.id, post.filePath)}/index.png`;
 }
 

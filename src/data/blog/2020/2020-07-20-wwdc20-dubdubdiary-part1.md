@@ -3,7 +3,7 @@ title: WWDC20 Dub Dub Diary, Part 1
 description: From June 23 to June 26, WWDC20 was hosted online. I was lucky to win the last WWDC18 and WWDC19 event, and I went to America alone and enjoyed it. So I coul...
 pubDatetime: 2020-07-20T09:00:00Z
 tags: [wwdc]
-ogImage: /images/2020/07/20/image1.png
+heroImage: /images/2020/07/20/image1.png
 ---
 
 

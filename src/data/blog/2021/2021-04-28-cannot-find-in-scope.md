@@ -3,7 +3,7 @@ title: Cannot find 'Something' in scope
 description: After updating some third party sdk version, there was a warning that can't find some library when building the project.
 pubDatetime: 2021-04-28T09:00:00Z
 tags: [cocoapods]
-ogImage: /images/2021/04/28/image1.png
+heroImage: /images/2021/04/28/image1.png
 ---
 
 

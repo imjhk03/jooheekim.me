@@ -3,7 +3,7 @@ title: 깃허브(GitHub) 블로그 jekyll 테마 커스텀(custom)하기
 description: 어제 깃허브 블로그 구축하고 나서 꾸미려고 하니깐 뭔가 마음대로 꾸밀 수 없는 걸 느껴서, 테마를 가져와서 내 입맛대로 꾸밀 수 있을까 찾다가 jekyll theme을 fork 해서 커스텀할 수 있는 방법이 있다고 했다. 오늘 포스트는 테마를 조금 커스텀 할 수 있는 부분에 대한 ...
 pubDatetime: 2019-11-17T09:00:00Z
 tags: [blog, jekyll]
-ogImage: /images/2019/11/17/image1.png
+heroImage: /images/2019/11/17/image1.png
 ---
 
 

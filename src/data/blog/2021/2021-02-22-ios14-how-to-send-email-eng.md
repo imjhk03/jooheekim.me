@@ -3,7 +3,7 @@ title: How to send emails from iOS 14
 description: With iOS 14, thirdparty app can be the default email app. This means we may have to support sending email with thirdparty apps. If the user is not using the ...
 pubDatetime: 2021-02-22T09:00:00Z
 tags: [uikit, email]
-ogImage: /images/2021/02/22/image1.jpeg
+heroImage: /images/2021/02/22/image1.jpeg
 ---
 
 

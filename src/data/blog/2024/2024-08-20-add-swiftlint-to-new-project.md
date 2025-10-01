@@ -3,7 +3,7 @@ title: 신규 프로젝트에 Swiftlint 적용하기
 description: 신규 iOS 프로젝트에 SwiftLint를 설치하고 설정하는 단계별 가이드
 pubDatetime: 2024-08-20T09:00:00Z
 tags: [optimization]
-ogImage: /images/2024/08/20/image1.png
+heroImage: /images/2024/08/20/image1.png
 ---
 
 새로운 프로젝트 시작할 때 개발하기 전에 설정하는 것들이 있다. 최소 운영체제 버전을 설정하거나 지원되는 기기 등 여러 가지가 있다. 그중 하나는 스위프트 스타일이나 코드 포맷을 맞추기 위한 도구인 [SwiftLint](https://github.com/realm/SwiftLint)를 추가하는 경우가 있다. 시간이 지나 다시 신규 프로젝트를 만들 때 SwiftLint 추가하는 방법이 까먹을 때가 있다. 그래서 설정하는 것을 다시 볼 수 있게 기록해서 나중에 참고하고 싶다는 마음에 글을 쓰게 되었다.

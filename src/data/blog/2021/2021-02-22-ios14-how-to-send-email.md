@@ -3,7 +3,7 @@ title: iOS 14부터 달라진 앱에서 이메일 보내는 방법
 description: iOS 14에서는 기본 이메일 앱이 아닌 다른 서드파티 앱을 기본 이메일로 설정할 수 있습니다. 즉, 지메일, Outlook, Spark 등의 메일 앱을 이제 기본 이메일 앱으로 대체할 수 있습니다.
 pubDatetime: 2021-02-22T09:00:00Z
 tags: [uikit, email]
-ogImage: /images/2021/02/22/image1.jpeg
+heroImage: /images/2021/02/22/image1.jpeg
 ---
 
 

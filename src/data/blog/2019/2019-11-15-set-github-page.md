@@ -3,7 +3,7 @@ title: 깃허브(GitHub) 블로그 구축하기
 description: "개발자들이라면 한 번이라도 봤을 만한 블로그 주소는 {username}.github.io 일 것이다. 개인적으로 깃허브 블로그 페이지 만들면서 고생해서 간단하고 최소한의 작업으로 구축하는 방법을 기록하기 위해 포스트를 쓰기로 했다."
 pubDatetime: 2019-11-15T09:00:00Z
 tags: [blog, jekyll]
-ogImage: /images/2019/11/16/image1.png
+heroImage: /images/2019/11/16/image1.png
 ---
 
 

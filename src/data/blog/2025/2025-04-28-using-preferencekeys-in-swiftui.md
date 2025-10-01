@@ -2,7 +2,7 @@
 title: SwiftUI에서 PreferenceKey 활용하기
 description: 하위 뷰에서 상위 뷰로 데이터를 전달하는 PreferenceKey 이해하기
 pubDatetime: 2025-04-28T09:00:00Z
-ogImage: /images/2025/04/28/image1.png
+heroImage: /images/2025/04/28/image1.png
 tags: [swiftui]
 ---
 

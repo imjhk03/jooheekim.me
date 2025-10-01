@@ -3,7 +3,7 @@ title: WWDC21 Keynote에 대한 나의 생각들
 description: 1년 중 가장 즐거운 시간이 돌아왔다. 바로 애플이 개최하는 개발자 컨퍼런스인 WWDC21이다. 작년과 똑같이 온라인으로 진행해서 아쉽지만, 올해는 디지털 라운지, 코드 챌린지 등 다양한 활동을 진행한다. 이번 글은 아주 짧게 올해 발표한 내용에 대해서 내 생각들을 얘기하려고 한다.
 pubDatetime: 2021-06-11T09:00:00Z
 tags: [wwdc]
-ogImage: /images/2021/06/11/image1.png
+heroImage: /images/2021/06/11/image1.png
 ---
 
 

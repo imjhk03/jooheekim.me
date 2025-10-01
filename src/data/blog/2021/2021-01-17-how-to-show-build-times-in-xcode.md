@@ -3,7 +3,7 @@ title: How to show build times in Xcode
 description: You can show how long the project build in Xcode by entering below command in ```Terminal.app```.
 pubDatetime: 2021-01-17T09:00:00Z
 tags: [xcode]
-ogImage: /images/2021/01/17/image1.png
+heroImage: /images/2021/01/17/image1.png
 ---
 
 

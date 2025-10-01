@@ -3,7 +3,7 @@ title: Raycast + Confetti로 Xcode 빌드 완료 효과 넣기
 description: Xcode 빌드 완료 시 Raycast의 Confetti 애니메이션으로 시각적 알림 효과 추가하기
 pubDatetime: 2023-02-19T09:00:00Z
 tags: [workflow]
-ogImage: /images/2023/02/19/video1.gif
+heroImage: /images/2023/02/19/video1.gif
 ---
 
 [싱글 모니터](https://imjhk03.github.io/posts/not-using-multiple-monitors/) 사용하면서 하나의 업무에만 집중하는 환경을 보내고 있다. 하지만 프로젝트 빌드 시간이 오래 걸리면 다른 업무를 확인하는 경우가 있는데, 이때 너무 집중을 하다 보면 빌드 완료되었다는 알림을 놓치는 경우가 있다. 한참 업무를 보거나 딴짓(?)을 하다가 다시 Xcode 프로그램으로 돌아가면 빌드가 다 완료되어 있는 상태가 있어서 보다 빨리 확인을 못 하는 경우가 있다.

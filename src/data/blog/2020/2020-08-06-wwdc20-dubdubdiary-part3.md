@@ -3,7 +3,7 @@ title: WWDC20 Dub Dub Diary, Part 3 - Code-along, New Components, and build for 
 description: Many sessions were also posted on the third day of WWDC20. In particular, sessions focused on game centers were concentrated, but they were not my interests ...
 pubDatetime: 2020-08-06T09:00:00Z
 tags: [wwdc]
-ogImage: /images/2020/08/06/image1.png
+heroImage: /images/2020/08/06/image1.png
 ---
 
 

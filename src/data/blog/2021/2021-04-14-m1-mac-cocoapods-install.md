@@ -3,7 +3,7 @@ title: M1 mac에서 cocoapods 설치하기
 description: "Update: Homebrew를 이용해서 설치하는 방법 추가하고 글 내용을 조금 수정했습니다."
 pubDatetime: 2021-04-14T09:00:00Z
 tags: [cocoapods]
-ogImage: /images/2021/04/14/image1.PNG
+heroImage: /images/2021/04/14/image1.PNG
 ---
 
 

@@ -2,7 +2,7 @@
 title: SwiftUI Color를 gradient으로 변경하기
 description: iOS 16의 새로운 Color.gradient 프로퍼티 활용하기
 pubDatetime: 2025-04-21T09:00:00Z
-ogImage: /images/2025/04/21/image1.png
+heroImage: /images/2025/04/21/image1.png
 tags: [swiftui, ios16]
 ---
 

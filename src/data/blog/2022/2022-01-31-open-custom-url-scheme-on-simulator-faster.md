@@ -3,7 +3,7 @@ title: Custom URL Scheme를 시뮬레이터에서 빠르게 여는 방법
 description: 해당 글은  참고하여 작성한 글입니다.
 pubDatetime: 2022-01-31T09:00:00Z
 tags: [xcode]
-ogImage: /images/2022/01/31/image3.gif
+heroImage: /images/2022/01/31/image3.gif
 ---
 
 

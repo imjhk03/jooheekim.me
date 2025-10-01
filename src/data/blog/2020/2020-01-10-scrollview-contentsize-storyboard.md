@@ -3,7 +3,7 @@ title: How to deal with scroll view content size with storyboard
 description: "`UIScrollView` is very useful when presenting content that are larger than a single screen. I've been using it to support iPhone SE users or iPhone 8 users t..."
 pubDatetime: 2020-01-10T09:00:00Z
 tags: [uikit, ui-development, storyboard]
-ogImage: /images/2020/01/10/image1.png
+heroImage: /images/2020/01/10/image1.png
 ---
 
 

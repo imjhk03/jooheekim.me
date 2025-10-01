@@ -2,7 +2,7 @@
 title: Swift의 문자열 보간법 이해하기
 description: Swift의 문자열 보간법과 StringInterpolation 프로토콜 활용법
 pubDatetime: 2025-01-13T09:00:00Z
-ogImage: /images/2025/01/13/image1.png
+heroImage: /images/2025/01/13/image1.png
 tags: [swift, strings]
 ---
 

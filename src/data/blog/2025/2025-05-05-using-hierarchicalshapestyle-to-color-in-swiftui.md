@@ -2,7 +2,7 @@
 title: HierarchicalShapeStyle로 색상 계층 구조 활용하기
 description: SwiftUI에서 계층적 색상 스타일 활용하기
 pubDatetime: 2025-05-05T09:00:00Z
-ogImage: /images/2025/05/05/image1.png
+heroImage: /images/2025/05/05/image1.png
 tags: [swiftui]
 ---
 

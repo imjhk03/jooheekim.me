@@ -3,7 +3,7 @@ title: How to create a view controller from xib
 description: Creating a new view controller was easy. I've used to create a view controller from Storyboard, and instantiated in code. Although this way is easy, so many ...
 pubDatetime: 2020-11-09T09:00:00Z
 tags: [uikit, ui-development, view-controllers, storyboard]
-ogImage: /images/2020/11/09/image1.png
+heroImage: /images/2020/11/09/image1.png
 ---
 
 

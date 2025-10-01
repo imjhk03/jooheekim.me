@@ -3,7 +3,7 @@ title: 화면 상태에 따라서 View가 그리는 작업, Render
 description: MVVM 패턴에서 View State 패턴을 도입하여 View Controller의 복잡도를 줄이는 방법
 pubDatetime: 2023-06-20T09:00:00Z
 tags: [code structure, design patterns]
-ogImage: https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb
+heroImage: https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb
 ---
 
 ![Image from Unsplash](https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb)

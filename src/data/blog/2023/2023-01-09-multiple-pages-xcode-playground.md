@@ -3,7 +3,7 @@ title: Multiple Pages Xcode Playground
 description: Xcode Playground에서 여러 페이지를 만들고 마크업을 사용하여 체계적으로 정리하는 방법
 pubDatetime: 2023-01-09T09:00:00Z
 tags: [swift playground]
-ogImage: /images/2023/01/09/image1.png
+heroImage: /images/2023/01/09/image1.png
 ---
 간단한 스위프트 코드를 작성할 때 Xcode Playground를 사용한다. Xcode Playground 파일을 생성하면 하나의 플레이그라운드에서 코드를 작성하게 되는데, 여러 플레이그라운드 파일들을 묶고 싶은 경우가 있다. 예를 들어, 하나의 주제를 가지고 다양한 코드 방법을 파일별로 정리하거나 문법 공부할 때 문법별로 정리하는 경우가 있다. 이럴 때 멀티 페이지를 만드는 방법을 소개하겠다.
 

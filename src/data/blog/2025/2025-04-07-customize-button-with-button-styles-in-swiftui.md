@@ -2,7 +2,7 @@
 title: SwiftUI에서 커스텀 버튼 스타일 구현하기
 description: ButtonStyle 프로토콜을 사용한 커스텀 버튼 스타일 만들기
 pubDatetime: 2025-04-07T09:00:00Z
-ogImage: /images/2025/04/07/image1.png
+heroImage: /images/2025/04/07/image1.png
 tags: [swiftui]
 ---
 

@@ -3,7 +3,7 @@ title: Xcode 저장공간 이해 및 관리
 description: 해당 글은 Understanding and Managing Xcode Space 글을 보고 정리한 글입니다.
 pubDatetime: 2021-08-09T09:00:00Z
 tags: [xcode]
-ogImage: /images/2021/08/09/image1.png
+heroImage: /images/2021/08/09/image1.png
 ---
 
 

@@ -3,7 +3,7 @@ title: WWDC20 Dub Dub Diary, Part 4 - Swift type inference, writing tests to fai
 description: For the fourth day of WWDC20, among great sessions there were two most interesting sessions about Swift language and testing. This article will talk about th...
 pubDatetime: 2020-08-10T09:00:00Z
 tags: [wwdc]
-ogImage: /images/2020/08/10/image1.png
+heroImage: /images/2020/08/10/image1.png
 ---
 
 
