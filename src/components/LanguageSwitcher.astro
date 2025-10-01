@@ -1,0 +1,67 @@
+---
+export interface Props {
+  currentLang?: "en" | "ko";
+  translations?: {
+    en?: string;
+    ko?: string;
+  };
+}
+
+const { currentLang, translations } = Astro.props;
+
+// Don't show the switcher if there are no translations
+if (!translations || (!translations.en && !translations.ko)) {
+  return null;
+}
+
+const languages = [
+  { code: "en", label: "ENG" },
+  { code: "ko", label: "KOR" },
+] as const;
+---
+
+<div class="language-switcher flex items-center gap-1 text-sm">
+  {
+    languages.map(({ code, label }, index) => {
+      const url = translations?.[code];
+      const isCurrent = currentLang === code;
+      const hasUrl = !!url;
+
+      return (
+        <>
+          {hasUrl ? (
+            <a
+              href={url}
+              class:list={[
+                "transition-colors",
+                {
+                  "font-semibold text-accent underline decoration-2 underline-offset-4":
+                    isCurrent,
+                  "text-foreground/60 hover:text-accent": !isCurrent,
+                },
+              ]}
+              aria-current={isCurrent ? "page" : undefined}
+            >
+              {label}
+            </a>
+          ) : (
+            <span
+              class:list={[
+                {
+                  "font-semibold text-accent underline decoration-2 underline-offset-4":
+                    isCurrent,
+                  "text-foreground/40": !isCurrent,
+                },
+              ]}
+            >
+              {label}
+            </span>
+          )}
+          {index < languages.length - 1 && (
+            <span class="text-foreground/40 mx-1">/</span>
+          )}
+        </>
+      );
+    })
+  }
+</div>

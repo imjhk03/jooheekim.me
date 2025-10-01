@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Bilingual blog post support with language switcher component
+- Language field (`lang`) in blog schema to specify post language (en/ko)
+- Translations field in blog schema to link between language versions
+- LanguageSwitcher component displaying "ENG / KOR" with underline for active language
+- Automatic filtering to show only English posts in main blog list (Korean posts accessible via language switcher)
+
+### Changed
+- PostDetails layout now includes language switcher on the right side of metadata line
+- Post filter updated to exclude Korean posts from default listings
+
 ## [2.0.0] - 2024-09-24
 
 ### Added

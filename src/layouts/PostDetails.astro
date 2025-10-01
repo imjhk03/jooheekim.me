@@ -15,6 +15,7 @@ import { getReadingTime } from "@/utils/getReadingTime";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
+import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -34,6 +35,8 @@ const {
   timezone,
   tags,
   hideEditPost,
+  lang,
+  translations,
 } = post.data;
 
 const { Content } = await render(post);
@@ -101,16 +104,21 @@ const nextPost =
     >
       {title}
     </h1>
-    <div class="my-2 flex items-center gap-2">
-      <Datetime {pubDatetime} {modDatetime} {timezone} {readingTime} size="lg" />
-      <span
-        aria-hidden="true"
-        class:list={[
-          "max-sm:hidden",
-          { hidden: !SITE.editPost.enabled || hideEditPost },
-        ]}>|</span
-      >
-      <EditPost {hideEditPost} {post} class="max-sm:hidden" />
+    <div class="my-2 flex items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <Datetime {pubDatetime} {modDatetime} {timezone} {readingTime} size="lg" />
+        <span
+          aria-hidden="true"
+          class:list={[
+            "max-sm:hidden",
+            { hidden: !SITE.editPost.enabled || hideEditPost },
+          ]}>|</span
+        >
+        <EditPost {hideEditPost} {post} class="max-sm:hidden" />
+      </div>
+      {translations && (translations.en || translations.ko) && (
+        <LanguageSwitcher currentLang={lang} {translations} />
+      )}
     </div>
     <article
       id="article"
