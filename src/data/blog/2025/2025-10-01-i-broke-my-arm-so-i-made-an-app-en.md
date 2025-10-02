@@ -49,6 +49,6 @@ The stitches from my left arm surgery site were removed on the second week, but 
 
 It hasn't even been a month yet, but developing with one hand taught me that I can implement simple apps thanks to Claude Code. Because I had to work with one hand, typing was difficult and I couldn't work for long stretches, so I focused on MVP app development—simple but focused on core features. If I have the budget, I'd like to upgrade to Max and use it more extensively.
 
-You can download the app [here](https://apps.apple.com/us/app/id6753172167).
+You can download the app [here](https://apps.apple.com/us/app/i-need-that-widget/id6753172187).
 
 Recovery is slow, but I'm taking it one day at a time. See you in the next build.
