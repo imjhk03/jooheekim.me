@@ -23,7 +23,7 @@ const headerProps = {
 ---
 
 <li class="my-6">
-  <div class="flex gap-4">
+  <div class="flex gap-4 overflow-hidden">
     {heroImage && (
       <div class="flex-shrink-0">
         <img
@@ -34,10 +34,10 @@ const headerProps = {
         />
       </div>
     )}
-    <div class="flex-1 min-w-0">
+    <div class="flex-1 min-w-0 overflow-hidden">
       <a
         href={getPath(id, filePath)}
-        class="inline-block text-lg font-medium text-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+        class="block text-lg font-medium text-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
       >
         {
           variant === "h2" ? (
@@ -48,7 +48,7 @@ const headerProps = {
         }
       </a>
       <Datetime {pubDatetime} {modDatetime} {timezone} {readingTime} />
-      <p>{description}</p>
+      <p class="break-words">{description}</p>
     </div>
   </div>
 </li>
