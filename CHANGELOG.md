@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.0] - 2025-10-02
+
+### Added
+- "I Broke My Arm, So I Made an App" blog post (bilingual: English/Korean)
+- App Store link integration for INTW app on apps page
+- INTW app reference in about page
+
+### Changed
+- Updated INTW app icons (light and dark mode variants)
+- App description updated to "displays your today's calendar events"
+
+### Fixed
+- Mobile layout overflow issue with long Korean post titles (added `break-words` and `min-w-0` to Card component)
+- Removed back button from post detail page for cleaner navigation
+
+### Removed
+- Language switcher test posts (replaced with actual blog content)
+
 ## [2.1.0] - 2025-10-01
 
 ### Added
