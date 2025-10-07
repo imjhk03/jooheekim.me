@@ -1,0 +1,27 @@
+---
+import { render, getCollection } from "astro:content";
+import FilmLayout from "@/layouts/FilmLayout.astro";
+
+export async function getStaticPaths() {
+  const films = await getCollection("films");
+  return films.map((film) => ({
+    params: { id: film.id },
+    props: { film },
+  }));
+}
+
+const { film } = Astro.props;
+const { Content } = await render(film);
+---
+
+<FilmLayout
+  title={film.data.title}
+  description={film.data.description}
+  date={film.data.date}
+  camera={film.data.camera}
+  film={film.data.film}
+  developed={film.data.developed}
+  location={film.data.location}
+>
+  <Content />
+</FilmLayout>

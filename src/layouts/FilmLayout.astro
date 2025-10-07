@@ -1,0 +1,422 @@
+---
+import { SITE } from "@/config";
+import IconInstagram from "@/assets/icons/IconInstagram.svg";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  date?: Date;
+  camera?: string;
+  film?: string;
+  developed?: string;
+  location?: string;
+}
+
+const {
+  title = SITE.title,
+  description = SITE.desc,
+  date,
+  camera,
+  film,
+  developed,
+  location,
+} = Astro.props;
+---
+
+<!doctype html>
+<html dir={SITE.dir} lang={SITE.lang ?? "en"} class="darkroom">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body>
+    <nav class="film-nav">
+      <div class="nav-container">
+        <span class="nav-title">Film</span>
+        <a href="/films" class="nav-about">Films</a>
+      </div>
+    </nav>
+
+    <main class="darkroom-container">
+      <article class="film-content">
+        <nav class="breadcrumb">
+          <a href="/films" class="breadcrumb-link">← Back to Films</a>
+        </nav>
+
+        <header class="film-header">
+          <h1 class="film-title">{title}</h1>
+
+          {date && (
+            <time class="film-date" datetime={date.toISOString()}>
+              {date.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>
+          )}
+
+          <div class="film-meta">
+            {camera && (
+              <div class="meta-item">
+                <span class="meta-label">Camera</span>
+                <span class="meta-value">{camera}</span>
+              </div>
+            )}
+            {film && (
+              <div class="meta-item">
+                <span class="meta-label">Film</span>
+                <span class="meta-value">{film}</span>
+              </div>
+            )}
+            {developed && (
+              <div class="meta-item">
+                <span class="meta-label">Developed</span>
+                <span class="meta-value">{developed}</span>
+              </div>
+            )}
+            {location && (
+              <div class="meta-item">
+                <span class="meta-label">Location</span>
+                <span class="meta-value">{location}</span>
+              </div>
+            )}
+          </div>
+        </header>
+
+        <div class="film-body">
+          <slot />
+        </div>
+
+        <footer class="film-footer">
+          <a
+            href="https://instagram.com/jhk.studio"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="instagram-link"
+            aria-label="Follow on Instagram"
+          >
+            <IconInstagram width={20} height={20} />
+            <span>@jhk.studio</span>
+          </a>
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  /* Darkroom Theme - Deep blacks with subtle red safelight glow */
+  html.darkroom {
+    background: #0a0a0a;
+  }
+
+  html.darkroom body {
+    margin: 0;
+    padding: 0;
+    background: #0a0a0a;
+    color: #c4c4c4;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+  }
+
+  /* Subtle film grain texture */
+  html.darkroom body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    z-index: 1;
+  }
+
+  /* Navigation */
+  .film-nav {
+    position: relative;
+    z-index: 10;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+
+  .nav-container {
+    max-width: 42rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(139, 0, 0, 0.15);
+  }
+
+  .nav-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8b0000;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .nav-about {
+    font-size: 0.95rem;
+    color: #b8b8b8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .nav-about:hover {
+    color: #c05050;
+  }
+
+  .darkroom-container {
+    min-height: 100vh;
+    padding: 2rem 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .film-content {
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+
+  .breadcrumb {
+    margin-bottom: 2rem;
+  }
+
+  .breadcrumb-link {
+    font-size: 0.95rem;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .breadcrumb-link:hover {
+    color: #c05050;
+  }
+
+  .film-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(139, 0, 0, 0.2);
+    padding-bottom: 2rem;
+  }
+
+  .film-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: #e8e8e8;
+    letter-spacing: -0.02em;
+    text-shadow: 0 0 20px rgba(139, 0, 0, 0.15);
+  }
+
+  .film-date {
+    display: block;
+    font-size: 0.875rem;
+    color: #8b0000;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+
+  .film-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .meta-label {
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+
+  .meta-value {
+    font-size: 0.95rem;
+    color: #b8b8b8;
+  }
+
+  .film-body {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: #b8b8b8;
+  }
+
+  .film-body p {
+    margin: 1.5rem 0;
+  }
+
+  .film-body p:first-child {
+    font-size: 1.15rem;
+    color: #c8c8c8;
+  }
+
+  .film-body a {
+    color: #a04040;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(160, 64, 64, 0.3);
+    transition: all 0.2s ease;
+  }
+
+  .film-body a:hover {
+    color: #c05050;
+    border-bottom-color: #c05050;
+  }
+
+  .film-body strong {
+    color: #d0d0d0;
+    font-weight: 600;
+  }
+
+  .film-body em {
+    color: #c0c0c0;
+    font-style: italic;
+  }
+
+  .film-body h2,
+  .film-body h3,
+  .film-body h4 {
+    color: #d8d8d8;
+    margin: 2.5rem 0 1rem 0;
+    line-height: 1.3;
+  }
+
+  .film-body h2 {
+    font-size: 1.75rem;
+    border-bottom: 1px solid rgba(139, 0, 0, 0.15);
+    padding-bottom: 0.5rem;
+  }
+
+  .film-body h3 {
+    font-size: 1.35rem;
+  }
+
+  .film-body code {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #c8c8c8;
+    font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  }
+
+  .film-body pre {
+    background: #141414;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    padding: 1.25rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+
+  .film-body pre code {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .film-body blockquote {
+    border-left: 3px solid #8b0000;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    color: #a8a8a8;
+    font-style: italic;
+  }
+
+  .film-body ul,
+  .film-body ol {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .film-body li {
+    margin: 0.5rem 0;
+  }
+
+  .film-body img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 4px;
+  }
+
+  .film-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(139, 0, 0, 0.15);
+    text-align: center;
+  }
+
+  .instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #b8b8b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+
+  .instagram-link:hover {
+    color: #c05050;
+  }
+
+  .instagram-link svg {
+    stroke: currentColor;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .film-nav {
+      padding: 1.25rem 1rem 0 1rem;
+    }
+
+    .nav-title {
+      font-size: 0.875rem;
+    }
+
+    .nav-about {
+      font-size: 0.875rem;
+    }
+
+    .darkroom-container {
+      padding: 1.5rem 1rem;
+    }
+
+    .film-title {
+      font-size: 2rem;
+    }
+
+    .film-meta {
+      gap: 1rem;
+    }
+
+    .film-body {
+      font-size: 1rem;
+    }
+
+    .film-body p:first-child {
+      font-size: 1.0625rem;
+    }
+  }
+</style>

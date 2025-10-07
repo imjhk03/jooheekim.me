@@ -1,0 +1,253 @@
+---
+import { getCollection } from "astro:content";
+import { SITE } from "@/config";
+import IconInstagram from "@/assets/icons/IconInstagram.svg";
+
+const films = await getCollection("films");
+const sortedFilms = films.sort((a, b) =>
+  b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<!doctype html>
+<html dir={SITE.dir} lang={SITE.lang ?? "en"} class="darkroom">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Films | {SITE.title}</title>
+    <meta name="title" content={`Films | ${SITE.title}`} />
+    <meta name="description" content="Film photography collection" />
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body>
+    <nav class="film-nav">
+      <div class="nav-container">
+        <span class="nav-title">Film</span>
+        <a href="/" class="nav-about">Home</a>
+      </div>
+    </nav>
+
+    <main class="darkroom-container">
+      <section id="films" class="film-content">
+        <h1 class="films-page-title">Film Photography</h1>
+        <p class="films-page-description">My journey with film camera.</p>
+
+        <div class="instagram-badge">
+          <a
+            href="https://instagram.com/jhk.studio"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="instagram-link"
+            aria-label="Follow on Instagram"
+          >
+            <IconInstagram width={20} height={20} />
+            <span>@jhk.studio</span>
+          </a>
+        </div>
+
+        {sortedFilms.length === 0 ? (
+          <p class="no-films">No film rolls yet.</p>
+        ) : (
+          <div class="films-grid">
+            {sortedFilms.map((film) => (
+              <article class="film-card">
+                <a href={`/films/${film.id}`} class="film-card-link">
+                  <h2 class="film-card-title">
+                    {film.data.title}
+                  </h2>
+                </a>
+              </article>
+            ))}
+          </div>
+        )}
+      </section>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  /* Darkroom Theme - Deep blacks with subtle red safelight glow */
+  html.darkroom {
+    background: #0a0a0a;
+  }
+
+  html.darkroom body {
+    margin: 0;
+    padding: 0;
+    background: #0a0a0a;
+    color: #c4c4c4;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+  }
+
+  /* Subtle film grain texture */
+  html.darkroom body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    z-index: 1;
+  }
+
+  /* Navigation */
+  .film-nav {
+    position: relative;
+    z-index: 10;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+
+  .nav-container {
+    max-width: 42rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(139, 0, 0, 0.15);
+  }
+
+  .nav-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8b0000;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .nav-about {
+    font-size: 0.95rem;
+    color: #b8b8b8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .nav-about:hover {
+    color: #c05050;
+  }
+
+  .darkroom-container {
+    min-height: 100vh;
+    padding: 2rem 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .film-content {
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+
+  .films-page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: #e8e8e8;
+    letter-spacing: -0.02em;
+    text-shadow: 0 0 20px rgba(139, 0, 0, 0.15);
+  }
+
+  .films-page-description {
+    color: #b0b0b0;
+    font-size: 1.0625rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .instagram-badge {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(139, 0, 0, 0.2);
+  }
+
+  .instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #b8b8b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+
+  .instagram-link:hover {
+    color: #c05050;
+  }
+
+  .instagram-link svg {
+    stroke: currentColor;
+  }
+
+  .no-films {
+    color: #888;
+    font-style: italic;
+  }
+
+  .films-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .film-card {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(139, 0, 0, 0.1);
+  }
+
+  .film-card:last-child {
+    border-bottom: none;
+  }
+
+  .film-card-link {
+    display: block;
+    text-decoration: none;
+  }
+
+  .film-card-link:hover .film-card-title {
+    color: #c05050;
+  }
+
+  .film-card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0;
+    color: #d0d0d0;
+    transition: color 0.2s ease;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .film-nav {
+      padding: 1.25rem 1rem 0 1rem;
+    }
+
+    .nav-title {
+      font-size: 0.875rem;
+    }
+
+    .nav-about {
+      font-size: 0.875rem;
+    }
+
+    .darkroom-container {
+      padding: 1.5rem 1rem;
+    }
+
+    .films-page-title {
+      font-size: 2rem;
+    }
+
+    .film-card-title {
+      font-size: 1.5rem;
+    }
+
+    .film-card-meta {
+      gap: 1rem;
+    }
+  }
+</style>

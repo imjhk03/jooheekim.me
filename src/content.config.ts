@@ -3,6 +3,7 @@ import { glob } from "astro/loaders";
 import { SITE } from "@/config";
 
 export const BLOG_PATH = "src/data/blog";
+export const FILMS_PATH = "src/data/films";
 
 const blog = defineCollection({
   loader: glob({ pattern: "**/[^_]*.md", base: `./${BLOG_PATH}` }),
@@ -30,4 +31,19 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = { blog };
+const films = defineCollection({
+  loader: glob({ pattern: "**/[^_]*.md", base: `./${FILMS_PATH}` }),
+  schema: () =>
+    z.object({
+      title: z.string(),
+      date: z.date(),
+      camera: z.string().optional(),
+      film: z.string().optional(),
+      developed: z.string().optional(),
+      location: z.string().optional(),
+      description: z.string().optional(),
+      images: z.array(z.string()).optional(),
+    }),
+});
+
+export const collections = { blog, films };

@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.3.0] - 2025-10-07
+
+### Added
+- Film photography section with dedicated darkroom-inspired theme
+- Films collection schema with metadata (camera, film, developed date, location)
+- Films listing page at `/films` with minimal post title display
+- Individual film post layout with full metadata and image gallery support
+- Breadcrumb navigation for easy navigation between films pages
+- Instagram icon and @jhk.studio integration in film pages
+- Film grain texture overlay effect for darkroom atmosphere
+- Responsive image sizing to fit properly within layout
+
+### Changed
+- Films section navigation links to `/films` listing instead of about page
+- Films listing page shows "Home" link to return to main site
+
 ## [2.2.0] - 2025-10-02
 
 ### Added
