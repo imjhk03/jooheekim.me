@@ -5,7 +5,7 @@ import IconInstagram from "@/assets/icons/IconInstagram.svg";
 
 const films = await getCollection("films");
 const sortedFilms = films.sort((a, b) =>
-  b.data.date.valueOf() - a.data.date.valueOf()
+  a.data.date.valueOf() - b.data.date.valueOf()
 );
 ---
 
@@ -50,15 +50,14 @@ const sortedFilms = films.sort((a, b) =>
         {sortedFilms.length === 0 ? (
           <p class="no-films">No film rolls yet.</p>
         ) : (
-          <div class="films-grid">
-            {sortedFilms.map((film) => (
-              <article class="film-card">
-                <a href={`/films/${film.id}`} class="film-card-link">
-                  <h2 class="film-card-title">
-                    {film.data.title}
-                  </h2>
+          <div class="films-inline">
+            {sortedFilms.map((film, index) => (
+              <>
+                <a href={`/films/${film.id}`} class="film-inline-link">
+                  #{index + 1}
                 </a>
-              </article>
+                {index < sortedFilms.length - 1 && <span class="film-separator">, </span>}
+              </>
             ))}
           </div>
         )}
@@ -188,36 +187,24 @@ const sortedFilms = films.sort((a, b) =>
     font-style: italic;
   }
 
-  .films-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  .films-inline {
+    font-size: 1.125rem;
+    line-height: 1.8;
   }
 
-  .film-card {
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(139, 0, 0, 0.1);
-  }
-
-  .film-card:last-child {
-    border-bottom: none;
-  }
-
-  .film-card-link {
-    display: block;
+  .film-inline-link {
+    color: #d0d0d0;
     text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 500;
   }
 
-  .film-card-link:hover .film-card-title {
+  .film-inline-link:hover {
     color: #c05050;
   }
 
-  .film-card-title {
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin: 0;
-    color: #d0d0d0;
-    transition: color 0.2s ease;
+  .film-separator {
+    color: #888;
   }
 
   /* Responsive adjustments */
@@ -242,12 +229,8 @@ const sortedFilms = films.sort((a, b) =>
       font-size: 2rem;
     }
 
-    .film-card-title {
-      font-size: 1.5rem;
-    }
-
-    .film-card-meta {
-      gap: 1rem;
+    .films-inline {
+      font-size: 1rem;
     }
   }
 </style>

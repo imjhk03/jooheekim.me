@@ -4,10 +4,6 @@ import IconGitHub from "@/assets/icons/IconGitHub.svg";
 import IconBrandX from "@/assets/icons/IconBrandX.svg";
 import IconBlueSky from "@/assets/icons/IconBluesky.svg";
 import IconMastodon from "@/assets/icons/IconMastodon.svg";
-import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
-import IconFacebook from "@/assets/icons/IconFacebook.svg";
-import IconTelegram from "@/assets/icons/IconTelegram.svg";
-import IconPinterest from "@/assets/icons/IconPinterest.svg";
 import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
 import { SITE } from "@/config";
 
