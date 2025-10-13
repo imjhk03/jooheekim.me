@@ -1,7 +1,7 @@
 ---
 title: "수술 한 달 후: 첫 세일을 시작한다"
 description: "회복 근황과 앱 출시 후 시도하는 것"
-pubDatetime: 2025-10-14T00:00:00Z
+pubDatetime: 2025-10-14T00:00:00+09:00
 heroImage: /images/2025/10/14/image1.jpg
 lang: ko
 translations:

@@ -1,7 +1,7 @@
 ---
 title: "One month after surgery: Running my first sale"
 description: "Recovery update and what I'm trying after the app launch"
-pubDatetime: 2025-10-14T00:00:00Z
+pubDatetime: 2025-10-14T00:00:00+09:00
 heroImage: /images/2025/10/14/image1.jpg
 lang: en
 translations:
