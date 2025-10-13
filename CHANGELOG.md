@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- "One month after surgery: Running my first sale" blog post (bilingual: English/Korean)
+- Blog post images for 2025-10-14 post (image1.jpg, image2.png)
+
 ## [2.3.0] - 2025-10-07
 
 ### Added
