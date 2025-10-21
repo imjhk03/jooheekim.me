@@ -5,7 +5,7 @@ import IconInstagram from "@/assets/icons/IconInstagram.svg";
 
 const films = await getCollection("films");
 const sortedFilms = films.sort((a, b) =>
-  a.data.date.valueOf() - b.data.date.valueOf()
+  b.data.date.valueOf() - a.data.date.valueOf()
 );
 ---
 
@@ -54,7 +54,7 @@ const sortedFilms = films.sort((a, b) =>
             {sortedFilms.map((film, index) => (
               <>
                 <a href={`/films/${film.id}`} class="film-inline-link">
-                  #{index + 1}
+                  #{sortedFilms.length - index}
                 </a>
                 {index < sortedFilms.length - 1 && <span class="film-separator">, </span>}
               </>
