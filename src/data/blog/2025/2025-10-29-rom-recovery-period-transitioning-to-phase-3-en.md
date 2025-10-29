@@ -82,4 +82,4 @@ The sale results weren't viral numbers, but I achieved my first revenue goal. I'
 **App Download:**  
 [I Need That Widget](https://apps.apple.com/us/app/i-need-that-widget/id6753172187)
 
-**This Week's Launch: v1.1 at $1.99 (October 29 - November 3)**
+**This Week's Launch: v1.1 at $1.99 (October 29 - November 10)**
