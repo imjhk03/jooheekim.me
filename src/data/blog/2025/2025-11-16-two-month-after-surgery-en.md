@@ -1,7 +1,7 @@
 ---
 title: "Two Months After Surgery: App Growth and Recovery Progress"
 description: "As my arm recovery progressed, I launched v1.1. The Reddit response was excellent and sales grew significantly, but I learned that sustained growth requires ASO and consistent marketing."
-pubDatetime: 2025-11-04T00:00:00+09:00
+pubDatetime: 2025-11-16T00:00:00+09:00
 heroImage: /images/2025/11/16/image1.jpeg
 lang: en
 translations:
