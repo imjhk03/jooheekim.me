@@ -1,7 +1,7 @@
 ---
 title: "수술 두 달 후: 앱 성장과 재활 속도"
 description: "팔 회복이 진행되면서 1.1 업데이트를 출시했다. Reddit 반응이 좋아 판매가 크게 늘었지만, 지속적인 성장을 위해서는 ASO와 꾸준한 마케팅이 필요하다는 것을 배웠다."
-pubDatetime: 2025-11-16:00:00+09:00
+pubDatetime: 2025-11-16T00:00:00+09:00
 heroImage: /images/2025/11/16/image1.jpeg
 lang: ko
 translations:
