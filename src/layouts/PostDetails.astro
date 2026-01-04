@@ -67,17 +67,22 @@ const layoutProps = {
 
 /* ========== Prev/Next Posts ========== */
 
-const allPosts = posts.map(({ data: { title }, id, filePath }) => ({
+// Filter to only show English posts (or posts without lang) for consistent prev/next navigation
+const englishPosts = posts.filter(p => !p.data.lang || p.data.lang === "en");
+
+const allPosts = englishPosts.map(({ data: { title }, id, filePath }) => ({
   id,
   title,
   filePath,
 }));
 
-const currentPostIndex = allPosts.findIndex(a => a.id === post.id);
+// For Korean posts, find position using the English translation path
+const targetPath = lang === "ko" && translations?.en ? translations.en : getPath(post.id, post.filePath);
+const currentPostIndex = allPosts.findIndex(a => getPath(a.id, a.filePath) === targetPath);
 
-const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
+const prevPost = currentPostIndex > 0 ? allPosts[currentPostIndex - 1] : null;
 const nextPost =
-  currentPostIndex !== allPosts.length ? allPosts[currentPostIndex + 1] : null;
+  currentPostIndex >= 0 && currentPostIndex < allPosts.length - 1 ? allPosts[currentPostIndex + 1] : null;
 ---
 
 <Layout {...layoutProps}>
