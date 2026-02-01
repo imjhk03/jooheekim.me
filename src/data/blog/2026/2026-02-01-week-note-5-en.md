@@ -1,7 +1,7 @@
 ---
 title: "Week Note 5"
 description: "Routines that keep me going and setting up a new development workflow"
-pubDatetime: 2026-02-01T22:30:00+09:00
+pubDatetime: 2026-02-01T21:00:00+09:00
 lang: en
 translations:
   en: /posts/2026/2026-02-01-week-note-5-en
