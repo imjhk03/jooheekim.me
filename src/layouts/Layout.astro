@@ -114,7 +114,9 @@ const structuredData = {
       href={new URL("rss.xml", Astro.site)}
     />
 
-    <meta name="apple-itunes-app" content="app-id=6753172187" />
+    {Astro.url.pathname === "/apps/" && (
+      <meta name="apple-itunes-app" content="app-id=6753172187" />
+    )}
     <meta name="theme-color" content="" />
 
     {
