@@ -12,12 +12,12 @@ All the apps I've built.
         <img
           src="/images/apps/INTW-AppIcon.png"
           alt="I Need That Widget App Icon"
-          class="w-full h-full object-cover dark:hidden"
+          class="w-full h-full object-cover border-0 dark:hidden"
         />
         <img
           src="/images/apps/INTW-AppIcon-dark.png"
           alt="I Need That Widget App Icon"
-          class="w-full h-full object-cover hidden dark:block"
+          class="w-full h-full object-cover border-0 hidden dark:block"
         />
       </div>
     </div>
@@ -34,7 +34,7 @@ All the apps I've built.
         <img
           src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
           alt="Download on the App Store"
-          class="h-10"
+          class="h-10 border-0"
         />
       </a>
     </div>
