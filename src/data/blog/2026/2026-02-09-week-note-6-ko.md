@@ -1,7 +1,7 @@
 ---
 title: "Week Note 6"
 description: "Waiting for spring, one small win at a time"
-pubDatetime: 2026-02-09T21:00:00+09:00
+pubDatetime: 2026-02-09T18:10:53+09:00
 lang: ko
 translations:
   en: /posts/2026/2026-02-09-week-note-6-en
