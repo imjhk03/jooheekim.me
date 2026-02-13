@@ -1,11 +1,14 @@
 ---
 import { getCollection } from "astro:content";
 import { SITE } from "@/config";
+import { slugifyStr } from "@/utils/slugify";
 
 const wikiEntries = await getCollection("wiki");
 const films = await getCollection("films");
 const bookCount = wikiEntries.length;
 const filmCount = films.length;
+
+const allTags = [...new Set(wikiEntries.flatMap(entry => entry.data.tags))].sort();
 ---
 
 <!doctype html>
@@ -58,6 +61,17 @@ const filmCount = films.length;
           </div>
         </a>
       </div>
+
+      {allTags.length > 0 && (
+        <section class="wiki-tags-section">
+          <h2 class="wiki-tags-title">Tags</h2>
+          <div class="wiki-tags-list">
+            {allTags.map(tag => (
+              <a href={`/wiki/tags/${slugifyStr(tag)}/`} class="wiki-tag-pill">{tag}</a>
+            ))}
+          </div>
+        </section>
+      )}
     </main>
   </body>
 </html>
@@ -219,6 +233,44 @@ const filmCount = films.length;
 
   .wiki-card:hover .card-arrow {
     transform: translateX(3px);
+  }
+
+  .wiki-tags-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #d4d0c8;
+  }
+
+  .wiki-tags-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #6a9e72;
+    margin: 0 0 1rem 0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .wiki-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .wiki-tag-pill {
+    font-size: 0.85rem;
+    color: #5c5040;
+    background: rgba(106, 158, 114, 0.1);
+    border: 1px solid rgba(106, 158, 114, 0.2);
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .wiki-tag-pill:hover {
+    background: rgba(106, 158, 114, 0.2);
+    border-color: rgba(106, 158, 114, 0.4);
+    color: #3d5a40;
   }
 
   @media (max-width: 640px) {

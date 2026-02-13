@@ -1,5 +1,6 @@
 ---
 import { SITE } from "@/config";
+import { slugifyStr } from "@/utils/slugify";
 
 export interface Props {
   title: string;
@@ -59,7 +60,7 @@ const ratingDots = (r: number) => "●".repeat(r) + "○".repeat(5 - r);
           {tags.length > 0 && (
             <div class="book-tags">
               {tags.map(tag => (
-                <span class="book-tag">{tag}</span>
+                <a href={`/wiki/tags/${slugifyStr(tag)}/`} class="book-tag">{tag}</a>
               ))}
             </div>
           )}
@@ -203,6 +204,12 @@ const ratingDots = (r: number) => "●".repeat(r) + "○".repeat(5 - r);
     padding: 0.2rem 0.6rem;
     border-radius: 3px;
     letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .book-tag:hover {
+    background: rgba(139, 105, 20, 0.18);
   }
 
   .book-body {

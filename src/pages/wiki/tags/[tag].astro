@@ -1,12 +1,28 @@
 ---
 import { getCollection } from "astro:content";
 import { SITE } from "@/config";
-import { slugifyStr } from "@/utils/slugify";
+import { slugifyStr, slugifyAll } from "@/utils/slugify";
 
-const wikiEntries = await getCollection("wiki");
-const books = wikiEntries.sort(
-  (a, b) => b.data.dateRead.valueOf() - a.data.dateRead.valueOf()
-);
+export async function getStaticPaths() {
+  const wikiEntries = await getCollection("wiki");
+
+  const tagSet = new Set<string>();
+  wikiEntries.forEach(entry => {
+    entry.data.tags.forEach(tag => tagSet.add(tag));
+  });
+
+  return [...tagSet].map(tag => ({
+    params: { tag: slugifyStr(tag) },
+    props: {
+      tagName: tag,
+      books: wikiEntries
+        .filter(entry => slugifyAll(entry.data.tags).includes(slugifyStr(tag)))
+        .sort((a, b) => b.data.dateRead.valueOf() - a.data.dateRead.valueOf()),
+    },
+  }));
+}
+
+const { tagName, books } = Astro.props;
 
 const ratingDots = (rating: number) => {
   return "●".repeat(rating) + "○".repeat(5 - rating);
@@ -20,9 +36,9 @@ const ratingDots = (rating: number) => {
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>Book Notes | {SITE.title}</title>
-    <meta name="title" content={`Book Notes | ${SITE.title}`} />
-    <meta name="description" content="Notes and takeaways from books I've read" />
+    <title>Tag: {tagName} | {SITE.title}</title>
+    <meta name="title" content={`Tag: ${tagName} | ${SITE.title}`} />
+    <meta name="description" content={`Wiki entries tagged "${tagName}"`} />
   </head>
   <body>
     <nav class="reading-nav">
@@ -37,41 +53,37 @@ const ratingDots = (rating: number) => {
         <a href="/wiki/" class="breadcrumb-link">&larr; Back to Wiki</a>
       </nav>
 
-      <section class="books-content">
-        <h1 class="books-page-title">Book Notes</h1>
-        <p class="books-page-description">Notes and takeaways from books I've read.</p>
+      <section class="tag-content">
+        <h1 class="tag-page-title">Tag: {tagName}</h1>
+        <p class="tag-page-description">{books.length} {books.length === 1 ? "entry" : "entries"}</p>
 
-        {books.length === 0 ? (
-          <p class="no-books">No book notes yet.</p>
-        ) : (
-          <div class="books-list">
-            {books.map(book => (
-              <div class="book-card">
-                <a href={`/wiki/books/${book.id}`} class="book-card-link">
-                  <h2 class="book-title">{book.data.title}</h2>
-                  <p class="book-author">by {book.data.author}</p>
-                  <span class="book-rating" aria-label={`Rating: ${book.data.rating} out of 5`}>
-                    {ratingDots(book.data.rating)}
-                  </span>
-                  <p class="book-description">{book.data.description}</p>
-                  <time class="book-date" datetime={book.data.dateRead.toISOString()}>
-                    {book.data.dateRead.toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                    })}
-                  </time>
-                </a>
-                {book.data.tags.length > 0 && (
-                  <div class="book-card-tags">
-                    {book.data.tags.map(tag => (
-                      <a href={`/wiki/tags/${slugifyStr(tag)}/`} class="book-card-tag">{tag}</a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
+        <div class="books-list">
+          {books.map(book => (
+            <div class="book-card">
+              <a href={`/wiki/books/${book.id}`} class="book-card-link">
+                <h2 class="book-title">{book.data.title}</h2>
+                <p class="book-author">by {book.data.author}</p>
+                <span class="book-rating" aria-label={`Rating: ${book.data.rating} out of 5`}>
+                  {ratingDots(book.data.rating)}
+                </span>
+                <p class="book-description">{book.data.description}</p>
+                <time class="book-date" datetime={book.data.dateRead.toISOString()}>
+                  {book.data.dateRead.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                  })}
+                </time>
+              </a>
+              {book.data.tags.length > 0 && (
+                <div class="book-card-tags">
+                  {book.data.tags.map(tag => (
+                    <a href={`/wiki/tags/${slugifyStr(tag)}/`} class="book-card-tag">{tag}</a>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </section>
     </main>
   </body>
@@ -145,24 +157,19 @@ const ratingDots = (rating: number) => {
     color: #8b6914;
   }
 
-  .books-page-title {
+  .tag-page-title {
     font-size: 2.5rem;
     font-weight: 700;
-    margin: 0 0 0.75rem 0;
+    margin: 0 0 0.5rem 0;
     color: #3d3229;
     letter-spacing: -0.02em;
     font-family: Georgia, "Times New Roman", serif;
   }
 
-  .books-page-description {
+  .tag-page-description {
     color: #8a7b6b;
     font-size: 1.0625rem;
     margin: 0 0 2.5rem 0;
-  }
-
-  .no-books {
-    color: #8a7b6b;
-    font-style: italic;
   }
 
   .books-list {
@@ -187,30 +194,6 @@ const ratingDots = (rating: number) => {
     display: block;
     text-decoration: none;
     color: inherit;
-  }
-
-  .book-card-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-top: 0.75rem;
-    padding-top: 0.75rem;
-    border-top: 1px solid rgba(139, 105, 20, 0.1);
-  }
-
-  .book-card-tag {
-    font-size: 0.75rem;
-    color: #8b6914;
-    background: rgba(139, 105, 20, 0.08);
-    padding: 0.15rem 0.5rem;
-    border-radius: 3px;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    transition: background 0.2s ease;
-  }
-
-  .book-card-tag:hover {
-    background: rgba(139, 105, 20, 0.18);
   }
 
   .book-title {
@@ -247,6 +230,30 @@ const ratingDots = (rating: number) => {
     color: #a89880;
   }
 
+  .book-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(139, 105, 20, 0.1);
+  }
+
+  .book-card-tag {
+    font-size: 0.75rem;
+    color: #8b6914;
+    background: rgba(139, 105, 20, 0.08);
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease;
+  }
+
+  .book-card-tag:hover {
+    background: rgba(139, 105, 20, 0.18);
+  }
+
   @media (max-width: 640px) {
     .reading-nav {
       padding: 1.25rem 1rem 0 1rem;
@@ -256,7 +263,7 @@ const ratingDots = (rating: number) => {
       padding: 1.5rem 1rem 3rem;
     }
 
-    .books-page-title {
+    .tag-page-title {
       font-size: 2rem;
     }
   }
