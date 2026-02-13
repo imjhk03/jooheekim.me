@@ -1,0 +1,241 @@
+---
+import { getCollection } from "astro:content";
+import { SITE } from "@/config";
+
+const wikiEntries = await getCollection("wiki");
+const films = await getCollection("films");
+const bookCount = wikiEntries.length;
+const filmCount = films.length;
+---
+
+<!doctype html>
+<html dir={SITE.dir} lang={SITE.lang ?? "en"} class="wiki-garden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Wiki | {SITE.title}</title>
+    <meta name="title" content={`Wiki | ${SITE.title}`} />
+    <meta name="description" content="Digital garden — books, photography, and more" />
+  </head>
+  <body>
+    <nav class="wiki-nav">
+      <div class="nav-container">
+        <span class="nav-title">Wiki</span>
+        <a href="/" class="nav-link">Home</a>
+      </div>
+    </nav>
+
+    <main class="wiki-container">
+      <section class="wiki-hero">
+        <h1 class="wiki-page-title">Digital Garden</h1>
+        <p class="wiki-page-description">A personal digital garden where I plant loose thoughts and let them grow.</p>
+      </section>
+
+      <div class="wiki-grid">
+        <a href="/wiki/books/" class="wiki-card wiki-card--books">
+          <div class="card-accent"></div>
+          <div class="card-body">
+            <h2 class="card-title">Books</h2>
+            <p class="card-description">Notes and takeaways from books I've read.</p>
+            <div class="card-footer">
+              <span class="card-count">{bookCount} {bookCount === 1 ? "note" : "notes"}</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/films/" class="wiki-card wiki-card--photography">
+          <div class="card-accent"></div>
+          <div class="card-body">
+            <h2 class="card-title">Photography</h2>
+            <p class="card-description">Film photography from my analog camera collection.</p>
+            <div class="card-footer">
+              <span class="card-count">{filmCount} {filmCount === 1 ? "roll" : "rolls"}</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  html.wiki-garden {
+    background: #f0eee9;
+  }
+
+  html.wiki-garden body {
+    margin: 0;
+    padding: 0;
+    background: #f0eee9;
+    color: #2c2c2c;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+    line-height: 1.6;
+  }
+
+  .wiki-nav {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+
+  .wiki-nav .nav-container {
+    max-width: 42rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #d4d0c8;
+  }
+
+  .wiki-nav .nav-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6a9e72;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .wiki-nav .nav-link {
+    font-size: 0.95rem;
+    color: #8a8780;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .wiki-nav .nav-link:hover {
+    color: #6a9e72;
+  }
+
+  .wiki-container {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .wiki-hero {
+    margin-bottom: 3rem;
+  }
+
+  .wiki-page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+    color: #2c2c2c;
+    letter-spacing: -0.02em;
+  }
+
+  .wiki-page-description {
+    color: #8a8780;
+    font-size: 1.0625rem;
+    margin: 0;
+  }
+
+  .wiki-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .wiki-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #d4d0c8;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .wiki-card:hover {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .wiki-card--books:hover {
+    border-color: #c8e4ca;
+  }
+
+  .wiki-card--photography:hover {
+    border-color: #8b0000;
+  }
+
+  .card-accent {
+    height: 4px;
+  }
+
+  .wiki-card--books .card-accent {
+    background: #c8e4ca;
+  }
+
+  .wiki-card--photography .card-accent {
+    background: #8b0000;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: #2c2c2c;
+  }
+
+  .wiki-card--books .card-title {
+    color: #6a9e72;
+  }
+
+  .wiki-card--photography .card-title {
+    color: #8b0000;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+    color: #8a8780;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-count {
+    font-size: 0.8rem;
+    color: #a8a59e;
+    font-weight: 500;
+  }
+
+  .card-arrow {
+    font-size: 1.1rem;
+    color: #a8a59e;
+    transition: transform 0.2s ease;
+  }
+
+  .wiki-card:hover .card-arrow {
+    transform: translateX(3px);
+  }
+
+  @media (max-width: 640px) {
+    .wiki-nav {
+      padding: 1.25rem 1rem 0 1rem;
+    }
+
+    .wiki-container {
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    .wiki-page-title {
+      font-size: 2rem;
+    }
+
+    .wiki-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

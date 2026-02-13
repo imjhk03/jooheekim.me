@@ -1,0 +1,342 @@
+---
+import { SITE } from "@/config";
+
+export interface Props {
+  title: string;
+  description: string;
+  author: string;
+  dateRead: Date;
+  rating: number;
+  tags: string[];
+}
+
+const { title, description, author, dateRead, rating, tags } = Astro.props;
+
+const ratingDots = (r: number) => "●".repeat(r) + "○".repeat(5 - r);
+---
+
+<!doctype html>
+<html dir={SITE.dir} lang={SITE.lang ?? "en"} class="reading-room">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | {SITE.title}</title>
+    <meta name="title" content={`${title} | ${SITE.title}`} />
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <nav class="reading-nav">
+      <div class="nav-container">
+        <span class="nav-title">Wiki</span>
+        <a href="/" class="nav-link">Home</a>
+      </div>
+    </nav>
+
+    <main class="reading-container">
+      <nav class="breadcrumb">
+        <a href="/wiki/books/" class="breadcrumb-link">&larr; Back to Books</a>
+      </nav>
+
+      <article class="book-content">
+        <header class="book-header">
+          <h1 class="book-detail-title">{title}</h1>
+          <p class="book-detail-author">by {author}</p>
+
+          <div class="book-detail-meta">
+            <span class="book-detail-rating" aria-label={`Rating: ${rating} out of 5`}>
+              {ratingDots(rating)}
+            </span>
+            <time class="book-detail-date" datetime={dateRead.toISOString()}>
+              {dateRead.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+              })}
+            </time>
+          </div>
+
+          {tags.length > 0 && (
+            <div class="book-tags">
+              {tags.map(tag => (
+                <span class="book-tag">{tag}</span>
+              ))}
+            </div>
+          )}
+        </header>
+
+        <div class="book-body">
+          <slot />
+        </div>
+
+        <footer class="book-footer">
+          <a href="/" class="footer-link">jooheekim.me</a>
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  html.reading-room {
+    background: #faf6f0;
+  }
+
+  html.reading-room body {
+    margin: 0;
+    padding: 0;
+    background: #faf6f0;
+    color: #3d3229;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+  }
+
+  .reading-nav {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+
+  .reading-nav .nav-container {
+    max-width: 42rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(139, 105, 20, 0.2);
+  }
+
+  .reading-nav .nav-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8b6914;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .reading-nav .nav-link {
+    font-size: 0.95rem;
+    color: #8a7b6b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .reading-nav .nav-link:hover {
+    color: #8b6914;
+  }
+
+  .reading-container {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .reading-room .breadcrumb {
+    margin-bottom: 2rem;
+  }
+
+  .reading-room .breadcrumb-link {
+    font-size: 0.95rem;
+    color: #8a7b6b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .reading-room .breadcrumb-link:hover {
+    color: #8b6914;
+  }
+
+  .book-content {
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+
+  .book-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(139, 105, 20, 0.2);
+  }
+
+  .book-detail-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #3d3229;
+    letter-spacing: -0.02em;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  .book-detail-author {
+    font-size: 1.1rem;
+    color: #8a7b6b;
+    margin: 0 0 1rem 0;
+  }
+
+  .book-detail-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .book-detail-rating {
+    font-size: 1rem;
+    color: #8b6914;
+    letter-spacing: 0.1em;
+  }
+
+  .book-detail-date {
+    font-size: 0.875rem;
+    color: #a89880;
+    font-weight: 500;
+  }
+
+  .book-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .book-tag {
+    font-size: 0.75rem;
+    color: #8b6914;
+    background: rgba(139, 105, 20, 0.08);
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    letter-spacing: 0.02em;
+  }
+
+  .book-body {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: #3d3229;
+  }
+
+  .book-body p {
+    margin: 1.5rem 0;
+  }
+
+  .book-body a {
+    color: #8b6914;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(139, 105, 20, 0.3);
+    transition: all 0.2s ease;
+  }
+
+  .book-body a:hover {
+    color: #a67c00;
+    border-bottom-color: #a67c00;
+  }
+
+  .book-body strong {
+    color: #2c2418;
+    font-weight: 600;
+  }
+
+  .book-body em {
+    font-style: italic;
+  }
+
+  .book-body h2,
+  .book-body h3,
+  .book-body h4 {
+    color: #3d3229;
+    margin: 2.5rem 0 1rem 0;
+    line-height: 1.3;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  .book-body h2 {
+    font-size: 1.75rem;
+    border-bottom: 1px solid rgba(139, 105, 20, 0.15);
+    padding-bottom: 0.5rem;
+  }
+
+  .book-body h3 {
+    font-size: 1.35rem;
+  }
+
+  .book-body blockquote {
+    border-left: 3px solid #8b6914;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    color: #5c5040;
+    font-style: italic;
+  }
+
+  .book-body ul,
+  .book-body ol {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .book-body li {
+    margin: 0.5rem 0;
+  }
+
+  .book-body code {
+    background: rgba(139, 105, 20, 0.08);
+    border: 1px solid rgba(139, 105, 20, 0.15);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #3d3229;
+    font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  }
+
+  .book-body pre {
+    background: #f0ebe2;
+    border: 1px solid rgba(139, 105, 20, 0.15);
+    border-radius: 6px;
+    padding: 1.25rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+
+  .book-body pre code {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .book-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(139, 105, 20, 0.15);
+    text-align: center;
+  }
+
+  .footer-link {
+    font-size: 0.9rem;
+    color: #a89880;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-link:hover {
+    color: #8b6914;
+  }
+
+  @media (max-width: 640px) {
+    .reading-nav {
+      padding: 1.25rem 1rem 0 1rem;
+    }
+
+    .reading-container {
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    .book-detail-title {
+      font-size: 2rem;
+    }
+
+    .book-detail-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .book-body {
+      font-size: 1rem;
+    }
+  }
+</style>

@@ -1,0 +1,228 @@
+---
+import { getCollection } from "astro:content";
+import { SITE } from "@/config";
+
+const wikiEntries = await getCollection("wiki");
+const books = wikiEntries.sort(
+  (a, b) => b.data.dateRead.valueOf() - a.data.dateRead.valueOf()
+);
+
+const ratingDots = (rating: number) => {
+  return "●".repeat(rating) + "○".repeat(5 - rating);
+};
+---
+
+<!doctype html>
+<html dir={SITE.dir} lang={SITE.lang ?? "en"} class="reading-room">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Book Notes | {SITE.title}</title>
+    <meta name="title" content={`Book Notes | ${SITE.title}`} />
+    <meta name="description" content="Notes and takeaways from books I've read" />
+  </head>
+  <body>
+    <nav class="reading-nav">
+      <div class="nav-container">
+        <span class="nav-title">Wiki</span>
+        <a href="/" class="nav-link">Home</a>
+      </div>
+    </nav>
+
+    <main class="reading-container">
+      <nav class="breadcrumb">
+        <a href="/wiki/" class="breadcrumb-link">&larr; Back to Wiki</a>
+      </nav>
+
+      <section class="books-content">
+        <h1 class="books-page-title">Book Notes</h1>
+        <p class="books-page-description">Notes and takeaways from books I've read.</p>
+
+        {books.length === 0 ? (
+          <p class="no-books">No book notes yet.</p>
+        ) : (
+          <div class="books-list">
+            {books.map(book => (
+              <a href={`/wiki/books/${book.id}`} class="book-card">
+                <div class="book-card-body">
+                  <h2 class="book-title">{book.data.title}</h2>
+                  <p class="book-author">by {book.data.author}</p>
+                  <span class="book-rating" aria-label={`Rating: ${book.data.rating} out of 5`}>
+                    {ratingDots(book.data.rating)}
+                  </span>
+                  <p class="book-description">{book.data.description}</p>
+                  <time class="book-date" datetime={book.data.dateRead.toISOString()}>
+                    {book.data.dateRead.toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                    })}
+                  </time>
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
+      </section>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  html.reading-room {
+    background: #faf6f0;
+  }
+
+  html.reading-room body {
+    margin: 0;
+    padding: 0;
+    background: #faf6f0;
+    color: #3d3229;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+  }
+
+  .reading-nav {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+
+  .reading-nav .nav-container {
+    max-width: 42rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(139, 105, 20, 0.2);
+  }
+
+  .reading-nav .nav-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8b6914;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .reading-nav .nav-link {
+    font-size: 0.95rem;
+    color: #8a7b6b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .reading-nav .nav-link:hover {
+    color: #8b6914;
+  }
+
+  .reading-container {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .reading-room .breadcrumb {
+    margin-bottom: 2rem;
+  }
+
+  .reading-room .breadcrumb-link {
+    font-size: 0.95rem;
+    color: #8a7b6b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .reading-room .breadcrumb-link:hover {
+    color: #8b6914;
+  }
+
+  .books-page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+    color: #3d3229;
+    letter-spacing: -0.02em;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  .books-page-description {
+    color: #8a7b6b;
+    font-size: 1.0625rem;
+    margin: 0 0 2.5rem 0;
+  }
+
+  .no-books {
+    color: #8a7b6b;
+    font-style: italic;
+  }
+
+  .books-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .book-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.25rem;
+    border: 1px solid rgba(139, 105, 20, 0.15);
+    border-radius: 6px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .book-card:hover {
+    border-color: rgba(139, 105, 20, 0.35);
+    box-shadow: 0 2px 8px rgba(139, 105, 20, 0.08);
+  }
+
+  .book-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+    color: #3d3229;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  .book-author {
+    font-size: 0.9rem;
+    color: #8a7b6b;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .book-rating {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #8b6914;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .book-description {
+    font-size: 0.9rem;
+    color: #5c5040;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.5;
+  }
+
+  .book-date {
+    font-size: 0.8rem;
+    color: #a89880;
+  }
+
+  @media (max-width: 640px) {
+    .reading-nav {
+      padding: 1.25rem 1rem 0 1rem;
+    }
+
+    .reading-container {
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    .books-page-title {
+      font-size: 2rem;
+    }
+  }
+</style>

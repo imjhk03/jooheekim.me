@@ -1,0 +1,26 @@
+---
+import { render, getCollection } from "astro:content";
+import WikiLayout from "@/layouts/WikiLayout.astro";
+
+export async function getStaticPaths() {
+  const wiki = await getCollection("wiki");
+  return wiki.map(entry => ({
+    params: { id: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<WikiLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  author={entry.data.author}
+  dateRead={entry.data.dateRead}
+  rating={entry.data.rating}
+  tags={entry.data.tags}
+>
+  <Content />
+</WikiLayout>
