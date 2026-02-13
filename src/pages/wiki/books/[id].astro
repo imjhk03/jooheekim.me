@@ -1,17 +1,19 @@
 ---
 import { render, getCollection } from "astro:content";
 import WikiLayout from "@/layouts/WikiLayout.astro";
+import { getBacklinks } from "@/utils/getBacklinks";
 
 export async function getStaticPaths() {
   const wiki = await getCollection("wiki");
   return wiki.map(entry => ({
     params: { id: entry.id },
-    props: { entry },
+    props: { entry, allEntries: wiki },
   }));
 }
 
-const { entry } = Astro.props;
+const { entry, allEntries } = Astro.props;
 const { Content } = await render(entry);
+const backlinks = getBacklinks(entry.id, allEntries);
 ---
 
 <WikiLayout
@@ -21,6 +23,7 @@ const { Content } = await render(entry);
   dateRead={entry.data.dateRead}
   rating={entry.data.rating}
   tags={entry.data.tags}
+  backlinks={backlinks}
 >
   <Content />
 </WikiLayout>

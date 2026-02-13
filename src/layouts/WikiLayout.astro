@@ -1,6 +1,7 @@
 ---
 import { SITE } from "@/config";
 import { slugifyStr } from "@/utils/slugify";
+import type { Backlink } from "@/utils/getBacklinks";
 
 export interface Props {
   title: string;
@@ -9,9 +10,10 @@ export interface Props {
   dateRead: Date;
   rating: number;
   tags: string[];
+  backlinks?: Backlink[];
 }
 
-const { title, description, author, dateRead, rating, tags } = Astro.props;
+const { title, description, author, dateRead, rating, tags, backlinks = [] } = Astro.props;
 
 const ratingDots = (r: number) => "●".repeat(r) + "○".repeat(5 - r);
 ---
@@ -69,6 +71,19 @@ const ratingDots = (r: number) => "●".repeat(r) + "○".repeat(5 - r);
         <div class="book-body">
           <slot />
         </div>
+
+        {backlinks.length > 0 && (
+          <aside class="backlinks">
+            <h3 class="backlinks-title">Linked from</h3>
+            <ul class="backlinks-list">
+              {backlinks.map(link => (
+                <li>
+                  <a href={link.url} class="backlink-item">{link.title}</a>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )}
 
         <footer class="book-footer">
           <a href="/" class="footer-link">jooheekim.me</a>
@@ -303,6 +318,59 @@ const ratingDots = (r: number) => "●".repeat(r) + "○".repeat(5 - r);
     background: none;
     border: none;
     padding: 0;
+  }
+
+  .book-body a.wiki-link {
+    color: #8b6914;
+    text-decoration: none;
+    border-bottom: 1.5px dashed rgba(139, 105, 20, 0.4);
+  }
+
+  .book-body a.wiki-link:hover {
+    color: #a67c00;
+    border-bottom-style: solid;
+    border-bottom-color: #a67c00;
+  }
+
+  .backlinks {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: rgba(139, 105, 20, 0.04);
+    border: 1px solid rgba(139, 105, 20, 0.12);
+    border-radius: 6px;
+  }
+
+  .backlinks-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #8a7b6b;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.75rem 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .backlinks-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .backlink-item {
+    font-size: 0.875rem;
+    color: #8b6914;
+    background: rgba(139, 105, 20, 0.08);
+    padding: 0.25rem 0.75rem;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .backlink-item:hover {
+    background: rgba(139, 105, 20, 0.18);
   }
 
   .book-footer {
