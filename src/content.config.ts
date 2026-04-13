@@ -4,6 +4,7 @@ import { SITE } from "@/config";
 
 export const BLOG_PATH = "src/data/blog";
 export const FILMS_PATH = "src/data/films";
+export const WIKI_PATH = "src/data/wiki";
 
 const blog = defineCollection({
   loader: glob({ pattern: "**/[^_]*.md", base: `./${BLOG_PATH}` }),
@@ -46,4 +47,17 @@ const films = defineCollection({
     }),
 });
 
-export const collections = { blog, films };
+const wiki = defineCollection({
+  loader: glob({ pattern: "**/[^_]*.md", base: `./${WIKI_PATH}` }),
+  schema: () =>
+    z.object({
+      title: z.string(),
+      author: z.string(),
+      dateRead: z.date(),
+      rating: z.number().min(1).max(5),
+      description: z.string(),
+      tags: z.array(z.string()).default(["books"]),
+    }),
+});
+
+export const collections = { blog, films, wiki };
