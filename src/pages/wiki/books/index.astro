@@ -48,18 +48,33 @@ const ratingDots = (rating: number) => {
             {books.map(book => (
               <div class="book-card">
                 <a href={`/wiki/books/${book.id}`} class="book-card-link">
-                  <h2 class="book-title">{book.data.title}</h2>
-                  <p class="book-author">by {book.data.author}</p>
-                  <span class="book-rating" aria-label={`Rating: ${book.data.rating} out of 5`}>
-                    {ratingDots(book.data.rating)}
-                  </span>
-                  <p class="book-description">{book.data.description}</p>
-                  <time class="book-date" datetime={book.data.dateRead.toISOString()}>
-                    {book.data.dateRead.toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                    })}
-                  </time>
+                  <div class="book-card-main">
+                    <div class="book-card-copy">
+                      <h2 class="book-title">{book.data.title}</h2>
+                      <p class="book-author">by {book.data.author}</p>
+                      <span class="book-rating" aria-label={`Rating: ${book.data.rating} out of 5`}>
+                        {ratingDots(book.data.rating)}
+                      </span>
+                      <p class="book-description">{book.data.description}</p>
+                      <time class="book-date" datetime={book.data.dateRead.toISOString()}>
+                        {book.data.dateRead.toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                        })}
+                      </time>
+                    </div>
+
+                    {book.data.heroImage && (
+                      <div class="book-cover">
+                        <img
+                          src={book.data.heroImage}
+                          alt={`${book.data.title} cover`}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    )}
+                  </div>
                 </a>
                 {book.data.tags.length > 0 && (
                   <div class="book-card-tags">
@@ -189,6 +204,34 @@ const ratingDots = (rating: number) => {
     color: inherit;
   }
 
+  .book-card-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 6rem;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .book-card-copy {
+    min-width: 0;
+  }
+
+  .book-cover {
+    width: 6rem;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid rgba(139, 105, 20, 0.15);
+    background: rgba(139, 105, 20, 0.06);
+    box-shadow: 0 3px 10px rgba(61, 50, 41, 0.08);
+  }
+
+  .book-cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .book-card-tags {
     display: flex;
     flex-wrap: wrap;
@@ -258,6 +301,15 @@ const ratingDots = (rating: number) => {
 
     .books-page-title {
       font-size: 2rem;
+    }
+
+    .book-card-main {
+      grid-template-columns: minmax(0, 1fr) 4.5rem;
+      gap: 0.875rem;
+    }
+
+    .book-cover {
+      width: 4.5rem;
     }
   }
 </style>

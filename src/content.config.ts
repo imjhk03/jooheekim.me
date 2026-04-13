@@ -56,6 +56,7 @@ const wiki = defineCollection({
       dateRead: z.date(),
       rating: z.number().min(1).max(5),
       description: z.string(),
+      heroImage: z.string().optional(),
       tags: z.array(z.string()).default(["books"]),
     }),
 });

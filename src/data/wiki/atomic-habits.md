@@ -1,30 +1,16 @@
 ---
-title: "Atomic Habits"
-author: "James Clear"
-dateRead: 2025-01-15
+title: "내게 없던 감각"
+author: "수전 배리 저자(글)·김명주 번역"
+dateRead: 2026-03-05
 rating: 4
-description: "An Easy & Proven Way to Build Good Habits & Break Bad Ones"
-tags: ["books", "self-improvement", "productivity"]
+draft: false
+description: "보는 법을 배운 소년, 듣는 법을 배운 소녀 그리고 우리가 세계를 인식하는 방법"
+heroImage: https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788934939528.jpg
+tags: ["도서", "과학", "교약과학", "뇌과학"]
 ---
 
-## Key Takeaways
+아주 어렸을 때 시각을 잃은 소년과 청각을 잃은 소녀의 이야기를 다룬다. 수술을 통해서 시각과 청각을 되찾으면서 세상을 보는 방법, 세상을 듣는 방법을 배워가는 과정의 이야기. 그러면서 시각과 청각 관련 과학 지식도 같이 이야기해준다. 읽으면서 과학과 인문이 같이 어우러지는 느낌이 들었다. 이야기가 흘러가면서 교육이 얼마나 중요한지 깨닫게 된다. 시각장애를 '상태'라고 표현한 문구가 인상 깊었다. 
 
-**The 1% rule**: Small improvements compound over time. Getting 1% better every day results in being 37 times better after a year. Conversely, getting 1% worse every day leads to decline.
+![image1](/wiki/books/내게없던감각/image1.jpeg)
 
-**The Four Laws of Behavior Change**:
-1. **Make it obvious** — Design your environment so cues for good habits are visible
-2. **Make it attractive** — Pair habits you need to do with habits you want to do
-3. **Make it easy** — Reduce friction for good habits, increase friction for bad ones
-4. **Make it satisfying** — Use immediate rewards to reinforce behavior
-
-## Personal Thoughts
-
-The most impactful idea for me was **identity-based habits** — instead of focusing on outcomes ("I want to lose weight"), focus on identity ("I am someone who moves every day"). The shift from *what you want to achieve* to *who you wish to become* makes habit formation feel less like a chore and more like self-expression.
-
-The concept of **habit stacking** (linking a new habit to an existing one) has been immediately practical. "After I pour my morning coffee, I will write for 10 minutes" works far better than vague intentions.
-
-## Favorite Quotes
-
-> "You do not rise to the level of your goals. You fall to the level of your systems."
-
-> "Every action you take is a vote for the type of person you wish to become."
+![image2](/wiki/books/내게없던감각/image2.jpeg)
