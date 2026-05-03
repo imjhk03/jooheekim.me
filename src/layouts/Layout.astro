@@ -134,6 +134,38 @@ const structuredData = {
     <ClientRouter />
 
     <script is:inline src="/toggle-theme.js"></script>
+    <script is:inline>
+      if ("modelContext" in navigator) {
+        navigator.modelContext.provideContext({
+          tools: [
+            {
+              name: "get_recent_posts",
+              description:
+                "Fetch the RSS feed listing recent blog posts from jooheekim.me",
+              inputSchema: { type: "object", properties: {} },
+              execute: async () => {
+                const res = await fetch("/rss.xml");
+                return {
+                  content: [{ type: "text", text: await res.text() }],
+                };
+              },
+            },
+            {
+              name: "get_sitemap",
+              description:
+                "Fetch the sitemap index listing all pages on jooheekim.me",
+              inputSchema: { type: "object", properties: {} },
+              execute: async () => {
+                const res = await fetch("/sitemap-index.xml");
+                return {
+                  content: [{ type: "text", text: await res.text() }],
+                };
+              },
+            },
+          ],
+        });
+      }
+    </script>
   </head>
   <body>
     <slot />
