@@ -1,0 +1,19 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://jooheekim.me/",
+      "alternate": [
+        {
+          "href": "https://jooheekim.me/rss.xml",
+          "type": "application/rss+xml"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://jooheekim.me/sitemap-index.xml",
+          "type": "application/xml"
+        }
+      ]
+    }
+  ]
+}

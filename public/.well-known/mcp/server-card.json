@@ -1,0 +1,17 @@
+{
+  "serverInfo": {
+    "name": "Joohee Kim Blog",
+    "version": "1.0.0",
+    "description": "Personal blog of Joohee Kim — software, writing, photography"
+  },
+  "transport": {
+    "type": "http",
+    "url": "https://jooheekim.me/"
+  },
+  "capabilities": {
+    "resources": {
+      "rss": "https://jooheekim.me/rss.xml",
+      "sitemap": "https://jooheekim.me/sitemap-index.xml"
+    }
+  }
+}
