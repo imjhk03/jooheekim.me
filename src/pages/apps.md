@@ -26,7 +26,7 @@ All the apps I've built.
       <p class="text-sm opacity-80 mb-1">iOS • SwiftUI</p>
       <p class="mb-3">See your calendar events and reminders at a glance with widgets.</p>
       <a
-        href="https://apps.apple.com/us/app/i-need-that-widget/id6753172187"
+        href="https://apps.apple.com/app/apple-store/id6753172187"
         target="_blank"
         rel="noopener noreferrer"
         class="inline-block"

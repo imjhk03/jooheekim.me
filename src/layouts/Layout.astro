@@ -29,6 +29,11 @@ const {
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.url);
+const isAppsPage =
+  Astro.url.pathname === "/apps" || Astro.url.pathname === "/apps/";
+const appStoreURL = "https://apps.apple.com/app/apple-store/id6753172187";
+const appDescription =
+  "See your calendar events and reminders at a glance with widgets.";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -92,11 +97,23 @@ const structuredData = {
     }
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={socialImageURL} />
+    {isAppsPage ? (
+      <>
+        <meta name="twitter:card" content="app" />
+        <meta name="twitter:description" content={appDescription} />
+        <meta name="twitter:app:name:iphone" content="I Need That Widget" />
+        <meta name="twitter:app:id:iphone" content="6753172187" />
+        <meta name="twitter:app:url:iphone" content={appStoreURL} />
+      </>
+    ) : (
+      <>
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={canonicalURL} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={socialImageURL} />
+      </>
+    )}
 
     <!-- Google JSON-LD Structured data -->
     <script
@@ -114,9 +131,7 @@ const structuredData = {
       href={new URL("rss.xml", Astro.site)}
     />
 
-    {Astro.url.pathname === "/apps/" && (
-      <meta name="apple-itunes-app" content="app-id=6753172187" />
-    )}
+    {isAppsPage && <meta name="apple-itunes-app" content="app-id=6753172187" />}
     <meta name="theme-color" content="" />
 
     {
