@@ -31,7 +31,6 @@ const {
 const socialImageURL = new URL(ogImage, Astro.url);
 const isAppsPage =
   Astro.url.pathname === "/apps" || Astro.url.pathname === "/apps/";
-const appStoreURL = "https://apps.apple.com/app/apple-store/id6753172187";
 const appDescription =
   "See your calendar events and reminders at a glance with widgets.";
 
@@ -100,10 +99,10 @@ const structuredData = {
     {isAppsPage ? (
       <>
         <meta name="twitter:card" content="app" />
+        <meta name="twitter:site" content="@_jooheekim_" />
         <meta name="twitter:description" content={appDescription} />
         <meta name="twitter:app:name:iphone" content="I Need That Widget" />
         <meta name="twitter:app:id:iphone" content="6753172187" />
-        <meta name="twitter:app:url:iphone" content={appStoreURL} />
       </>
     ) : (
       <>
