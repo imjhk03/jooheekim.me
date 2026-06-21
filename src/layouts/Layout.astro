@@ -31,14 +31,19 @@ const {
 const socialImageURL = new URL(ogImage, Astro.url);
 const isAppsPage =
   Astro.url.pathname === "/apps" || Astro.url.pathname === "/apps/";
+const appTitle = "I Need That Widget";
 const appDescription =
   "See your calendar events and reminders at a glance with widgets.";
+const appImageURL = new URL("/images/apps/INTW-AppIcon.png", Astro.url);
+const socialTitle = isAppsPage ? appTitle : title;
+const socialDescription = isAppsPage ? appDescription : description;
+const socialPreviewImageURL = isAppsPage ? appImageURL : socialImageURL;
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: `${title}`,
-  image: `${socialImageURL}`,
+  headline: `${socialTitle}`,
+  image: `${socialPreviewImageURL}`,
   datePublished: `${pubDatetime?.toISOString()}`,
   ...(modDatetime && { dateModified: modDatetime.toISOString() }),
   author: [
@@ -66,16 +71,16 @@ const structuredData = {
 
     <!-- General Meta Tags -->
     <title>{title}</title>
-    <meta name="title" content={title} />
-    <meta name="description" content={description} />
+    <meta name="title" content={socialTitle} />
+    <meta name="description" content={socialDescription} />
     <meta name="author" content={author} />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:title" content={socialTitle} />
+    <meta property="og:description" content={socialDescription} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:image" content={socialImageURL} />
+    <meta property="og:image" content={socialPreviewImageURL} />
 
     <!-- Article Published/Modified time -->
     {
@@ -100,8 +105,11 @@ const structuredData = {
       <>
         <meta name="twitter:card" content="app" />
         <meta name="twitter:site" content="@_jooheekim_" />
+        <meta name="twitter:creator" content="@_jooheekim_" />
+        <meta name="twitter:title" content={appTitle} />
         <meta name="twitter:description" content={appDescription} />
-        <meta name="twitter:app:name:iphone" content="I Need That Widget" />
+        <meta name="twitter:image" content={appImageURL} />
+        <meta name="twitter:app:name:iphone" content={appTitle} />
         <meta name="twitter:app:id:iphone" content="6753172187" />
       </>
     ) : (
