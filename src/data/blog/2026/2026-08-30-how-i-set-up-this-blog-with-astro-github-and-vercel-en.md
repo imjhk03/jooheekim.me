@@ -413,10 +413,11 @@ A **commit** is a saved snapshot. The words after `-m` explain what was saved.
 
 Before committing, look at the files listed by the two checking commands. Continue only if they are files you meant to share. Do not commit `.env` files, passwords, access tokens, private keys, or personal files. If you find one, stop and remove it from the staged list before continuing.
 
-Connect the computer folder to the GitHub repository:
+Connect the computer folder to the GitHub repository. Before running this command, replace `YOUR-USERNAME/YOUR-REPOSITORY` with your own GitHub username and repository name. These are placeholders, so do not run the command unchanged:
 
 ```bash
-git remote add origin https://github.com/{YOUR-USERNAME}/{YOUR-REPOSITORY}.git
+GITHUB_REPO="YOUR-USERNAME/YOUR-REPOSITORY"
+git remote add origin "https://github.com/${GITHUB_REPO}.git"
 git remote -v
 ```
 
@@ -589,8 +590,11 @@ Then follow this recipe:
 14. Authenticate with `gh auth login`, choose HTTPS and browser login, then run `gh auth setup-git`. If browser sign-in is unavailable, stop and ask the person to complete an approved authentication method. Never ask the person to paste a token into the agent chat, and never save it in the project.
 15. If the person has asked for GitHub setup, verify that `GITHUB_REPO` is an empty repository. If it does not exist, ask the person to create it or explicitly authorize creating it; never guess its visibility. Add the remote only when there is no existing `origin`:
 
+    Set `GITHUB_REPO` to the person's actual GitHub username and repository name. Do not run the command while it still contains placeholder text such as `YOUR-USERNAME` or `YOUR-REPOSITORY`:
+
     ```bash
-    git remote add origin https://github.com/{YOUR-USERNAME}/{YOUR-REPOSITORY}.git
+    GITHUB_REPO="YOUR-USERNAME/YOUR-REPOSITORY"
+    git remote add origin "https://github.com/${GITHUB_REPO}.git"
     git remote -v
     ```
 
