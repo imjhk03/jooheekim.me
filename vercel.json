@@ -3,13 +3,6 @@
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "redirects": [
-    {
-      "source": "/posts/2026-09-06-week-note-36-ko",
-      "destination": "/posts/2026/2026-09-06-week-note-36-ko/",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
