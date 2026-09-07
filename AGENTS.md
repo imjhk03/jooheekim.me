@@ -85,6 +85,12 @@ Layout.astro (root HTML, meta tags, OG, JSON-LD)
 3. 이중언어인 경우 en/ko 파일 쌍으로 생성
 4. `npm run build`로 빌드 검증
 
+### Week Note Safety Checks
+- 새 주간회고는 직전 주간회고의 en/ko 파일을 템플릿으로 복사한 뒤 날짜, 번호, 내용만 수정한다.
+- `translations` 경로를 새로 수기로 조합하지 말고, 실제 파일명과 연도 디렉터리에서 확인한다.
+- en/ko 양쪽 파일의 `translations.en`과 `translations.ko`가 서로 같은 경로를 가리키는지 확인한다.
+- 빌드 후 `dist/posts/[year]/`에 en/ko 페이지가 모두 생성되는지 확인하고, 영어 페이지의 KOR 링크도 검사한다.
+
 ### File Naming Convention
 - 단일 언어: `YYYY-MM-DD-slug.md`
 - 이중언어: `YYYY-MM-DD-slug-en.md` + `YYYY-MM-DD-slug-ko.md`
