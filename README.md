@@ -8,7 +8,7 @@ I'm Joohee Kim (김주희), an iOS engineer living in South Korea. Currently exp
 
 ## Tech Stack
 
-- **Framework**: [Astro](https://astro.build/) v5.13.10
+- **Framework**: [Astro](https://astro.build/) v7.3.2
 - **Theme**: [AstroPaper](https://github.com/satnaing/astro-paper)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) v4.1.11
 - **Deployment**: [Vercel](https://vercel.com)
