@@ -2,7 +2,7 @@
 title: "ROM Recovery Period: Building v1.1 and Transitioning to Phase 3"
 description: "Shipping user-requested features, learning what works in indie marketing, and preparing for the strength recovery phase"
 pubDatetime: 2025-10-29T00:00:00+09:00
-heroImage: /images/2025/10/29/image1.jpeg
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image1.jpeg
 lang: en
 translations:
   en: /posts/2025/2025-10-29-rom-recovery-period-transitioning-to-phase-3-en
@@ -10,7 +10,7 @@ translations:
 tags: [blog]
 ---
 
-![image1](/images/2025/10/29/image1.jpeg)
+![image1](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image1.jpeg)
 
 ## Six Weeks After Surgery
 
@@ -21,7 +21,7 @@ I've finally removed the brace. I apply ointment to the surgical site daily, can
 Phase 2 (ROM Recovery Period) is coming to an end, and I'm transitioning into Phase 3 (Strength Recovery Period). Recovery is slower than I anticipated, but I'm genuinely surprised that I've managed to build and launch an app throughout this process.
 
 ## Sale Results and v1.1 Development
-![image2](/images/2025/10/29/image2.png)
+![image2](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image2.png)
 Over the past two weeks, I ran a sale while simultaneously developing v1.1. Working one-handed meant fatigue accumulated toward the end, but I managed to finish well.
 
 For two weeks after launch, downloads remained at zero. I couldn't determine if the app was bad, if pricing was the problem, or if simply no one knew about it. So I decided to run a sale to test my hypotheses.
@@ -52,23 +52,23 @@ While I can type with both hands, I can't do so for extended periods, which mean
 Initially, I referenced official documentation and blogs to configure things step by step. I set up the status line to display current work status, model, and token usage at a glance, and added a configuration to automatically show todos. I also created a code review Agent to examine code by feature. Everything has been running smoothly so far, so I plan to continue using it.
 
 **First tried using agents:**
-![image3](/images/2025/10/29/image3.png)
+![image3](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image3.png)
 
 **Showing todos looks good to track:**
-![image4](/images/2025/10/29/image4.png)
+![image4](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image4.png)
 
 **Status line:**
-![image5](/images/2025/10/29/image5.png)
+![image5](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image5.png)
 
 **Sometimes Claude Code needs some logs:**
-![image6](/images/2025/10/29/image6.png)
+![image6](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image6.png)
 
 I also tried Cursor's Codex midway through. However, whether I failed to communicate my requirements properly or there wasn't enough context, it didn't produce what I wanted. I asked it to understand the project first and create a new widget in the existing design style, but it generated something completely off-target. I eventually returned to Claude Code. I'll need to research Codex more thoroughly with a different project when I have time.
 
 I intended to study ASO (App Store Optimization) as well, but focusing on development left little room for it. Fortunately, App Store Connect data showed my keyword search and page view metrics weren't bad. While it doesn't seem like an immediate problem, I need to continue monitoring trends.
 
 ## Transitioning to Phase 3
-![image7](/images/2025/10/29/image7.jpg)
+![image7](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image7.jpg)
 Though it took time, I successfully completed v1.1 development. Starting today, I'm launching the update with another sale. This time I'm testing a $1.99 price point and posting to Reddit's r/iosapps community. I'm curious to see if I'll reach a new user base and what kind of feedback will come in.
 
 What I realized while preparing this version is that fatigue accumulated more than I expected. My rehabilitation progress also slowed down. While app development is important, I've come to understand that if my body doesn't recover, I won't be able to sustain this long-term.

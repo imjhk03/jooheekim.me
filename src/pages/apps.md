@@ -10,12 +10,12 @@ All the apps I've built.
     <div class="flex-shrink-0">
       <div class="w-24 h-24 rounded-[20px] overflow-hidden shadow-lg">
         <img
-          src="/images/apps/INTW-iOS-Default-1024@1x.png"
+          src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/apps/INTW-iOS-Default-1024@1x.png"
           alt="I Need That Widget App Icon"
           class="w-full h-full object-cover border-0 dark:hidden"
         />
         <img
-          src="/images/apps/INTW-iOS-Dark-1024@1x.png"
+          src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/apps/INTW-iOS-Dark-1024@1x.png"
           alt="I Need That Widget App Icon"
           class="w-full h-full object-cover border-0 hidden dark:block"
         />

@@ -2,7 +2,7 @@
 title: "ROM 회복 기간: v1.1 개발과 Phase 3로의 전환"
 description: "유저 피드백 기반 기능 개발, 인디 마케팅에서 배운 것들, 그리고 근력 회복 단계 준비"
 pubDatetime: 2025-10-14T00:00:00+09:00
-heroImage: /images/2025/10/29/image1.jpeg
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image1.jpeg
 lang: ko
 translations:
   en: /posts/2025/2025-10-29-rom-recovery-period-transitioning-to-phase-3-en
@@ -10,7 +10,7 @@ translations:
 tags: [blog]
 ---
 
-![image1](/images/2025/10/29/image1.jpeg)
+![image1](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image1.jpeg)
 
 ## 6주 후 - ROM 회복 기간
 왼팔 수술한 지 6주가 지났다. 한 달이 지나고 난 뒤 2주는 정말 빠르게 흘러갔다. 이제는 매주 병원 가서 엑스레이로 뼈가 제대로 붙고 있는지 확인하고, 일주일에 2번 도수치료를 받으며 굳어버린 근육을 풀고 팔꿈치 가동 범위를 조금씩 넓혀가고 있다.
@@ -20,7 +20,7 @@ tags: [blog]
 Phase 2(ROM 회복 기간)가 끝나가고, 이제 Phase 3(근력 회복 기간)로 넘어간다. 회복은 생각보다 느리지만, 그 안에서도 꾸준히 앱을 만들고 런칭할 수 있었다는 게 스스로 놀랍다.
 
 ## 세일 결과 및 v1.1
-![image2](/images/2025/10/29/image2.png)
+![image2](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image2.png)
 지난 2주 동안 앱 세일을 진행하면서 동시에 v1.1 개발을 했다. 한 손으로 작업하다 보니 마지막에는 피로가 쌓였지만, 그래도 잘 마무리할 수 있었다.
 
 런칭 후 2주간 다운로드가 0이었다. 앱이 나쁜 건지, 가격이 문제인건지, 아니면 아무도 내 앱을 모르는 건지 알 수가 없었다. 그래서 세일을 돌리며 가설을 검증해보기로 했다.
@@ -50,23 +50,23 @@ Phase 2(ROM 회복 기간)가 끝나가고, 이제 Phase 3(근력 회복 기간)
 처음엔 공식 문서와 블로그를 참고하며 하나씩 세팅했다. Status line을 설정해서 현재 작업 상태, 모델, 토큰 사용량을 한눈에 볼 수 있게 했고, todos를 자동으로 보여주는 설정도 추가했다. 코드 리뷰용 Agent도 만들어서 기능 단위로 코드를 검토하게 했다. 지금까지는 큰 문제없이 잘 돌아가고 있어서 계속 쓸 예정이다.
 
 **Agents 처음 사용하다:**
-![image3](/images/2025/10/29/image3.png)
+![image3](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image3.png)
 
 **Todo 보면서 작업 현황 확인하기:**
-![image4](/images/2025/10/29/image4.png)
+![image4](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image4.png)
 
 **Status line 설정:**
-![image5](/images/2025/10/29/image5.png)
+![image5](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image5.png)
 
 **가끔 Claude Code도 로그가 필요하다:**
-![image6](/images/2025/10/29/image6.png)
+![image6](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image6.png)
 
 중간에 Cursor의 Codex도 시도해봤다. 하지만 내가 요구사항을 제대로 전달하지 못한 건지, context가 부족한 건지 내가 원하는 대로 만들어지지 않았다. 프로젝트를 먼저 파악하고 기존 디자인 스타일로 새 위젯을 만들어달라고 했는데, 엉뚱하게 만들어서 결국 다시 Claude Code로 돌아갔다. Codex는 시간을 두고 다른 프로젝트에서 더 연구해봐야겠다.
 
 ASO(앱스토어 최적화)도 공부하려고 했지만, 개발에 집중하다 보니 제대로 손대지 못했다. 다행히 앱스토어 커넥트 데이터를 보니 키워드 검색이나 페이지뷰 수치가 나쁘지 않았다. 당장 큰 문제는 아닌 것 같지만, 추이는 계속 모니터링해야 할 것 같다.
 
 ## Phase 3로
-![image7](/images/2025/10/29/image7.jpg)
+![image7](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/29/image7.jpg)
 시간이 걸렸지만 무사히 v1.1 개발을 완료했다. 오늘부터 다시 한번 세일과 함께 업데이트를 런칭한다. 이번에는 $1.99로 가격을 테스트하고, Reddit의 r/iosapps 커뮤니티에 올려볼 예정이다. 새로운 유저층을 만날 수 있을지, 또 어떤 피드백이 들어올지 궁금하다.
 
 이번 버전을 준비하면서 느낀 건, 생각보다 피로가 많이 쌓였다는 것이다. 재활 진행 속도도 더뎌졌다. 앱 개발도 중요하지만, 결국 내 몸이 회복되지 않으면 장기적으로 지속할 수 없다는 걸 깨달았다.

@@ -2,7 +2,7 @@
 title: "Three Months After Surgery: Changes Made by Small Movements"
 description: "Gradually returning to daily life while launching v1.2 on Black Friday. Received my first payout and learning ASO optimization. Small movements are creating change."
 pubDatetime: 2025-12-16T00:00:00+09:00
-heroImage: /images/2025/12/16/image1.JPG
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/12/16/image1.JPG
 lang: en
 translations:
   en: /posts/2025/2025-12-16-three-month-after-surgery-en
@@ -10,7 +10,7 @@ translations:
 tags: [blog]
 ---
 
-![image1](/images/2025/12/16/image1.JPG)
+![image1](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/12/16/image1.JPG)
 
 ## Gradually Returning to Daily Life
 It's been three months since my left arm surgery. In the early part of the second month, my left arm still didn't have enough strength to travel alone, making it difficult to grip bus or subway handles, so I traveled with family or friends. Long outings would build up fatigue, making it hard to move around for extended periods. Still, as autumn was in full swing, I enjoyed short walks. I go out when the sun is bright since sunlight helps with feeling less depressed.
@@ -27,7 +27,7 @@ While there are still areas with dull sensation and hand numbness, the scattered
 
 
 ## Black Friday Sale
-![image2](/images/2025/12/16/image2.jpg)
+![image2](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/12/16/image2.jpg)
 As I reduced development time, I completely forgot about the big event - Black Friday. I thought it would be good to run another sale around that time, but decided to add the most requested feature - opening events in other calendar apps - and release a new version. I planned to avoid adding too many features and completed development before Black Friday. Version 1.2 added features like opening other calendar apps when tapping widgets, showing not just today but future upcoming events, iOS 18 support, and FAQ. I released the app update to coincide with Black Friday and posted on Reddit like I did with the previous version launch. I also created screens for bug reports and information, and thanks to that, I received bug report emails and proceeded with bug fixes. However, I didn't get the explosive response I had with the previous sale.
 
 I also proceeded with ASO optimization. Searching for competitor apps and keywords, I realized there were more things I didn't know than I thought. I learned what keywords would be advantageous for my app, what screenshots to use, what descriptions to write, etc. While there are many competing apps, I saw gaps where my app could target niches. App Store visibility is the most difficult part, and I think I need to work on this for a long time.
@@ -35,7 +35,7 @@ I also proceeded with ASO optimization. Searching for competitor apps and keywor
 Recently, I installed keyword-related programs and it's been interesting to check them out. I can see whether my app is exposed for certain keywords, the difficulty of keyword exposure, etc. I need to gradually find and study more programs that help with ASO or app distribution.
 
 ## First Payout
-![image3](/images/2025/12/16/image3.jpeg)
+![image3](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/12/16/image3.jpeg)
 December 4th, I received my first payout. It wasn't much, but it was meaningful since it was my first revenue from the app. The minimum costs for developing and launching the app were covered by what I earned. Apple's Q4 settlement timing was quite late, so I received October revenue in early December, which made November tough. Going forward, I'll save Apple's settlement dates to my calendar to prepare for months without incoming revenue.
 
 Since this is a paid app rather than a subscription product with monthly revenue, new purchases need to happen every month. Looking at the trends so far, I'm earning at least $100 per month. While explosive income occurs during sale promotions, I need to earn revenue even without promotion/marketing. I'll probably develop a new subscription app starting next year to create a new pipeline.

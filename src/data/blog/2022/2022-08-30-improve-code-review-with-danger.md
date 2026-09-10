@@ -13,7 +13,7 @@ tags: [optimization]
 ## Danger
 [Danger](https://danger.systems/swift/)는 CI 프로세스에 실행하는 도구로, 코드 리뷰 관련 작업을 자동화 작업을 진행한다. `Dangerfile`이라는 파일을 가지고 어떤 동작을 수행할지 작성한 다음에 사용한다. GitHub, GitLab, Jenkins, Bitrise 등 지원하는 서비스가 많다. 나는 여기 중에서 GitHub Actions를 이용해서 PR을 올릴 때, Danger 작업을 실행하면서 코드 스타일에 대해서 검사하도록 추가하는 작업을 소개하겠다.
 
-<img src="/images/2022/08/30/img1.jpeg" alt="Danger GitHub 사이트를 가면 'Stop saying you forgot to ...' in code review 설명이 있다."/>
+<img src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2022/08/30/img1.jpeg" alt="Danger GitHub 사이트를 가면 'Stop saying you forgot to ...' in code review 설명이 있다."/>
 
 # GitHub Actions
 Danger를 실행하는 방법 중에 하나는 [GitHub Actions](https://docs.github.com/en/actions)를 사용하는 것이다. GitHub Actions는 깃허브에서 제공하는 CI와 CD를 위한 서비스입니다. 깃허브에 있는 프로젝트 저장소에서 어떤 이벤트를 발생하면 어떤 동작을 실행하도록 한다. GitHub Action을 사용하려면 아래와 같이 워크플로우를 생성해야 한다. [깃허브 문서](https://docs.github.com/en/actions/quickstart)에도 자세히 설명되어 있어 참고하면 좋다.
@@ -68,11 +68,11 @@ brew install danger/tap/danger-swift
 danger-swift edit
 ```
 
-<img src="/images/2022/08/30/image2.png" alt="터미널 창에 danger-swift edit 명령어를 치면 Dangerfile을 열면서 Dangerfile을 수정 완료하면 터미널을 닫히라는 안내 문구가 있다."/>
+<img src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2022/08/30/image2.png" alt="터미널 창에 danger-swift edit 명령어를 치면 Dangerfile을 열면서 Dangerfile을 수정 완료하면 터미널을 닫히라는 안내 문구가 있다."/>
 
 Xcode으로 열면 main.swift 파일을 열어서 Dangerfile 설정을 작성하면 된다.
 
-<img src="/images/2022/08/30/image3.png" alt="Xcode에서 연 Danger 폴더 경로 중에 main.swift 파일을 찾아서 열어둔다."/>
+<img src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2022/08/30/image3.png" alt="Xcode에서 연 Danger 폴더 경로 중에 main.swift 파일을 찾아서 열어둔다."/>
 
 아래와 같이 Dangerfile을 구성하면 된다. 아래는 간단한 예제를 작성한 것이며, [다른 예제](https://danger.systems/swift/tutorials/ios_app.html)들을 참고하면서 프로젝트에 맞는 규칙들을 추가하면 된다.
 
@@ -102,7 +102,7 @@ SwiftLint.lint(inline: true, configFile: ".swiftlint.yml")
 
 관련 내용이 반영이 되었다면 작업한 내용을 push하고 PR을 올려서 리파지토리에 반영하도록 한다. 올바르게 작업을 했다면 PR을 생성한 순간 Danger가 실행할 것이다.
 
-<img src="/images/2022/08/30/image4.png" alt="깃허브에 PR을 올렸을 때 SwiftLint를 검사한 결과를 Danger에서 코멘트를 달아준다."/>
+<img src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2022/08/30/image4.png" alt="깃허브에 PR을 올렸을 때 SwiftLint를 검사한 결과를 Danger에서 코멘트를 달아준다."/>
 
 ## SwiftLint 및 기타 plugins
 [SwiftLint](https://github.com/realm/SwiftLint)는 스위프트 스타일과 컨벤션 등을 지키도록 도와주는 도구다. Danger SwiftLint plugin을 가지고 pr 올릴 때마다 체크해 줘서 막강한 힘을 보여준다. SwiftLint 말고도 다른 Danger plugin들도 있다. 예를 들어 빌드 정보를 보여주거나 테스트 코드들을 실행하는 등 다른 plugin들을 찾아보면서 프로젝트에 알맞은 도구를 사용하면 좋을 것 같다. [Plugin](https://github.com/danger/awesome-danger)들은 여기서 확인해 볼 수 있다.

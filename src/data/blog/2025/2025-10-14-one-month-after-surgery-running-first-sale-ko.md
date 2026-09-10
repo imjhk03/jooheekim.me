@@ -2,7 +2,7 @@
 title: "수술 한 달 후: 첫 세일을 시작한다"
 description: "회복 근황과 앱 출시 후 시도하는 것"
 pubDatetime: 2025-10-14T00:00:00+09:00
-heroImage: /images/2025/10/14/image1.jpg
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/14/image1.jpg
 lang: ko
 translations:
   en: /posts/2025/2025-10-14-one-month-after-surgery-running-first-sale-en
@@ -10,7 +10,7 @@ translations:
 tags: [blog]
 ---
 
-![image1](/images/2025/10/14/image1.jpg)
+![image1](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/14/image1.jpg)
 
 ## 한 달
 
@@ -19,7 +19,7 @@ tags: [blog]
 도수치료가 생각보다 많이 힘들다. 치료받고 나면 마치 운동을 하고 온 것처럼 체력이 확 떨어지고 피곤함이 몰려온다. 집에 도착하면 샤워하고 바로 잠들기 바쁘다. 수술 직후에는 급성 통증 때문에 힘들었다면, 지금은 통증은 줄었지만 전체적으로 체력이 더 떨어진 것 같다. 잠도 전보다 훨씬 많이 자게 됐다. 하루에 실질적으로 뭔가 할 수 있는 시간이 4-5시간 정도밖에 안 되는 것 같다.
 
 ## 앱 출시 후
-![image2](/images/2025/10/14/image2.png)
+![image2](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/14/image2.png)
 10월 2일에 앱을 출시했다. 오늘이 10월 14일이니 정확히 12일이 지났다. 현재 상황은 이렇다. 다운로드 0개, 앱 페이지 조회 0회, 매출은 당연히 $0이다. 출시 후 첫 3일 정도는 신규로 추가하고 싶은 기능들을 생각해보고 몇 가지 버그를 수정하면서 보냈다. 동시에 SNS에 블로그 글도 공유하고 앱 내용도 올렸다. 하지만 생각보다 반응이 거의 없었다. 다운로드도 없었고 앱 페이지 조회 수치도 전혀 움직이지 않았다.
 
 그 후 긴 추석 연휴가 시작됐다. 가족들과 시간을 보내느라 앱 홍보나 마케팅에 많은 신경을 쓸 수 없었다. 솔직히 연휴 기간이라 사람들도 앱스토어를 잘 안 볼 거라는 생각도 들었다. 그렇게 일주일 정도가 지나갔다. 연휴가 끝나고 다시 도수치료를 받으러 다니기 시작했는데, 치료 후 피로도가 생각보다 심해서 집에 돌아오면 아무것도 못 하고 쉬어야 했다. 그러다 보니 앱에 대해 지속적으로 포스팅하거나 홍보하는 것도 제대로 하지 못했다.

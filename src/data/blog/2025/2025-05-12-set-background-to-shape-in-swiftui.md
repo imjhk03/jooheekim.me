@@ -2,7 +2,7 @@
 title: SwiftUI에서 도형을 배경으로 설정하기
 description: "background(_:in:fillStyle:) modifier를 사용한 배경 스타일링"
 pubDatetime: 2025-05-12T09:00:00Z
-heroImage: /images/2025/05/12/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/05/12/image1.png
 tags: [swiftui, ui]
 ---
 
@@ -20,7 +20,7 @@ Text("Hello, world!")
 )
 ```
 
-![캡슐 모양의 파란색 그라데이션 배경이 있는 텍스트](/images/2025/05/12/image1.png)
+![캡슐 모양의 파란색 그라데이션 배경이 있는 텍스트](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/05/12/image1.png)
 
 ## 사용 가능한 도형들
 
@@ -53,7 +53,7 @@ VStack(spacing: 10) {
 .foregroundStyle(.white)
 ```
 
-![다양한 도형과 그라데이션이 적용된 텍스트 예시](/images/2025/05/12/image2.png)
+![다양한 도형과 그라데이션이 적용된 텍스트 예시](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/05/12/image2.png)
 
 >다른 뷰와 함께 배경을 지정하거나 화면 전체 백그라운드 만드는 방법은 이 [글](https://imjhk03.github.io/posts/swiftui-add-background/)에서 참고하면 된다.
 

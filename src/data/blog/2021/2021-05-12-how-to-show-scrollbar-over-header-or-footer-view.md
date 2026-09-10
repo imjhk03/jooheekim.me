@@ -3,7 +3,7 @@ title: How to show scrollbar over header or footer view
 description: After revisiting my old codes, I found some useful code that helped a bug. Although this bug is solved over iOS 13, if your project deployment target is iOS ...
 pubDatetime: 2021-05-12T09:00:00Z
 tags: [uikit, ui-development]
-heroImage: /images/2021/05/12/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/05/12/image1.png
 ---
 
 
@@ -15,7 +15,7 @@ After revisiting my old codes, I found some useful code that helped a bug. Altho
 # Scrollbar goes under the header or footer view
 As the below image shows, the scrollbar is under the header view. It was a strange bug, and does not look good. But adding the below code helped the bug. It looks like the scrollbar layer's zPosition was lower than the header view layer's zPosition.
 
-![The scrollbar is shown under the view, which makes a blank between the scrollbar](/images/2021/05/12/image1.png)
+![The scrollbar is shown under the view, which makes a blank between the scrollbar](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/05/12/image1.png)
 
 ```swift
 func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {

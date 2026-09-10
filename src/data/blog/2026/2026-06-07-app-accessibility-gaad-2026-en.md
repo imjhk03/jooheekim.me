@@ -3,7 +3,7 @@ title: "What I Learned Supporting Accessibility in My App for GAAD 2026"
 description: "I used GAAD 2026 as a chance to make my app more accessible and learned a lot"
 pubDatetime: 2026-06-07T00:00:00+09:00
 lang: en
-heroImage: /images/2026/06/07/heroImage.jpg
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/06/07/heroImage.jpg
 tags: [blog, accessibility, ios]
 ---
 
@@ -70,7 +70,7 @@ They are small APIs, but they come up often when adding accessibility semantics,
 
 ## Accessible Interaction And Control Semantics
 
-![Three I Need That Widget screens showing larger text support in the main list, widget previews, and settings](/images/2026/06/07/image1.jpg)
+![Three I Need That Widget screens showing larger text support in the main list, widget previews, and settings](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/06/07/image1.jpg)
 
 ### 1. A custom row should become a real accessible button
 
@@ -389,7 +389,7 @@ var body: some View {
 
 ### 1. Not everything should scale the same way
 
-![Before and after comparison showing icon scaling adjustments so larger text keeps better spacing in the event list](/images/2026/06/07/image2.jpg)
+![Before and after comparison showing icon scaling adjustments so larger text keeps better spacing in the event list](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/06/07/image2.jpg)
 
 Sometimes supporting Dynamic Type does not mean every element should simply become larger. For example, some icons can grow with the text and make the spacing feel tighter. Using `@ScaledMetric` lets non-text values participate in Dynamic Type too, but in a more controlled way. It allows values like icon sizes, spacing, or padding to scale along with text instead of staying fixed.
 
@@ -429,7 +429,7 @@ struct ItemRowView: View {
 
 ### 2. Sometimes compact UI should change structure
 
-![Before and after comparison showing a compact picker layout replaced with clearer navigation-based settings screens for larger text](/images/2026/06/07/image3.jpg)
+![Before and after comparison showing a compact picker layout replaced with clearer navigation-based settings screens for larger text](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/06/07/image3.jpg)
 
 I had been using pickers for selecting things like display mode or app destination. When testing with larger text sizes, I noticed the selected value could get trimmed. So instead of keeping everything inline, I changed some of those controls into navigation rows that open separate selection pages.
 
@@ -479,7 +479,7 @@ Form {
 
 ## Overlay Accessibility
 
-![Before and after comparison of a small widget accessibility approach, showing VoiceOver reading many elements first and then reading one summary element](/images/2026/06/07/image4.jpg)
+![Before and after comparison of a small widget accessibility approach, showing VoiceOver reading many elements first and then reading one summary element](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/06/07/image4.jpg)
 
 Sometimes, instead of reading every detail, one summary is better.
 
@@ -531,7 +531,7 @@ This was one of those small implementation details I only learned by actually te
 
 ## Test, Test, Test!
 
-![iPhone Control Center showing VoiceOver and Text Size controls](/images/2026/06/07/image5.jpg)
+![iPhone Control Center showing VoiceOver and Text Size controls](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/06/07/image5.jpg)
 
 You may have noticed that I tested a lot while implementing these accessibility features. This is important because you really have to use the features yourself to understand how accessibility works in practice.
 
@@ -550,7 +550,7 @@ For faster testing, I added VoiceOver and Text Size controls to Control Center s
 
 ## Conclusion
 
-![App Store accessibility section showing supported features including VoiceOver, Larger Text, Dark Interface, and Reduced Motion](/images/2026/06/07/image6.jpg)
+![App Store accessibility section showing supported features including VoiceOver, Larger Text, Dark Interface, and Reduced Motion](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/06/07/image6.jpg)
 
 Supporting accessibility is not especially hard because Apple provides great accessibility APIs, but doing it well still takes time, testing, and iteration.
 

@@ -3,7 +3,7 @@ title: iOS 14부터 달라진 앱에서 이메일 보내는 방법
 description: iOS 14에서는 기본 이메일 앱이 아닌 다른 서드파티 앱을 기본 이메일로 설정할 수 있습니다. 즉, 지메일, Outlook, Spark 등의 메일 앱을 이제 기본 이메일 앱으로 대체할 수 있습니다.
 pubDatetime: 2021-02-22T09:00:00Z
 tags: [uikit, email]
-heroImage: /images/2021/02/22/image1.jpeg
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/02/22/image1.jpeg
 ---
 
 
@@ -13,7 +13,7 @@ iOS 14에서는 기본 이메일 앱이 아닌 다른 서드파티 앱을 기본
 
 # 기본 이메일 앱으로 보내는 방법
 
-![Email Confirm Interface](/images/2021/02/22/image1.jpeg)
+![Email Confirm Interface](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/02/22/image1.jpeg)
 *이메일 구성 인터페이스*
 
 애플에서 제공하는 라이브러리 중에 `MessageUI` 프레임워크 안에 `MFMailComposeViewController`를 이용해서 기본 이메일 앱을 통해서 이메일 보내는 것을 다룹니다. 받는 사람, 제목, 메시지 내용을 담아서 화면을 보여주지만, 이메일을 보내지 않습니다. 사용자가 보내기 액션을 취하면 그때 이메일이 보내집니다. 아래 예제 코드입니다.
@@ -151,7 +151,7 @@ private func presentAlertSheetThirdPartyEmailApps(_ availableApps: [AvailableApp
 ```
 
 적용해보면 아래와 같은 스크린샷 모습을 볼 수 있습니다.
-![Third Party App Alert Sheet and No available App Alert](/images/2021/02/22/image2.jpeg)
+![Third Party App Alert Sheet and No available App Alert](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/02/22/image2.jpeg)
 
 Warning: 이메일 앱을 보내는 것을 테스트하고 싶다면 iOS 시뮬레이터가 아닌 실 기기에서 테스트해야 합니다.
 

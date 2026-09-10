@@ -3,7 +3,7 @@ title: WWDC20 Dub Dub Diary, Part 3 - Code-along, New Components, and build for 
 description: Many sessions were also posted on the third day of WWDC20. In particular, sessions focused on game centers were concentrated, but they were not my interests ...
 pubDatetime: 2020-08-06T09:00:00Z
 tags: [wwdc]
-heroImage: /images/2020/08/06/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/08/06/image1.png
 ---
 
 
@@ -11,13 +11,13 @@ Many sessions were also posted on the third day of WWDC20. In particular, sessio
 
 ## Widgets code-along
 
-![Widgets code-along screenshot. Seeing session while coding along.](/images/2020/08/06/image1.png)
+![Widgets code-along screenshot. Seeing session while coding along.](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/08/06/image1.png)
 
 There is a session where the process of developing Widgets is divided into three parts. Usually, the development process was with the presentation of the topic in one session. But this year, it was the first time that the development process was separated into a session. It was fun, and I was able to get a sense of how to develop Widgets. I didn't immediately understand whether this code was right because I wasn't developing the app from the beginning, but that didn't make a big deal. It was good to learn about Widgets by developing various topics. Sometimes having these types of sessions would be good for learning new features.
 
 ## iOS pickers, menus and actions
 
-![Menus, Date and Time picker, Color picker](/images/2020/08/06/image2.png)
+![Menus, Date and Time picker, Color picker](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/08/06/image2.png)
 
 The interesting sessions were the new components from iOS 14. Using Menu, we can provide users with a more compacted and UX-friendly choice, choosing dates and times is easy through Date and time picker, and selecting wider colors through Color picker.
 
@@ -33,13 +33,13 @@ When selecting the date and time, we used the picker view. But now we can use th
 
 In `NavigationBar`, easy pop backwards can be made through Menu. It is designed to replace Action sheets and popovers and can be used for various purposes such as selection and navigation. UI became simple by putting all the features that had to be shown on the screen to the menu. Below is an example from the Folders app.
 
-![Folders app without menu and with menu. Much cleaner screen.](/images/2020/08/06/image3.png)
+![Folders app without menu and with menu. Much cleaner screen.](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/08/06/image3.png)
 
 The new components supports multi-platform. It would be a good idea to take this opportunity to develop an app that can be developed not only on iPhones but also on iPads and even on macOS.
 
 ### Build for iPad
 
-![Shortcuts App in iPad. There is a Sidebar to the left.](/images/2020/08/06/image4.png)
+![Shortcuts App in iPad. There is a Sidebar to the left.](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/08/06/image4.png)
 
 While talking about multi-platform, I watched an iPad-related session. After watching this session, I wanted to develop a very attractive iPad app. In particular, through this session, there is a very detailed explanation of how to develop an iPad app. Using `UISplitViewController`, you can configure the screen to be shown on the iPad and the screen to be shown in iPhone or compact mode. You can also create a list using `UICollectionView` to develop a new Sidebar. Through this session, I felt it was easy to create an iPad app and thought it would be good to implement a new feature called Sidebar together.
 

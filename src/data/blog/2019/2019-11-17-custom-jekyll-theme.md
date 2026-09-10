@@ -3,7 +3,7 @@ title: 깃허브(GitHub) 블로그 jekyll 테마 커스텀(custom)하기
 description: 어제 깃허브 블로그 구축하고 나서 꾸미려고 하니깐 뭔가 마음대로 꾸밀 수 없는 걸 느껴서, 테마를 가져와서 내 입맛대로 꾸밀 수 있을까 찾다가 jekyll theme을 fork 해서 커스텀할 수 있는 방법이 있다고 했다. 오늘 포스트는 테마를 조금 커스텀 할 수 있는 부분에 대한 ...
 pubDatetime: 2019-11-17T09:00:00Z
 tags: [blog, jekyll]
-heroImage: /images/2019/11/17/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2019/11/17/image1.png
 ---
 
 
@@ -11,7 +11,7 @@ heroImage: /images/2019/11/17/image1.png
 
 소스에 있는 세팅들 보다가 수정하고 싶은 부분이 생겼는데, css 를 건드릴 수 있는 부분이 없었다. Padding을 줄이거나, icon을 추가하거나 등 세팅할 수 있는 부분을 찾을 수가 없었다.
 
-![GitHub Page Folder withou css folder](/images/2019/11/17/image1.png)
+![GitHub Page Folder withou css folder](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2019/11/17/image1.png)
 
 (css 관련된 부분들을 찾을 수가 없다)
 
@@ -19,11 +19,11 @@ heroImage: /images/2019/11/17/image1.png
 
 현재 적용하고 있는 Texture GitHub 프로젝트 가서 상단에 있는 Fork 누르면 본인 계정에 새로운 리포지토리가 생성하면서 fork가 된다.
 
-![GitHub Project menu that has fork](/images/2019/11/17/image2.png)
+![GitHub Project menu that has fork](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2019/11/17/image2.png)
 
 Fork가 다 되면 새로운 리포지토리가 생성이 되어 있고, 해당 리포지토리의 Setting으로 가서 리포지토리 이름을 다시 {username}.github.io 로 변경한다.
 
-![Forked project and changed name](/images/2019/11/17/image3.png)
+![Forked project and changed name](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2019/11/17/image3.png)
 
 Fork 한 프로젝트 안의 파일들을 보면 테마마다 다르겠지만 assets, layouts, includes 등 처음에 그냥 테마 설치하여 적용했을 때보다 많은 폴더가 있다. 여기서부터는 각자 적용한 테마들의 커스텀 하는 방법 참고하여 진행하면 된다. README 파일에 설명되어 있을 수 있고, 아니면 직접 소스 분석하면서 수정하면 된다. 아래부터는 **Texture jekyll theme** 한해서 이 깃헙 블로그에 적용한 것들을 일부 소개하고 있다.
 
@@ -41,21 +41,21 @@ Fork 한 프로젝트 안의 파일들을 보면 테마마다 다르겠지만 as
 
 관련해서 더 찾다 보니 scss 파일을 통해서 아이콘을 적용하는 것 같은데, 아이콘 파일들은 assets에 없었다. 유심히 소스 보니깐 fontello 폰트를 사용하는 거로 봐서, fontello 폰트 안에 있는 아이콘을 쓰는 게 아닐까 생각이 들었다. Fontello 사이트 들어가서 확인해보니깐 아이콘들이 있었으며, 기존에 사용하고 있는 트위터와 깃허브 아이콘들이 있었다.
 
-![Fontello website](/images/2019/11/17/image4.png)
+![Fontello website](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2019/11/17/image4.png)
 
 (Fontello website)
 
 원하는 instagram 아이콘 선택해서 다운로드하고 font 폴더에 있는 것들을 덮어쓰기 하니깐 이제는 기존에 나오는 아이콘들이 나타나지 않았다. 다운받은 폰트 관련 파일 안에는 이전에 적용되어 있던 아이콘에 대한 설정들이 없었고 인스타그램 아이콘만 관련된 설정들이 있어서 나타나지 않았던 것이었다. 다시 관련된 아이콘들을 찾아서 포함하여 다운받고 다시 적용하니깐 잘 나왔다.
 
-![Only instagram icon shown](/images/2019/11/17/image5.png)
+![Only instagram icon shown](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2019/11/17/image5.png)
 
 (instagram 아이콘은 나타났지만, 이전에 나타났던 아이콘들은 나오지 않았다)
 
-![Fontello font settings](/images/2019/11/17/image6.png)
+![Fontello font settings](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2019/11/17/image6.png)
 
 (새로 다운받은 폰트 관련 파일 중 하나. 관련된 아이콘들에 대한 설정들이 있다)
 
-![All icon shown](/images/2019/11/17/image7.png)
+![All icon shown](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2019/11/17/image7.png)
 
 (새로 다운받은 폰트 관련 파일들을 적용하고 나서 이전에 나타난 아이콘과 새로운 인스타그램 아이콘이 나온다)
 
@@ -65,7 +65,7 @@ Jekyll 테마마다 다 다르겠지만, 지금의 테마에서는 fontello 폰�
 ### Texture jekyll theme custom - 2. 모바일 환경에서 날짜가 제목 밑으로 나타나기
 깃허브 블로그 만들고 나서 기쁜 마음으로 침대에 누우면서 잠들기 전에 스마트폰으로 들어갔는데, 날짜 관련 부분이 제목 옆으로 나와서 뭔가 이뻐 보이지 않는 느낌이 들었다.
 
-![Mobile github page screenshot](/images/2019/11/17/image8.PNG)
+![Mobile github page screenshot](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2019/11/17/image8.PNG)
 
 (밑으로 내려가 줘....)
 
@@ -77,7 +77,7 @@ Jekyll 테마마다 다 다르겠지만, 지금의 테마에서는 fontello 폰�
 }
 ```
 
-![Mobile github page screenshot 2](/images/2019/11/17/image9.png)
+![Mobile github page screenshot 2](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2019/11/17/image9.png)
 
 (왼쪽은 적용 전, 오른쪽은 적용 후. 태그 관련된 부분은 아래에 다룰 예정이다)
 
@@ -112,7 +112,7 @@ Jekyll 테마마다 다 다르겠지만, 지금의 테마에서는 fontello 폰�
 
 마지막으로 포스트 목록에 나타나는 태그들 관련 css style 추가하여 완성했다.
 
-![Post tags screenshot 3](/images/2019/11/17/image10.png)
+![Post tags screenshot 3](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2019/11/17/image10.png)
 
 (왼쪽은 적용 전, 오른쪽은 적용 후. 이제 태그들만 보고 어떤 내용인지 예상할 수 있고, 보고 싶은 내용만 볼 수 있어서 좋을 듯하다)
 

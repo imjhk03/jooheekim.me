@@ -46,7 +46,7 @@ C언어를 공부하면서 문법 하나 끝낼 때마다 성적처리 프로그
 
 ---
 
-<img src="/images/2015/03/14/image1.jpg" alt="성적처리 프로그램 실행 화면"/>
+<img src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2015/03/14/image1.jpg" alt="성적처리 프로그램 실행 화면"/>
 
 ```c
 #define _CRT_SECURE_NO_WARNINGS

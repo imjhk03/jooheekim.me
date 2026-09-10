@@ -2,7 +2,7 @@
 title: SwiftUI에서 TextField 세로로 쓰기
 description: TextField의 axis 속성으로 세로 스크롤 구현하기
 pubDatetime: 2025-06-02T09:00:00Z
-heroImage: /images/2025/06/02/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/06/02/image1.png
 tags: [swiftui, textfield]
 ---
 
@@ -38,4 +38,4 @@ struct ContentView: View {
 - `lineLimit(_:)` modifier로 최소/최대 줄 수 지정 가능
 - 키보드의 return 키로 새로운 줄 추가 가능
 
-![텍스트필드에 긴 문장이 세로로 표시된 모습](/images/2025/06/02/image1.png)
+![텍스트필드에 긴 문장이 세로로 표시된 모습](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/06/02/image1.png)

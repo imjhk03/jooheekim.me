@@ -2,7 +2,7 @@
 title: "I Broke My Arm, So I Made an App"
 description: "A backstory of building an app with one-handed development"
 pubDatetime: 2025-10-01T00:00:00Z
-heroImage: /images/2025/10/01/image1.jpeg
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/01/image1.jpeg
 lang: ko
 translations:
   en: /posts/2025/2025-10-01-i-broke-my-arm-so-i-made-an-app-en
@@ -10,7 +10,7 @@ translations:
 tags: [blog]
 ---
 
-![image1](/images/2025/10/01/image1.jpeg)
+![image1](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/01/image1.jpeg)
 
 ## The Break
 9월 16일, 왼쪽 팔 골절 및 힘줄 접합 수술을 받았다. 의사 선생님께서 회복하려면 시간이 많이 걸린다고 했다. 왼팔이 회복될 때까지는 오른팔로만 생활해야 한다. 두 팔로 키보드 타이핑을 해야 하는 개발자로서 힘든 상황이었다.
@@ -27,9 +27,9 @@ tags: [blog]
 
 코드를 한 손으로 작성하기 어려워서 Claude Code에 많이 의존했다. Dictation을 활성화해서 말로 프롬프트를 작성할 수도 있었지만, 정확도가 높지 않아 조금 느리더라도 한 손으로 타이핑해서 프롬프트를 작성하고 Claude Code가 코드를 작성하도록 했다. Cursor도 사용해봤지만 Claude Pro를 구독하고 있어서 Claude를 썼다. Max가 아니라 사용량 제한이 있고 업그레이드된 모델을 사용할 수는 없었지만, 간단한 앱이었기에 충분했다. 사용 시간 제한이 걸리면 잠깐 쉬는 시간으로 활용해서 팔과 몸도 쉬게 했다. 빌드 및 테스트는 익숙한 Xcode를 열어서 확인했다.
 
-![image2](/images/2025/10/01/image2.png)
+![image2](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/01/image2.png)
 _쉬어가는 시간_
-![image3](/images/2025/10/01/image3.png)
+![image3](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/01/image3.png)
 
 수술한 지 10일쯤 되어야 통증이 거의 사라졌기 때문에 그동안은 오래 앉아서 작업할 수 없었다. 하루 최대 5-6시간 작업하고, 나머지 시간은 병원에 다녀오거나 침대에서 쉬었다. 2주째 되는 날, 앱은 거의 완성되어서 Figma에서 애플 앱 아이콘 템플릿 리소스를 이용해 앱 아이콘 레이어를 만들고, Icon Composer로 마무리했다. 앱 스토어 스크린샷 디자인까지 직접 하기에는 시간이 오래 걸릴 것 같아 Screenshot Studio로 빠르게 작업했다.
 
@@ -41,7 +41,7 @@ _쉬어가는 시간_
 * [Screenshot Studio](https://appstorescreenshotstudio.com/)
 
 ## Now and Then
-![image4](/images/2025/10/01/image4.jpg)
+![image4](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/01/image4.jpg)
 이 포스트가 게시되었다면 앱은 무사히 심사를 통과해서 설치 가능한 상태일 것이다. 가장 필요한 기능과 위젯을 먼저 개발했고, 앞으로 몇 가지 기능을 더 추가해서 업데이트할 예정이다. 아이패드와 맥도 지원할 계획이다. 개발하다 보니 개인적으로 필요한 앱이 또 생겨서 구상 중이다. 수술 전에 작업했던 앱도 마무리하고 싶지만, 복잡도가 높은 앱이어서 시간과 에너지를 충분히 투자할 수 있는 상황이 되면 다시 작업하려고 한다.
 
 왼팔 수술 부위 실밥을 2주째 되는 날 제거했지만, 아직도 보조기를 차고 있고 손 붓기도 남아 있다. 도수치료도 이제 시작해서 겨우 90°보다 조금 더 펴고 굽힐 수 있는 정도다.

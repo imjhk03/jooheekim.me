@@ -28,7 +28,7 @@ heroImage: https://images.unsplash.com/photo-1486962532485-55d6645c218e?q=80&w=3
 ## 캡처 아키텍처
 `AVFoundation` 프레임워크를 사용해서 이미지(혹은 비디오) 캡처 구현할 때, 캡처 아키텍처에서 주요한 부분이 바로 세션, 입력과 출력이다. 캡처 세션은 입력 장치에서 캡처 출력을 연결하고 캡처 동작을 구성하고 데이터의 흐름을 조정한다. 입력은 카메라나 마이크와 같은 하드웨어 장치에서 데이터를 제공하며 출력은 입력에서 제공한 데이터를 가공하여 종류에 따라 데이터를 생성한다. 예를 들어 PhotoOutput 같이 고사양 사진이나 Live Photo들을, VideoDataOutput이나 AudioDataOutPut은 비디오 또는 오디오 버퍼를 앱으로 전달한다.
 
-![Camera Capture Architecture](/images/2024/08/14/image1.png)
+![Camera Capture Architecture](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2024/08/14/image1.png)
 _From Apple Developer_
 
 ## 필수 항목
@@ -39,7 +39,7 @@ _From Apple Developer_
 ### 접근 권한 알림 설정
 카메라와 마이크에 대한 접근 권한은 Info.plist 파일에 키를 추가하여 접근 권한에 대한 메시지를 작성할 수 있다.
 * 카메라 사용 접근 권한 키는 [NSCameraUsageDescription](https://developer.apple.com/documentation/bundleresources/information_property_list/nscamerausagedescription)* 마이크 사용 접근 권한 키는 [NSMicrophoneUsageDescription](https://developer.apple.com/documentation/bundleresources/information_property_list/nsmicrophoneusagedescription)
-![Info.plist file settings](/images/2024/08/14/image2.png)
+![Info.plist file settings](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2024/08/14/image2.png)
 
 카메라를 사용하기 전에 접근 권한 상태를 확인하고 사용하는 것이 좋다. [AVCaptureDevice](https://developer.apple.com/documentation/avfoundation/avcapturedevice) [authorizationStatus\(for:\)](https://developer.apple.com/documentation/avfoundation/avcapturedevice/1624613-authorizationstatus) 메서드를 사용해서 확인하고, 만약 접근 권한이 거부되어 있다면 [requestAccess\(for:completionHandler:\)](https://developer.apple.com/documentation/avfoundation/avcapturedevice/1624584-requestaccess) 메서드를 사용하여 사용자에게 다시 접근 권한에 대한 알림을 띄울 수 있다. 앱이 만약 필수적으로 카메라를 사용하지 않고 카메라 기능을 사용하는 경우가 따로 있다면, 그때 접근 권한을 체크하는 방법도 있다. 자세한 내용은 [애플 개발자 사이트](https://developer.apple.com/documentation/avfoundation/capture_setup/requesting_authorization_to_capture_and_save_media#2958841)에서 참고하면 좋다.
 

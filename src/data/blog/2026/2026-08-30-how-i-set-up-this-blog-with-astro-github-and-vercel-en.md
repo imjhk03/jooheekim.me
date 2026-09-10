@@ -151,12 +151,12 @@ npm --version
 ```
 
 The computer should print two version numbers.
-![Terminal showing the installed Node.js and npm version numbers](/images/2026/08/30/image2.png)
+![Terminal showing the installed Node.js and npm version numbers](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image2.png)
 
 Astro's current installation guide asks for Node.js `v22.12.0` or newer. If the computer says that `node` or `npm` cannot be found, install the current LTS version from [nodejs.org](https://nodejs.org/en/download/), open a new terminal, and try again.
 
 For me, I already have `Homebrew` installed, so I used `brew install npm` to install npm.
-![Terminal showing Homebrew installing Node.js and its dependencies](/images/2026/08/30/image1.png)
+![Terminal showing Homebrew installing Node.js and its dependencies](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image1.png)
 
 ## Start with a clean AstroPaper project
 
@@ -174,7 +174,7 @@ A setup wizard will ask questions. Tell it:
 - yes, install the packages
 - yes, start Git if the wizard asks
 
-![Astro's setup wizard creating the my-blog project](/images/2026/08/30/image3.png)
+![Astro's setup wizard creating the my-blog project](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image3.png)
 
 Then go into the new folder:
 
@@ -184,12 +184,12 @@ npm install
 npm run dev
 ```
 
-![Terminal showing npm install and the Astro development server starting](/images/2026/08/30/image4.png)
-![Finder showing the new my-blog project files](/images/2026/08/30/image6.png)
+![Terminal showing npm install and the Astro development server starting](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image4.png)
+![Finder showing the new my-blog project files](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image6.png)
 
 The terminal will show a local address, usually `http://localhost:4321/`. Open that address in your browser.
 
-![AstroPaper starter home page running at localhost](/images/2026/08/30/image5.png)
+![AstroPaper starter home page running at localhost](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image5.png)
 
 The word **local** means “only on your computer.” At this point, other people cannot see your site yet.
 
@@ -214,7 +214,7 @@ The file also has a loader whose `base` uses `BLOG_PATH`. Leave that part connec
 ### Give the website your name
 
 The main settings are in `astro-paper.config.ts` in the project root. A setting is a value that tells the website what to say or do. Open the file in any code editor; for me, I'm using Zed.
-![Zed showing the Astro site configuration file](/images/2026/08/30/image7.png)
+![Zed showing the Astro site configuration file](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image7.png)
 
 The important settings look like this:
 
@@ -279,7 +279,7 @@ my-blog/
 ```
 
 The most important folder for writing is `src/data/blog/`. The clean project may not have this folder yet, so create it under `src`.
-![Finder showing the src/data/blog folder](/images/2026/08/30/image8.png)
+![Finder showing the src/data/blog folder](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image8.png)
 
 ### Write your first post
 
@@ -326,7 +326,7 @@ A filename also helps make the web address. The example file becomes a page unde
 Put a picture in `public/images/2026/08/30/photo.jpg`. Then write this in the post:
 
 ```md
-![A description of the photo](/images/2026/08/30/photo.jpg)
+![A description of the photo](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/photo.jpg)
 ```
 
 The words inside the square brackets help people who cannot see the picture understand it.
@@ -340,7 +340,7 @@ npm run dev
 ```
 
 Then open the local address in your browser. The development server reads your source files while you work and is the easiest way to see changes.
-![AstroPaper home page showing the new My First Post](/images/2026/08/30/image9.png)
+![AstroPaper home page showing the new My First Post](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image9.png)
 
 To stop the development server, press `Control + C` (hold the Control key, then press C).
 
@@ -350,7 +350,7 @@ When you want to check the finished production version, run:
 npm run build
 ```
 
-![Terminal showing a successful Astro build and Pagefind indexing](/images/2026/08/30/image10.png)
+![Terminal showing a successful Astro build and Pagefind indexing](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image10.png)
 A **build** is the moment when Astro turns the project into the finished files that can be published. It also refreshes the `dist/` folder.
 In this project, the build:
 
@@ -366,7 +366,7 @@ You can look at the finished build on your computer with:
 npm run preview
 ```
 
-![Browser showing the My First Post page in the local preview](/images/2026/08/30/image11.png)
+![Browser showing the My First Post page in the local preview](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image11.png)
 
 The preview is still only on your computer, but it is closer to the version Vercel will publish. Important: `npm run preview` does not build the project. It only serves the files that already exist in `dist/`. After changing a post, run `npm run build` before running `npm run preview`, or you may see an older version without your new post.
 
@@ -387,8 +387,8 @@ Git is the program that remembers changes. GitHub is the website that stores tho
 First, make an empty repository on your GitHub account. If the project already exists on your computer, do not add another README, license, or `.gitignore` during this step.
 
 For a sample project that goes with this post, a clear repository name is `astro-blog-example`. A repository name is just the label on the project box. For my personal blog, I use `jooheekim.me`, the custom domain I bought.
-![GitHub's new repository form for astro-blog-example](/images/2026/08/30/image12.png)
-![The empty astro-blog-example GitHub repository](/images/2026/08/30/image13.png)
+![GitHub's new repository form for astro-blog-example](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image12.png)
+![The empty astro-blog-example GitHub repository](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image13.png)
 
 Open a terminal in the folder where you created the blog, then run:
 
@@ -408,7 +408,7 @@ git diff --cached --name-only
 git commit -m "Initialize Astro blog"
 ```
 
-![Terminal showing the initial Git commit](/images/2026/08/30/image14.png)
+![Terminal showing the initial Git commit](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image14.png)
 A **commit** is a saved snapshot. The words after `-m` explain what was saved.
 
 Before committing, look at the files listed by the two checking commands. Continue only if they are files you meant to share. Do not commit `.env` files, passwords, access tokens, private keys, or personal files. If you find one, stop and remove it from the staged list before continuing.
@@ -467,8 +467,8 @@ Now push the project:
 git push -u origin main
 ```
 
-![Terminal showing a successful push to GitHub](/images/2026/08/30/image15.png)
-![The astro-blog-example repository with its files on GitHub](/images/2026/08/30/image16.png)
+![Terminal showing a successful push to GitHub](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image15.png)
+![The astro-blog-example repository with its files on GitHub](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image16.png)
 The command `git push` sends the saved snapshot from your computer to GitHub.
 
 You should not need to paste a GitHub password or token. Read the [GitHub CLI login guide](https://cli.github.com/manual/gh_auth_login) or the [gh auth setup-git guide](https://cli.github.com/manual/gh_auth_setup-git) if the questions look different.
@@ -495,14 +495,14 @@ Vercel is the worker that turns the GitHub files into a public website.
 7. If Vercel asks for an output directory, write `dist`.
 8. Click **Deploy**.
 
-![Vercel's new project page listing the astro-blog-example repository](/images/2026/08/30/image18.png)
-![Vercel's project setup page for the Astro repository](/images/2026/08/30/image19.png)
+![Vercel's new project page listing the astro-blog-example repository](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image18.png)
+![Vercel's project setup page for the Astro repository](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image19.png)
 
 If you cannot see your repository in Vercel, you may need to change the repository access in your GitHub settings.
 
-![GitHub repository access settings for the Vercel connection](/images/2026/08/30/image17.png)
-![Vercel showing the deployment in progress](/images/2026/08/30/image20.png)
-![Vercel's deployment success page](/images/2026/08/30/image21.png)
+![GitHub repository access settings for the Vercel connection](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image17.png)
+![Vercel showing the deployment in progress](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image20.png)
+![Vercel's deployment success page](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/08/30/image21.png)
 For this static blog, you do not need a special Vercel adapter. Astro makes ordinary files, and Vercel can serve them.
 
 The first deployment gives you a temporary Vercel address. Open it and check the home page, a post, pictures, and search.

@@ -26,3 +26,9 @@ pnpm-debug.log*
 # pagefind
 
 public/pagefind
+.vercel
+.env*
+
+# Media stored in Vercel Blob
+public/images/
+public/films/

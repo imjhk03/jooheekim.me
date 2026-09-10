@@ -3,7 +3,7 @@ title: 스위프트에서 빌더 패턴 구현해보기
 description: 최근에 회사에서 커스텀 해서 사용하는 뷰를 사용해야 하는 경우가 생겼는데, 정해진 규칙이 있고 다양하게 조립하여 뷰를 그릴 수 있다고 판단하여 builder pattern(이하 빌더 패턴)으로 만들어 구현해 보았다. 회사 직원들도 잘 만들었다고 했고, 직접 사용하면서 불편한 점이 ...
 pubDatetime: 2021-09-23T09:00:00Z
 tags: [architecture, design-patterns, builder-pattern]
-heroImage: /images/2021/09/23/image1.jpeg
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/09/23/image1.jpeg
 ---
 
 
@@ -46,7 +46,7 @@ Text("This is title")
 - Builder - 생성하고 싶은 Product를 생성해 주고 반환해 주는 구성 요소
 - Director - Builder를 이용해서 필요한 product를 받아서 처리하는 구성 요소. 사용하는 용도에 따라 Director를 이용할 수 있고, 직접 Builder를 접근해서 product 반환할 수 있다.
 
-![빌더 패턴의 구조를 설명한 간단하게 그린 클래스 패턴](/images/2021/09/23/image1.jpeg)
+![빌더 패턴의 구조를 설명한 간단하게 그린 클래스 패턴](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/09/23/image1.jpeg)
 
 ## 구현하기
 

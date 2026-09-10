@@ -2,7 +2,7 @@
 title: "One month after surgery: Running my first sale"
 description: "Recovery update and what I'm trying after the app launch"
 pubDatetime: 2025-10-14T00:00:00+09:00
-heroImage: /images/2025/10/14/image1.jpg
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/14/image1.jpg
 lang: en
 translations:
   en: /posts/2025/2025-10-14-one-month-after-surgery-running-first-sale-en
@@ -10,7 +10,7 @@ translations:
 tags: [blog]
 ---
 
-![image1](/images/2025/10/14/image1.jpg)
+![image1](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/14/image1.jpg)
 
 ## One Month
 
@@ -19,7 +19,7 @@ It's been a month since my left arm surgery. The swelling has gone down signific
 Physical therapy is harder than I thought. After each session, my energy drops as if I've just finished a workout, and fatigue hits me hard. When I get home, I shower and immediately fall asleep. Right after surgery, it was the acute pain that was difficult. Now the pain has decreased, but my overall stamina seems to have dropped even more. I sleep much more than before. It feels like I only have about 4-5 hours a day when I can actually do something productive.
 
 ## After Launch
-![image2](/images/2025/10/14/image2.png)
+![image2](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/10/14/image2.png)
 I launched the app on October 2nd. Today is October 14th, so exactly 12 days have passed. Here's the current situation: 0 downloads, 0 app page views, and naturally $0 in revenue. For the first three days after launch, I spent time thinking about new features I wanted to add and fixing some bugs. At the same time, I shared my blog post on social media and posted about the app. But the response was almost nonexistent. There were no downloads, and the app page view count didn't move at all.
 
 Then the long Chuseok holiday began. I spent time with family and couldn't pay much attention to app promotion or marketing. Honestly, I figured people probably weren't checking the App Store during the holiday anyway. About a week passed like that. After the holiday ended, I started going to physical therapy again, but the fatigue after treatment was more intense than I expected. When I got home, I couldn't do anything but rest. As a result, I couldn't properly post about the app consistently or do any real promotion.

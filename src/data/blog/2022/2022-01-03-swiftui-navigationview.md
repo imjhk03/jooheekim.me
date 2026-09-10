@@ -3,7 +3,7 @@ title: SwiftUI에서 NavigationView 사용하기
 description: SwiftUI에서 를 이용해서 유저가 navigate 하면서 여러 화면들을 이동할 수 있게 할 수 있습니다. 아래 예시 코드에서 `Text`를 `NavigationView`로 감쌌는데, 감싼 후에 `Text`가 아래로 이동한 것을 볼 수 있습니다.
 pubDatetime: 2022-01-03T09:00:00Z
 tags: [swiftui, navigation]
-heroImage: /images/2022/01/03/image4.gif
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2022/01/03/image4.gif
 ---
 
 
@@ -21,7 +21,7 @@ struct ContentView: View {
 }
 ```
 
-| <img src="/images/2022/01/03/image1.png" alt="Plain text saying Hello SwiftUI" width="400"> | <img src="/images/2022/01/03/image2.png" alt="Navigation View is added so the text move below" width="400"> |
+| <img src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2022/01/03/image1.png" alt="Plain text saying Hello SwiftUI" width="400"> | <img src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2022/01/03/image2.png" alt="Navigation View is added so the text move below" width="400"> |
 |---|---|
 | NavigationView가 없는 Text | NavigationView가 있는 Text |
 
@@ -45,7 +45,7 @@ NavigationView {
 .navigationTitle("SwiftUI")
 ```
 
-<img src="/images/2022/01/03/image3.png" alt="Navigation Title is added, saying SwiftUI" width="400"/>
+<img src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2022/01/03/image3.png" alt="Navigation Title is added, saying SwiftUI" width="400"/>
 
 `NavigationView` 안에 보이고 있는 view의 타이틀을 지정하기 위해서 위에서 Text view에 navigationTitle를 지정합니다. 만약 `NavigationView`에 navigationTitle를 지정하면 고정적인 타이틀을 지정하는 의미로 볼 수 있습니다.
 
@@ -89,7 +89,7 @@ NavigationView {
 }
 ```
 
-![A gif showing a three column, and when each selected a second view shows](/images/2022/01/03/image4.gif)
+![A gif showing a three column, and when each selected a second view shows](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2022/01/03/image4.gif)
 
 ## 마무리
 

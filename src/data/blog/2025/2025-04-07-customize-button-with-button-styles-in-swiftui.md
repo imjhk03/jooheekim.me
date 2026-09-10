@@ -2,7 +2,7 @@
 title: SwiftUI에서 커스텀 버튼 스타일 구현하기
 description: ButtonStyle 프로토콜을 사용한 커스텀 버튼 스타일 만들기
 pubDatetime: 2025-04-07T09:00:00Z
-heroImage: /images/2025/04/07/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/04/07/image1.png
 tags: [swiftui]
 ---
 
@@ -51,7 +51,7 @@ struct ContentView: View {
 }
 ```
 
-![Green Circle Button](/images/2025/04/07/image1.png)
+![Green Circle Button](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/04/07/image1.png)
 
 SwiftUI의 환경(environment) 시스템을 활용해서 버튼의 색을 커스텀 버튼 스타일 내부가 아닌 외부에서 지정할 수 있다.
 
@@ -81,7 +81,7 @@ struct ContentView: View {
 }
 ```
 
-![Blue Circle Button](/images/2025/04/07/image2.png)
+![Blue Circle Button](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/04/07/image2.png)
 
 ## 버튼 상호작용 상태 처리하기
 `ButtonConfiguration`에 있는 `isPressed` 프로퍼티를 사용하여 버튼이 눌렸을 때의 시각적 피드백을 구현할 수 있다.
@@ -104,7 +104,7 @@ struct CircleStyle: ButtonStyle {
 }
 ```
 
-![Circle Button interaction](/images/2025/04/07/image3.gif)
+![Circle Button interaction](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/04/07/image3.gif)
 
 
 **참고**

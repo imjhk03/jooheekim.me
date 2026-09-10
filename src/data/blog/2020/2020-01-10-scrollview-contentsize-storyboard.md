@@ -3,7 +3,7 @@ title: How to deal with scroll view content size with storyboard
 description: "`UIScrollView` is very useful when presenting content that are larger than a single screen. I've been using it to support iPhone SE users or iPhone 8 users t..."
 pubDatetime: 2020-01-10T09:00:00Z
 tags: [uikit, ui-development, storyboard]
-heroImage: /images/2020/01/10/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/01/10/image1.png
 ---
 
 
@@ -13,7 +13,7 @@ I prefer using Interface Builder to add or modify `UIScrollView` that is already
 
 ## Steps
 
-![Example Storyboard Scene](/images/2020/01/10/image1.png)
+![Example Storyboard Scene](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/01/10/image1.png)
 
 This is an example of one `UIViewController` that has a `UIScrollView`. When it was first made, it was matched with iPhone 5. But after setting the storyboard view as iPhone 11, the layouts are not setted well. It's because the `UIScrollView` layouts were not properly setted before. Let's fix this problem.
 
@@ -27,7 +27,7 @@ Add a `UIView` that contains the `UIScrollView`. This view needs below constrain
 
 1. Leading, trailing, top and bottom constraints (all zero to Superview).
 
-![Added UIView and constraints](/images/2020/01/10/image2.png)
+![Added UIView and constraints](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/01/10/image2.png)
 
 ### Step 3
 Add equal height, equal width contraints to the UIView inside `UIScrollView` to the `UIView` that contains `UIScrollView`.
@@ -36,7 +36,7 @@ Add equal height, equal width contraints to the UIView inside `UIScrollView` to 
 2. Check the `UIScrollView`'s constraints. `UIScrollView` constraints needs to be setted as below.
     2-1. Leading, trailing, top and bottom constraints (all zero to Superview).
 
-![The final constraints](/images/2020/01/10/image3.png)
+![The final constraints](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/01/10/image3.png)
 
 
 After the steps, you can run different devices and see it will scroll through all content. And also in the storyboard you will no longer see any red error like 'Scrollable Content Size Ambiguity Error'. 👏

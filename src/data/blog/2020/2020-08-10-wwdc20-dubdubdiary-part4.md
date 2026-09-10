@@ -3,7 +3,7 @@ title: WWDC20 Dub Dub Diary, Part 4 - Swift type inference, writing tests to fai
 description: For the fourth day of WWDC20, among great sessions there were two most interesting sessions about Swift language and testing. This article will talk about th...
 pubDatetime: 2020-08-10T09:00:00Z
 tags: [wwdc]
-heroImage: /images/2020/08/10/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/08/10/image1.png
 ---
 
 
@@ -50,7 +50,7 @@ FilteredList(
 
 Type inference helps us write source code faster, not spelling all the types in our code. Below is the code side by side with the initializer.
 
-![Swift Type Inference](/images/2020/08/10/image1.png)
+![Swift Type Inference](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/08/10/image1.png)
 
 Below code is how the compiler use type inference, using clues from the source code.
 
@@ -110,7 +110,7 @@ Using enum cases for all String value is convenient for future updates. String v
 
 For assertion messages, make use of optional descriptions to give more context for failure messages. And for testing asynchronous logic, use `waitForExistence()` then `sleep()`.
 
-![Use assertion message](/images/2020/08/10/image2.png)
+![Use assertion message](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/08/10/image2.png)
 
 To unwrap optionals, don't force unwrap to cause crash. Instead, follow below code.
 

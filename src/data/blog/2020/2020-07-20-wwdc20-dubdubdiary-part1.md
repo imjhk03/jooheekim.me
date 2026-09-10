@@ -3,7 +3,7 @@ title: WWDC20 Dub Dub Diary, Part 1
 description: From June 23 to June 26, WWDC20 was hosted online. I was lucky to win the last WWDC18 and WWDC19 event, and I went to America alone and enjoyed it. So I coul...
 pubDatetime: 2020-07-20T09:00:00Z
 tags: [wwdc]
-heroImage: /images/2020/07/20/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/07/20/image1.png
 ---
 
 
@@ -30,7 +30,7 @@ I was expecting how the keynote will show online, but it came out better than I 
 - Translate app
 - Compact Siri UI
 
-![iOS 14](/images/2020/07/20/image1.png)
+![iOS 14](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/07/20/image1.png)
 
 
 New features such as App Library, Widgets, PIP and App Clips have been announced. Features that might have been seen in other OS have been added to iOS 14, but the interesting part was the App Clips. You can use apps that can be used very lightly from NFC or QR codes without installing them. If making a good use of these things, it would be great to encourage users to use the app without having to install it. If they like using it or been using it frequently, users can install it and use it as usual. I think focusing on Widgets and App Clips will be the main thing on iOS 14 this year.
@@ -41,7 +41,7 @@ New features such as App Library, Widgets, PIP and App Clips have been announced
 - Search (Spotlight)
 - Scribble
 
-![iPadOS 14](/images/2020/07/20/image2.png)
+![iPadOS 14](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/07/20/image2.png)
 
 In iPadOS 14, compacted phone UI and other new features were announced. But the most memorable thing was the Scribble feature. Using an Apple pencil to write a phrase becomes text, and selecting or deleting text with the Apple pencil is now available in iPadOS 14. This feature makes iPad more useful for people studying on the iPad with the Apple pencil or writing with it. Now, little by little, Apple seem to be pushing for an inseparable relationship between the Apple pencil and the iPad.
 
@@ -50,7 +50,7 @@ In iPadOS 14, compacted phone UI and other new features were announced. But the 
 - Sleep tracking
 - Hand wash detection
 
-![watchOS 7](/images/2020/07/20/image3.png)
+![watchOS 7](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/07/20/image3.png)
 
 New dance functions and sleep tracking functions have been added, but the hand washing feature is what I liked the most. Now that it is important to wash your hands and wear a mask, with Apple Watch you can take care of your health more than before. Just as Apple Watch cares much about health, I thought that health-related apps would be the best fit for Apple Watch in the future.
 
@@ -60,13 +60,13 @@ New dance functions and sleep tracking functions have been added, but the hand w
 - Control Center
 - Native translations in Safari
 
-![macOS Big Sur](/images/2020/07/20/image4.png)
+![macOS Big Sur](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/07/20/image4.png)
 
 MacOS has changed the design of the UI on a large scale. I felt as if I was looking at the old iOS 7 design. The icons went back to the neumorphism design, which seems to be the middle of the design of skeuomorphism and flat. Since last year, neumorphism designs began to be seen little by little, but I never expected them to come out from macOS Big Sur new design. I felt that macOS followed the trend of design. In addition to the new UI design, control centers that were seen on iPhones and iPads have become available on macOS, and website translation functions have been added on Safari.
 
 ## Apple Silicon
 
-![Apple Silicon](/images/2020/07/20/image5.png)
+![Apple Silicon](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/07/20/image5.png)
 
 **Apple Silicon**. ARM Mac products will be available, and iOS/iPadOS apps will be able to run natively. With Apple Silicon in the Mac, it will create a common architecture across all Apple products, developers can optimize apps for all environments. Mac products with Apple Silicon will be released at the end of the year and a complete transition will be made within two years. I want to use Mac products with Apple silicon as soon as possible.
 
@@ -74,7 +74,7 @@ MacOS has changed the design of the UI on a large scale. I felt as if I was look
 
 # Platforms State of the Union
 
-![Platforms State of the Union](/images/2020/07/20/image6.png)
+![Platforms State of the Union](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/07/20/image6.png)
 
 I once thought the Keynote was important, but what I learned after visiting WWDC19 last year is that Platforms State of the Union is a must-see session for developers. This session is for developers to learn more about new features and meet engineering leaders. In this WWDC20, we were able to meet various engineering leaders, and what was interesting was the scene where they talked about Apple Silicon through Facetime. We could briefly see more diverse features, including Sidebar function in iPadOS, color use in macOS, and a simple demonstration of Widget development in iOS 14.
 

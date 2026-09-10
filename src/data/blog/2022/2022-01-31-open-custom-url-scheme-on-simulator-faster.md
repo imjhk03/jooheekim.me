@@ -3,7 +3,7 @@ title: Custom URL Scheme를 시뮬레이터에서 빠르게 여는 방법
 description: 해당 글은  참고하여 작성한 글입니다.
 pubDatetime: 2022-01-31T09:00:00Z
 tags: [xcode]
-heroImage: /images/2022/01/31/image3.gif
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2022/01/31/image3.gif
 ---
 
 
@@ -13,7 +13,7 @@ heroImage: /images/2022/01/31/image3.gif
 
 | Custom URL | App View |
 |---|---|
-| <img src="/images/2022/01/31/image1.PNG" alt="메모 앱에 4개의 custom URL scheme이 있다" width="400"> | <img src="/images/2022/01/31/image2.PNG" alt="앱의 일부 화면이 나타나 있는 화면. Custom URL scheme을 지정한 화면 중 하나." width="400"> |
+| <img src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2022/01/31/image1.PNG" alt="메모 앱에 4개의 custom URL scheme이 있다" width="400"> | <img src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2022/01/31/image2.PNG" alt="앱의 일부 화면이 나타나 있는 화면. Custom URL scheme을 지정한 화면 중 하나." width="400"> |
 
 사파리에서 직접 입력하거나 메모 앱에서 하나씩 눌러서 테스트해도 괜찮으나, custom URL scheme이 너무 많을 경우 하나씩 확인하는 작업이 귀찮거나 느릴 수 있습니다.
 
@@ -25,7 +25,7 @@ Xcode 안에 있는 도구를 사용할 수 있는 command line인 `xcrun`을 �
 xcrun simctl openurl booted {custom URL Scheme}
 ```
 
-![터미널에 명령어를 입력하여 시뮬레이터에서 앱 열고 있다](/images/2022/01/31/image3.gif)
+![터미널에 명령어를 입력하여 시뮬레이터에서 앱 열고 있다](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2022/01/31/image3.gif)
 
 ## 마무리
 

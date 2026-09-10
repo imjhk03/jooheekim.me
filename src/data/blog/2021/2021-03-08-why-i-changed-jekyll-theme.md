@@ -3,7 +3,7 @@ title: jekyll 블로그 테마를 바꾼 이유
 description: 2019년 연말부터 거의 꾸준히 글 쓰려고 노력하고 있다. 기술 블로그 통해서 많은 것을 배워서 나도 비슷하게 그런 글을 쓰거나, 아니면 개인적으로 공부한 것을 기록하는 용도로 기술 블로그를 시작했다. 물론, 개인 포트폴리오 용도도 좀 있다. 성실하다는 것을 잘 나타나는 지표로 사...
 pubDatetime: 2021-03-08T09:00:00Z
 tags: [blog, jekyll]
-heroImage: /images/2021/03/08/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/03/08/image1.png
 ---
 
 
@@ -15,7 +15,7 @@ heroImage: /images/2021/03/08/image1.png
 
 다시 2019년에 들면서 GitHub Page 라는 것을 이용해서 블로그를 만들 수 있다는 내용을 듣고 리파지토리 새로 만들면서 기술 블로그를 지금까지도 잘 쓰고 있다. 처음에는 깔끔한 UI를 좋아해서 찾다가 [texture](https://github.com/samarsault/texture) jekyll 테마를 적용했다. 아직 초반이기 때문에 필요한 것들이 많지 않아서 해당 테마를 입히고 천천히 custom 하려고 했다. 대학교 때 배웠던 html이나 css로 웹사이트 만든 적도 있고, jekyll document도 잘 나와 있어서 참고하면서 천천히 나만의 기술 블로그로 만들려고 했다.
 
-![First jekyll theme](/images/2021/03/08/image1.png)
+![First jekyll theme](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/03/08/image1.png)
 *깃헙 블로그 테마를 처음 적용한 모습*
 
 커스텀하는게 재밌어서 블로그 작성하고 나면 '이런 부분은 좀 개선해야겠다', '이런 거 추가해야겠다' 하는 것을 메모했다가 시간 내서 적용하고 [블로그 글](https://imjhk03.github.io/posts/custom-jekyll-theme/)을 작성하기도 했다. 이때까지만 해도 재미가 있었다.
@@ -24,7 +24,7 @@ heroImage: /images/2021/03/08/image1.png
 
 이전에 썼던 테마에서 마지막으로 커스텀하면서 추가한 기능이 '태그' 추가였다. 멋진 개발자들의 블로그를 보면 블로그 내용과 관련한 태그도 같이 나오길래 나도 한번 적용해보고 싶어서 추가해보려고 했다. 해당 테마는 태그 기능이 없길래 기능을 추가하면서 jekyll 문법도 보고, 회사 직원 도움받으면서 태그 기능을 추가했다. 생각보다 조금 어려웠고, 태그별로 또 페이지를 만들어야 하는 번거로움이 생겼다. 그래도 뭔가 스스로 하나를 만들었다는 기쁨에 좋았고 나중에는 'WWDC' 카테고리를 따로 만들어서 확장하기도 했다.
 
-![Tag buttons are shown under blog title](/images/2021/03/08/image2.png)
+![Tag buttons are shown under blog title](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/03/08/image2.png)
 *태그를 목록에 표시하고 어떤 태그냐에 따라서 색깔도 지정했다.*
 
 문제는 여기서부터 시작했다. 커스텀 하는 부분에 생각보다 시간이 오래 걸렸고, 하다 보면 더 하고 싶은 부분과 번거로움이 생긴다는 점을 느꼈다. 개발자이다 보니 기능 하나 추가하거나 커스텀 하는 부분에서 재미를 느꼈지만, 이 부분에 대해서 꾸준히 해야 하는지 고민을 하기 시작했다. 블로그 글을 꾸준히 써야 하는데 커스텀까지 신경 써야 하기 때문이다. 회사 업무가 많아지다 보면 자연스레 커스텀 하는 부분은 나중에 생각하게 되고 귀찮아서 안 하게 되는 경우가 생기게 된다.

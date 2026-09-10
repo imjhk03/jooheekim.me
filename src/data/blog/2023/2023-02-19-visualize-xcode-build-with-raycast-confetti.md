@@ -3,14 +3,14 @@ title: Raycast + Confetti로 Xcode 빌드 완료 효과 넣기
 description: Xcode 빌드 완료 시 Raycast의 Confetti 애니메이션으로 시각적 알림 효과 추가하기
 pubDatetime: 2023-02-19T09:00:00Z
 tags: [workflow]
-heroImage: /images/2023/02/19/video1.gif
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2023/02/19/video1.gif
 ---
 
 [싱글 모니터](https://imjhk03.github.io/posts/not-using-multiple-monitors/) 사용하면서 하나의 업무에만 집중하는 환경을 보내고 있다. 하지만 프로젝트 빌드 시간이 오래 걸리면 다른 업무를 확인하는 경우가 있는데, 이때 너무 집중을 하다 보면 빌드 완료되었다는 알림을 놓치는 경우가 있다. 한참 업무를 보거나 딴짓(?)을 하다가 다시 Xcode 프로그램으로 돌아가면 빌드가 다 완료되어 있는 상태가 있어서 보다 빨리 확인을 못 하는 경우가 있다.
 
 우연히 인터넷에서 Raycast + Confetti로 Xcode 빌드가 완료되면 알 수 있도록 하는 팁을 발견해서 적용해 보았는데 너무 만족하고 있다.
 
-![Xcode 빌드가 완료되면 화면 양쪽에서 빵빠레 애니메이션이 나타난다](/images/2023/02/19/video1.gif)
+![Xcode 빌드가 완료되면 화면 양쪽에서 빵빠레 애니메이션이 나타난다](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2023/02/19/video1.gif)
 _GIF 변환하면서 속도가 느려진 모습으로 나타나고 있다_ 
 
 
@@ -42,7 +42,7 @@ chmod +x confetti_shortcut.sh
 ## Xcode
 Xcode > Settings > Behaviors > Build > Succeeds 아래에 Run script 영역에서 만든 스크립트 파일을 선택하면 된다.
 
-![Xcode > Settings > Behaviors > Build > Succeeds 맨 아래 만들었던 스크립트 파일을 설정한 화면](/images/2023/02/19/image1.png)
+![Xcode > Settings > Behaviors > Build > Succeeds 맨 아래 만들었던 스크립트 파일을 설정한 화면](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2023/02/19/image1.png)
 
 **참고**
 

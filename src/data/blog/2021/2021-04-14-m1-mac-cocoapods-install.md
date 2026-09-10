@@ -3,7 +3,7 @@ title: M1 mac에서 cocoapods 설치하기
 description: "Update: Homebrew를 이용해서 설치하는 방법 추가하고 글 내용을 조금 수정했습니다."
 pubDatetime: 2021-04-14T09:00:00Z
 tags: [cocoapods]
-heroImage: /images/2021/04/14/image1.PNG
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/04/14/image1.PNG
 ---
 
 
@@ -15,7 +15,7 @@ M1 맥 미니 구매하고 나서, 놀라운 퍼포먼스와 무소음 환경을
 ## Rosetta를 이용하고 ffi 설치해서 cocoapods 설치하는 방법
 ### 1. 터미널 앱을 Rosetta를 사용하여 열기
 응용 프로그램에서 터미널 앱에서 오른쪽 클릭을 해 정보 보기를 한 후, 'Rosetta를 사용하여 열기'를 체크합니다.
-![터미널 정보 창에 Rosetta를 사용하여 열기를 체크](/images/2021/04/14/image1.PNG)
+![터미널 정보 창에 Rosetta를 사용하여 열기를 체크](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/04/14/image1.PNG)
 
 ### 2. 터미널 앱을 열어서 아래 명령어 입력하기
 ```zsh

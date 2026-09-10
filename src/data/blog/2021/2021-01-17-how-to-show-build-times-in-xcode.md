@@ -3,7 +3,7 @@ title: How to show build times in Xcode
 description: You can show how long the project build in Xcode by entering below command in ```Terminal.app```.
 pubDatetime: 2021-01-17T09:00:00Z
 tags: [xcode]
-heroImage: /images/2021/01/17/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/01/17/image1.png
 ---
 
 
@@ -15,6 +15,6 @@ defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
 
 After entering the command, if you build Xcode it will show the build time on the activity viewer.
 
-![The build time will show on activity viewer](/images/2021/01/17/image1.png)
+![The build time will show on activity viewer](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/01/17/image1.png)
 
 If you change YES to NO, the build time will not show in Xcode.

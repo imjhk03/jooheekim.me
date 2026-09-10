@@ -3,7 +3,7 @@ title: How to create a view controller from xib
 description: Creating a new view controller was easy. I've used to create a view controller from Storyboard, and instantiated in code. Although this way is easy, so many ...
 pubDatetime: 2020-11-09T09:00:00Z
 tags: [uikit, ui-development, view-controllers, storyboard]
-heroImage: /images/2020/11/09/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/11/09/image1.png
 ---
 
 
@@ -12,7 +12,7 @@ Creating a new view controller was easy. I've used to create a view controller f
 ## 1. Create a new xib file
 First, create a new empty xib file and name it. Then, add a UIView to the empty place. Add other components you need.
 
-![An empty xib file having a UIView](/images/2020/11/09/image1.png)
+![An empty xib file having a UIView](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/11/09/image1.png)
 
 ## 2. Create a swift file
 Create a swift file that associates with the new view controller xib file. Here are the start code for example.
@@ -33,11 +33,11 @@ final class MainViewController: UIViewController {
 ## 3. Link both files
 Now let's link both files. In the xib file, the *File's Owner* is the swift file name. Put the view controller swift file name at the **File's Owner** Custom Class > Class.
 
-![UIView xib file's owner is the swift file name](/images/2020/11/09/image2.png)
+![UIView xib file's owner is the swift file name](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/11/09/image2.png)
 
 After that, you can add IBOutlets to the swift file. As you add the ```IBOutlets```, you can see the object is **File's Owner** below the screenshot. I added a new collection view and at ```viewDidLoad``` function, I set the collection view's background color to red.
 
-![IBOutlet's object is file's owner](/images/2020/11/09/image3.png)
+![IBOutlet's object is file's owner](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/11/09/image3.png)
 
 ```swift
 import UIKit
@@ -74,11 +74,11 @@ Why is this error occurring? We have forgotten to link the ```UIView``` itself t
 
 Go to the xib file and at the **File's Owner** 's Connection Inspector, link the view object to the view in the Document Outline. See the image below for more details.
 
-![Linking the view from Connection Inspector to the view in Document Outline](/images/2020/11/09/image4.png)
+![Linking the view from Connection Inspector to the view in Document Outline](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/11/09/image4.png)
 
 Now build and run, and your app won't crash and show the view controller successfully.
 
-![A new view controller is successfully presented](/images/2020/11/09/image5.png)
+![A new view controller is successfully presented](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/11/09/image5.png)
 
 
 

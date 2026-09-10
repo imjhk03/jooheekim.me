@@ -3,7 +3,7 @@ title: How to send emails from iOS 14
 description: With iOS 14, thirdparty app can be the default email app. This means we may have to support sending email with thirdparty apps. If the user is not using the ...
 pubDatetime: 2021-02-22T09:00:00Z
 tags: [uikit, email]
-heroImage: /images/2021/02/22/image1.jpeg
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/02/22/image1.jpeg
 ---
 
 
@@ -11,7 +11,7 @@ With iOS 14, third-party app can be the default email app. This means we may hav
 
 # How to send email via default
 
-![Email composition Interface](/images/2021/02/22/image1.jpeg)
+![Email composition Interface](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/02/22/image1.jpeg)
 *Email composition Interface*
 
 Apple's `MessageUI` framework provides `MFMailComposeViewController` which shows an email composition interface to send email inside an app. Although this does not automatically send email, so the user need to tap themselves to send email. Here is the example code below.
@@ -149,7 +149,7 @@ private func presentAlertSheetThirdPartyEmailApps(_ availableApps: [AvailableApp
 ```
 
 If you apply it, you can see the screenshot like below.
-![Third Party App Alert Sheet and No available App Alert](/images/2021/02/22/image2-1.jpeg)
+![Third Party App Alert Sheet and No available App Alert](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/02/22/image2-1.jpeg)
 
 WARNING: If you want to test sending an email app, you need to test it on a real device, not on an iOS simulator.
 

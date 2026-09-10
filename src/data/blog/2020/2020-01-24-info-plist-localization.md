@@ -3,7 +3,7 @@ title: Info.plist Localization
 description: "Recently, one of our app got rejected by App Store Connect, because it needed to update `NSPhotoLibraryUsageDescription` content. There was not enough reason..."
 pubDatetime: 2020-01-24T09:00:00Z
 tags: [localization]
-heroImage: /images/2020/01/24/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/01/24/image1.png
 ---
 
 
@@ -12,16 +12,16 @@ Recently, one of our app got rejected by App Store Connect, because it needed to
 ## Add new Strings File
 First, add a new `Strings File` naming "`InfoPlist`".
 
-![Add new InfoPlist.strings](/images/2020/01/24/image1.png)
+![Add new InfoPlist.strings](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/01/24/image1.png)
 
 ## Enable Localization
 While `InfoPlist.strings` file selected, press **Localize...** button in the file inspector panel.
 
-![Localize Button](/images/2020/01/24/image2.png)
+![Localize Button](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/01/24/image2.png)
 
 After pressing the button, you will get localized files like below.
 
-![Two new localize InfoPlist.strings file](/images/2020/01/24/image3.png)
+![Two new localize InfoPlist.strings file](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/01/24/image3.png)
 
 ## Add Localized Message
 Add localized description for each file that matches the language. You can change the app name to match the language of the country (`CFBundleDisplayName` and `CFBundleName`). The keys must be added to `Info.plist` file, or the localization will not work well.

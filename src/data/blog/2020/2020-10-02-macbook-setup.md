@@ -3,7 +3,7 @@ title: '나의 새로운 Mac 설정 목록 (Setup my personal Mac)'
 description: "2023.01.20 업데이트: macOS Ventura 13.1 버전 기준으로 업데이트"
 pubDatetime: 2020-10-02T09:00:00Z
 tags: [workflow]
-heroImage: /images/2020/10/02/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/10/02/image1.png
 ---
 
 
@@ -23,16 +23,16 @@ heroImage: /images/2020/10/02/image1.png
     defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
     ```
     
-    ![Dock with empty space](/images/2020/10/02/image1.png)
+    ![Dock with empty space](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/10/02/image1.png)
 
 5. Mission Control - 핫 코너
     - Spaces를 최근 사용 내역에 따라 자동으로 재정렬 체크 해제
-    ![Mission Control 체크 리스트](/images/2023/01/20/image5.png)
+    ![Mission Control 체크 리스트](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2023/01/20/image5.png)
     - Launchpad, Mission Control, 데스크탑, 디스플레이 잠자기
-    ![Mission Control 핫 코너](/images/2023/01/20/image2.png)
+    ![Mission Control 핫 코너](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2023/01/20/image2.png)
 6. 손쉬운 사용 - 확대/축소
     - 확대/축소하려면 스크롤 제스처를 다음 보조 키와 함께 사용 활성화
-    ![단축키를 사용하여 확대하기](/images/2023/01/20/image3.png)
+    ![단축키를 사용하여 확대하기](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2023/01/20/image3.png)
 7. 메뉴 막대에서 Bluetooth 보기 활성화
 8. 키보드
     - 단축키
@@ -40,14 +40,14 @@ heroImage: /images/2020/10/02/image1.png
         - Spotlight 검색 보기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⌥스페이스
     - 텍스트
         - 메뉴바에 나타나는 항목 빼고 모든 항목 체크박스 해제하기
-        ![키보드 텍스트 모든 체크박스 해제하기](/images/2023/01/20/image6.png)
+        ![키보드 텍스트 모든 체크박스 해제하기](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2023/01/20/image6.png)
 9. 트랙패드
     - 탭하여 클릭하기 활성화
     - 이동 속도 조절
 10. 공유
     - 컴퓨터 이름 변경
         - 이렇게 하면 터미널에서 컴퓨터 이름이 나타난다
-        ![터미널에 내 컴퓨터 이름 변경하기](/images/2023/01/20/image4.png)
+        ![터미널에 내 컴퓨터 이름 변경하기](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2023/01/20/image4.png)
 11. Finder
     - 보기
         - 경로, 상태 막대 보기
@@ -58,7 +58,7 @@ heroImage: /images/2020/10/02/image1.png
 defaults -currentHost write -g AppleFontSmoothing -int 0
 ```
 13. Spotlight 검색 카테고리 일부만 체크하기
-![터미널에 내 컴퓨터 이름 변경하기](/images/2023/01/20/image7.png)
+![터미널에 내 컴퓨터 이름 변경하기](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2023/01/20/image7.png)
 14. 필요한 프로그램들을 정리한 노트 기록하기
     - Brave Browser
     - Xcode

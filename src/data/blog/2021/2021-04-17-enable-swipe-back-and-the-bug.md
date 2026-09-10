@@ -3,7 +3,7 @@ title: Enable swipe back and the bug
 description: In iOS, we can swipe back(left to right) to pop the view controller and navigate back. This is only available when the navigation bar is shown. If we want to...
 pubDatetime: 2021-04-17T09:00:00Z
 tags: [uikit, ui-development]
-heroImage: /images/2021/04/17/image1.gif
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/04/17/image1.gif
 ---
 
 
@@ -24,7 +24,7 @@ override func viewDidLoad() {
 But be careful when using it. There is a bug, which is when we swipe back at the very root view controller. Nothing happens because there is no view controller to pop. But then, nothing happens when tapping anywhere. The view controller does not response at all. If we swipe back again, a strange view appears from the left as we swipe. After this happens, the root view controller now gets response. Below image shows the strange behavior.
 
 
-![A list of movie poster and tapped one of them to see the detail. Scrolls down to hide navigation bar, and successfully swipes back to pop view controller and navigate back. Scrolls down to the middle of the list and swipes back. Nothing happens but tapping to one of the list does not response. Swipes back and from the right shows a detail view controller. After that, the view controller response normally.](/images/2021/04/17/image1.gif)
+![A list of movie poster and tapped one of them to see the detail. Scrolls down to hide navigation bar, and successfully swipes back to pop view controller and navigate back. Scrolls down to the middle of the list and swipes back. Nothing happens but tapping to one of the list does not response. Swipes back and from the right shows a detail view controller. After that, the view controller response normally.](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/04/17/image1.gif)
 
 To prevent this strange behavior, we need to handle the ```interactivePopGestureRecognizer``` to be enabled or disabled. This can be in the root view controller or implement ```UINavigationControllerDelegate``` to the root view controller. It depends on how your root view controller is structed.
 

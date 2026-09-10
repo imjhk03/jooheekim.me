@@ -2,7 +2,7 @@
 title: SwiftUI Color를 gradient으로 변경하기
 description: iOS 16의 새로운 Color.gradient 프로퍼티 활용하기
 pubDatetime: 2025-04-21T09:00:00Z
-heroImage: /images/2025/04/21/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/04/21/image1.png
 tags: [swiftui, ios16]
 ---
 
@@ -22,7 +22,7 @@ VStack {
 .padding()
 ```
 
-![파란색 사각형과 그라데이션이 적용된 사각형](/images/2025/04/21/image1.png)
+![파란색 사각형과 그라데이션이 적용된 사각형](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/04/21/image1.png)
 
 
 **참고**

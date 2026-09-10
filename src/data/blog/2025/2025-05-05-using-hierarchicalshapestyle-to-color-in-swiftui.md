@@ -2,7 +2,7 @@
 title: HierarchicalShapeStyle로 색상 계층 구조 활용하기
 description: SwiftUI에서 계층적 색상 스타일 활용하기
 pubDatetime: 2025-05-05T09:00:00Z
-heroImage: /images/2025/05/05/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/05/05/image1.png
 tags: [swiftui]
 ---
 
@@ -25,7 +25,7 @@ VStack {
 .padding()
 ```
 
-![다섯 단계의 색상 계층 구조](/images/2025/05/05/image1.png)
+![다섯 단계의 색상 계층 구조](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/05/05/image1.png)
 
 `HierarchicalShapeStyle`은 다음과 같은 다섯 단계의 계층 구조를 제공한다:
 

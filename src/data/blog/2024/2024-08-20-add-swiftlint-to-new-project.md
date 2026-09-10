@@ -3,7 +3,7 @@ title: 신규 프로젝트에 Swiftlint 적용하기
 description: 신규 iOS 프로젝트에 SwiftLint를 설치하고 설정하는 단계별 가이드
 pubDatetime: 2024-08-20T09:00:00Z
 tags: [optimization]
-heroImage: /images/2024/08/20/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2024/08/20/image1.png
 ---
 
 새로운 프로젝트 시작할 때 개발하기 전에 설정하는 것들이 있다. 최소 운영체제 버전을 설정하거나 지원되는 기기 등 여러 가지가 있다. 그중 하나는 스위프트 스타일이나 코드 포맷을 맞추기 위한 도구인 [SwiftLint](https://github.com/realm/SwiftLint)를 추가하는 경우가 있다. 시간이 지나 다시 신규 프로젝트를 만들 때 SwiftLint 추가하는 방법이 까먹을 때가 있다. 그래서 설정하는 것을 다시 볼 수 있게 기록해서 나중에 참고하고 싶다는 마음에 글을 쓰게 되었다.
@@ -24,7 +24,7 @@ Homebrew 이외 설치 방법은 [SwiftLint 깃헙](https://github.com/realm/Swi
 ## 2. 프로젝트에 SwiftLint 추가하기
 프로젝트에 새로운 파일 생성해서 `'.swiftlint.yml'` 파일을 만든다. 이 파일에서는 프로젝트에 맞게 규칙들을 설정하면 된다.
 
-![](/images/2024/08/20/image1.png)
+![](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2024/08/20/image1.png)
 
 간단하게 SwiftLint 규칙들을 소개하면 아래와 같다. 이 규칙들 토대로 옵션들을 커스텀 할 수 있다.
 * disabled_rules: 기본적으로 활성화된 규칙 집합에서 규칙을 비활성화한다
@@ -132,20 +132,20 @@ fi
 
 스크립트를 작성하고 빌드를 하면 아래와 같이 처음에 에러가 발생할 수 있다.
 
-![](/images/2024/08/20/image2.png)
+![](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2024/08/20/image2.png)
 
 이는 Xcode 15부터 `ENABLE_USER_SCRIPT_SANDBOXING`의 기본 값이 `NO`에서 `YES`로 변경되었기 때문이다. 그 결과, SwiftLint는 파일 권한 부족과 관련된 오류에 직면하게 되며, 일반적으로 `error: Sandbox: swiftlint(19427) deny(1) file-read-data`라는 형태로 나타난다.
 
 이 오류를 해결하기 위해서는 Build Settings에서 sandbox 검색해서 `ENABLE_USER_SCRIPT_SANDBOXING` 설정값을 `NO`로 변경하면 된다.
 
-![](/images/2024/08/20/image3.png)
+![](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2024/08/20/image3.png)
 
 추가적으로 아래와 같은 경고가 뜬다.
 >warning build: Run script build phase 'SwiftLint' will be run during every build because it does not specify any outputs. To address this warning, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase.
 
 Xcode 14부터 발생하는 경고인데 빌드 할 때 마다 스크립트를 돌린다는 내용이다. 모든 파일을 항상 lint 하지 않도록 설정할 수 있지만, SwiftLint는 이미 꽤 빨라서 굳이 할 필요는 없다. 아래 Build Run Script Phase에서 체크 박스를 해제함으로써 경고를 없앨 수 있다. 추가적인 내용은 [realm/SwiftLint\#4015](https://github.com/realm/SwiftLint/issues/4015)에서 볼 수 있다.
 
-![](/images/2024/08/20/image4.png)
+![](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2024/08/20/image4.png)
 
 여기까지 설정하면 초기 프로젝트에서 빌드 성공하고 SwiftLint 규칙에 걸리는 오류들만 나타난다.
 

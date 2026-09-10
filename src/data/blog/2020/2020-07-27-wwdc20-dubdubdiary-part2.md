@@ -3,7 +3,7 @@ title: WWDC20 Dub Dub Diary, Part 2 - Widget, App clips, and SwiftUI
 description: On the second day of WWDC20, sessions were uploaded all at once and could be viewed immediately without waiting. Before this year, there were sessions by tim...
 pubDatetime: 2020-07-27T09:00:00Z
 tags: [wwdc]
-heroImage: /images/2020/07/27/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/07/27/image1.png
 ---
 
 
@@ -11,7 +11,7 @@ On the second day of WWDC20, sessions were uploaded all at once and could be vie
 
 When listening to sessions through developer apps, it was interesting that this year there was a function to copy code script. While listening to the session, typing all the parts of code described in the session took long time, but now just copy them right away by pressing the copy button. The codes are showed along by time.
 
-![Code Copy Button on Developer App](/images/2020/07/27/image1.png)
+![Code Copy Button on Developer App](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/07/27/image1.png)
 Image of button copying developer app code
 
 Also, when looking through the list of sessions, there were surprisingly many sessions for only 10 to 20 minutes. Previously, sessions were usually prepared on a 40-minute basis, so it was very good to have such short sessions. Short sessions and smooth presentation were very good to provide only the key points of the subject.
@@ -22,7 +22,7 @@ Among the sessions, the one I wanted to hear was the new Widgets and App Clips o
 
 Widgets and App Clips can be developed with SwiftUI (App Clips can also be developed with Swift and/or Objective-C). Developing these features not using UIKit, but only SwiftUI can be easy to create view or support multi-platform. But I think further more, Apple is planning to do more things with SwiftUI. In other words, SwiftUI is likely to have major part in the future.
 
-![Rock Paper Scissor Game SwiftUI](/images/2020/07/27/image2.png)
+![Rock Paper Scissor Game SwiftUI](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/07/27/image2.png)
 Rock Paper Scissor Game SwiftUI App
 
 Although I haven't studied SwiftUI deeply yet, I've developed a [game app](https://github.com/imjhk03/RockPaperScissors) that was created simply using SwiftUI this year. At first, it was not difficult to make a screen, but it was really unfamiliar with how data was used and how the screen changed depending on the condition. I had to look for new terms and wondered if it was right to write them like this. I only had a short experience of studying it, so I thought I should study SwiftUI properly this year. If you look at the ["*Integration of SwiftUI*"](https://developer.apple.com/videos/play/wwdc2020/10119/) session, you can see the overall SwiftUI content and development process.

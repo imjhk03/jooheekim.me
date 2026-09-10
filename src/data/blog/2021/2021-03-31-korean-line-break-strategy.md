@@ -3,7 +3,7 @@ title: iOS 14부터 UILabel에서 한글 사용할 때 줄바꿈 이쁘게 하�
 description: iOS에서 `UILabel`에 한글을 사용할 때, 줄 바꿈이 이쁘게 되지 않아 문제가 됐었는데, 찾다 보니 iOS 14에서부터 한글 사용할 때 줄 바꿈이 이쁘게 할 수 있는 설정이 있다고 해서 테스트해봤다.
 pubDatetime: 2021-03-31T09:00:00Z
 tags: [uikit]
-heroImage: /images/2021/03/31/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/03/31/image1.png
 ---
 
 
@@ -12,7 +12,7 @@ iOS에서 `UILabel`에 한글을 사용할 때, 줄 바꿈이 이쁘게 되지 �
 # iOS 13
 아래 스크린샷과 같이 한글이 길 경우에는 줄 바꿈이 매끄럽지 않다. 위의 레이블은 `attributedText`이고 아래 레이블은 일반 텍스트이다.
 
-![iOS 13 UILabel 한글 줄바끔이 매끄럽지 않다.](/images/2021/03/31/image1.png)
+![iOS 13 UILabel 한글 줄바끔이 매끄럽지 않다.](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/03/31/image1.png)
 
 "표준시", "로 ~"
 
@@ -67,7 +67,7 @@ let attributes: [NSAttributedString.Key: Any] = [
 attributedLabel.attributedText = NSAttributedString(string: text, attributes: attributes)
 ```
 
-![iOS 14에서 lineBreakStrategy를 사용하면 한글 줄바꿈이 매끄럽다.](/images/2021/03/31/image2.png)
+![iOS 14에서 lineBreakStrategy를 사용하면 한글 줄바꿈이 매끄럽다.](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/03/31/image2.png)
 
 여기서 특이한 것은, iOS 14에서는 특별한 설정 없이 일반 텍스트일 때는 잘 나온다. iOS 14부터는 기본적으로 언어에 따라서 줄 바꿈 하도록 되어 있는 것 같은데 맞는지는 다른 언어를 사용해보지 않아서 잘 모르겠다.
 

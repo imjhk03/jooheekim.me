@@ -3,13 +3,13 @@ title: Cannot find 'Something' in scope
 description: After updating some third party sdk version, there was a warning that can't find some library when building the project.
 pubDatetime: 2021-04-28T09:00:00Z
 tags: [cocoapods]
-heroImage: /images/2021/04/28/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/04/28/image1.png
 ---
 
 
 After updating some third party sdk version, there was a warning that can't find some library when building the project.
 
-![An error that says 'Cannot find 'Analytics' in scope](/images/2021/04/28/image1.png)
+![An error that says 'Cannot find 'Analytics' in scope](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/04/28/image1.png)
 
 The issue was that some library was separated used, but after updating the sdk version, that library went into the main sdk library. (AnalyticsEventSelectContent -> FirebaseAnalytics) The library was redundant in the repo.
 

@@ -2,14 +2,14 @@
 title: SwiftUI에서 PreferenceKey 활용하기
 description: 하위 뷰에서 상위 뷰로 데이터를 전달하는 PreferenceKey 이해하기
 pubDatetime: 2025-04-28T09:00:00Z
-heroImage: /images/2025/04/28/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/04/28/image1.png
 tags: [swiftui]
 ---
 
 ## Overview
 SwiftUI에서 일반적으로 `Environment`나 `ObservableObject`를 통해 상위 뷰에서 하위 뷰로 데이터를 전달한다. 하지만 때로는 반대로 하위 뷰에서 상위 뷰로 데이터를 전달해야 할 때가 있다. 이럴 때 `PreferenceKey`를 사용한다.
 
-![하위 뷰에서 상위 뷰로 데이터 전달하는 PreferenceKey](/images/2025/04/28/image1.png)
+![하위 뷰에서 상위 뷰로 데이터 전달하는 PreferenceKey](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/04/28/image1.png)
 
 ## PreferenceKey 구현하기
 먼저 [PreferenceKey](https://developer.apple.com/documentation/swiftui/preferencekey) 프로토콜을 구현해야 한다. 프로토콜에는 두 가지 필수 요구사항이 있다:
@@ -120,7 +120,7 @@ struct ContentView: View {
 }
 ```
 
-![하위 뷰에서 상위 뷰로 데이터 전달하는 PreferenceKey](/images/2025/04/28/image2.png)
+![하위 뷰에서 상위 뷰로 데이터 전달하는 PreferenceKey](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2025/04/28/image2.png)
 
 위 이미지를 보면 "Stop Looking!" 텍스트가 포함된 빨간색 원은 "Start" 텍스트가 있는 녹색 원보다 더 크게 렌더링된다. 이는 각 텍스트의 너비에 맞춰 상위 뷰의 크기가 자동으로 조정되었기 때문이다.
 

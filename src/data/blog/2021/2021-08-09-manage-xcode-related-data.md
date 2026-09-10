@@ -3,7 +3,7 @@ title: Xcode 저장공간 이해 및 관리
 description: 해당 글은 Understanding and Managing Xcode Space 글을 보고 정리한 글입니다.
 pubDatetime: 2021-08-09T09:00:00Z
 tags: [xcode]
-heroImage: /images/2021/08/09/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/08/09/image1.png
 ---
 
 
@@ -19,7 +19,7 @@ heroImage: /images/2021/08/09/image1.png
 ~/Library/Developer/Xcode/DerivedData
 ```
 
-![Derived Data 경로에 있는 폴더](/images/2021/08/09/image1.png)
+![Derived Data 경로에 있는 폴더](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/08/09/image1.png)
 
 **ModuleCache.noindex** 폴더는 Xcode가 컴파일한 모듈(modules)을 저장한다. Xcode는 캐시된 모듈을 프로젝트들과 공유하며 빠르게 빌드할 수 있게 한다. 프로젝트 빌드 폴더도 동일하게 빠르게 빌드할 수 있게 해준다. 해당 프로젝트 폴더를 지우면 mac 저장 공간도 줄이고 이상한 버그도 해결할 수 있지만, 다음 빌드할 때 시간이 더 소요된다.
 
@@ -31,11 +31,11 @@ heroImage: /images/2021/08/09/image1.png
 ~/Library/Developer/Xcode/Archives
 ```
 
-![Archive한 폴더가 날짜별로 있다.](/images/2021/08/09/image2.png)
+![Archive한 폴더가 날짜별로 있다.](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/08/09/image2.png)
 
 날짜별 폴더에 들어가 보면 아래와 같이 아카이브 파일이 있는데, 해당 파일을 삭제하면 된다. 프로젝트 빌드에 영향을 끼치지 않고 저장 공간을 줄일 수 있지만, 혹시 다시 테스트플라이트 올려야 하는 경우를 위해서 지우지 않아도 괜찮다. 또한, 현재 서비스하고 있는 앱을 디버깅하는 데 필요한 파일인 dSYM 파일이 있는데, 아카이브 패키지 안에 있다. 되도록 더 사용하지 않을 것으로 판단할 때 지우는 것을 추천한다.
 
-![프로젝트를 아카이브한 파일](/images/2021/08/09/image3.png)
+![프로젝트를 아카이브한 파일](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/08/09/image3.png)
 
 ## Clearing Simulators
 
@@ -43,7 +43,7 @@ heroImage: /images/2021/08/09/image1.png
 
 시뮬레이터 킨 상태에서 **Device > Erase All Content and Settings** 메뉴를 선택하면 아래와 같이 시뮬레이터에 팝업이 나타난다. 지우고 싶다면 **Erase**를 누르면 된다. 이렇게 되면 저장했던 사진들이 지워지고 기타 Core Database 등을 지우게 된다.
 
-![Xcode 시뮬레이터의 콘텐츠를 지우는 팝업이 뜬 화면](/images/2021/08/09/image4.png)
+![Xcode 시뮬레이터의 콘텐츠를 지우는 팝업이 뜬 화면](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/08/09/image4.png)
 
 ## Deleting Unavailable Simulators
 
@@ -71,7 +71,7 @@ Xcode는 해당 파일들을 제거하지 않아 시간 지날수록 계속 쌓�
 
 생각보다 저장 공간을 많이 차지하기 때문에 지원하는 iOS 버전을 몇 개 빼고 지우는 것을 추천한다. 해당 폴더는 iOS device만 있기 때문에 watchOS와 tvOS 따로 있으며, 해당 폴더도 정리해도 괜찮다.
 
-![Xcode 시뮬레이터가 iOS 기기 서포트하는 폴더가 버전별로 있다.](/images/2021/08/09/image5.png)
+![Xcode 시뮬레이터가 iOS 기기 서포트하는 폴더가 버전별로 있다.](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/08/09/image5.png)
 
 ```zsh
 ~/Library/Developer/Xcode/watchOS DeviceSupport

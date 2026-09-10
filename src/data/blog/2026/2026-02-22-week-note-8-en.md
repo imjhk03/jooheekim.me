@@ -21,6 +21,6 @@ With the freelance project update done, I've started cleanup work for the next v
 
 There was also some exciting news. My app "I Need That Widget" broke into the top 50 paid productivity apps on the Korean App Store — at number 34! I've had the app out for a while, but I never expected it to chart. I hadn't done any special marketing, which made it even more surprising. It seems like the App Store algorithm picked it up. Now I really need to ship that new version.
 
-![App Store ranking](/images/2026/02/22/image1.jpeg)
+![App Store ranking](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2026/02/22/image1.jpeg)
 
 Outside of project work, the things I do for myself — reading books, taking photos with a weekly theme, editing YouTube videos — I barely managed any of them this month. Every week was so packed that I simply didn't have enough time for personal pursuits. This month in particular, there were a lot of family events, which made it even harder. Next month, I want to carve out as much personal time as I can.

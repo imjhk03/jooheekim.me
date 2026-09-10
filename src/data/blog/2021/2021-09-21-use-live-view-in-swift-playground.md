@@ -3,7 +3,7 @@ title: Use Live View in Swift Playground
 description: Recently I've been using Swift Playground app on iPad for studying Swift language. Personally, I think the playground app is one of the best apps for learnin...
 pubDatetime: 2021-09-21T09:00:00Z
 tags: [swift-playground, developer-tools]
-heroImage: /images/2021/09/21/image1.png
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/09/21/image1.png
 ---
 
 
@@ -34,6 +34,6 @@ PlaygroundPage.current.liveView = controller
 
 If you build and run that playground, the view will appear on the assistant editor. Below is the screenshot of swift playground on iPad. We can also use navigation controller to push and pop a detail view.
 
-![Swift playground app showing a view controller at the right side.](/images/2021/09/21/image1.png)
+![Swift playground app showing a view controller at the right side.](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/09/21/image1.png)
 
 Try using this code to write a simple UI related code or more, especially on iPad. It is one of a best tool for learning swift. Try it out!

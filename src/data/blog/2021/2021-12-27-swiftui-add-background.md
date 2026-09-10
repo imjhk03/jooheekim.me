@@ -28,7 +28,7 @@ struct ContentView: View {
 }
 ```
 
-<img src="/images/2021/12/27/image1.png" alt="Text Hello, world has a blue background" width="400"/>
+<img src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/12/27/image1.png" alt="Text Hello, world has a blue background" width="400"/>
 
 백그라운드를 추가할 때, 어떤 뷰에 `background(_:alignment:)` modifier를 추가하냐에 따라 그려지는 모습이 달라집니다. 아래는 `VStack`에 백그라운드를 추가한 모습입니다.
 
@@ -45,7 +45,7 @@ var body: some View {
 }
 ```
 
-<img src="/images/2021/12/27/image2.png" alt="Image globe and Text Hello, world, wrapped in VStack has a blue background" width="400"/>
+<img src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/12/27/image2.png" alt="Image globe and Text Hello, world, wrapped in VStack has a blue background" width="400"/>
 
 ## 더 넓은 백그라운드 만들기
 
@@ -67,7 +67,7 @@ var body: some View {
 }
 ```
 
-<img src="/images/2021/12/27/image3.png" alt="A blue background is added to the screen, but the safe area inset is not colored" width="400"/>
+<img src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/12/27/image3.png" alt="A blue background is added to the screen, but the safe area inset is not colored" width="400"/>
 
 ## Safe Area까지 백그라운드 넓히기
 
@@ -90,7 +90,7 @@ var body: some View {
 }
 ```
 
-<img src="/images/2021/12/27/image4.png" alt="The blue background is extended to the safe area" width="400"/>
+<img src="https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2021/12/27/image4.png" alt="The blue background is extended to the safe area" width="400"/>
 
 ## 마무리
 

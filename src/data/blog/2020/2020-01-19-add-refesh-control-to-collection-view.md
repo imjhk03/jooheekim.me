@@ -3,7 +3,7 @@ title: Add Refresh Control to Collection View
 description: "I've been currently rebuilding a project that I'm working on, and there were some UI issues when refreshing datas. `UIRefreshControl` was implied for pulltor..."
 pubDatetime: 2020-01-19T09:00:00Z
 tags: [uikit, ui-development]
-heroImage: /images/2020/01/19/image1.jpeg
+heroImage: https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/01/19/image1.jpeg
 ---
 
 
@@ -51,7 +51,7 @@ tableView.refreshControl = refreshControl
 
 If you can handle when the data is fetched or while fetching, you can change `attributedTitle` like below.
 
-![Pull to refresh and refreshing image](/images/2020/01/19/image1.jpeg)
+![Pull to refresh and refreshing image](https://dlp7yaj6myr6fvex.public.blob.vercel-storage.com/images/2020/01/19/image1.jpeg)
 
 ## Wrap up
 
