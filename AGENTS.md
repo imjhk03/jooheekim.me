@@ -37,6 +37,7 @@ description: string    # Required
 tags: string[]         # Default: ["others"]
 featured: boolean      # Show in featured section
 draft: boolean         # Hide from listings
+generateOgImage: true  # Generate a custom OG image for this post
 lang: "en" | "ko"      # Content language
 translations:          # Link to translated version
   en: "slug"
@@ -126,6 +127,7 @@ tags: [blog]
 | `tags` | No | Default: `["others"]` |
 | `featured` | No | `true`면 홈페이지 Featured 섹션에 노출 |
 | `draft` | No | `true`면 모든 목록에서 숨김 |
+| `generateOgImage` | No | `true`면 이 글의 OG 이미지를 생성하고, 생략하면 사이트 기본 이미지를 사용 |
 | `heroImage` | No | 경로: `/images/YYYY/MM/DD/filename` |
 
 ## Language Filtering Behavior

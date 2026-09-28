@@ -44,8 +44,8 @@ const readingTime = getReadingTime(post.body || "");
 
 let ogImageUrl: string | undefined;
 
-// Use dynamic OG image if enabled
-if (SITE.dynamicOgImage) {
+// Use a generated OG image only when the post opts in
+if (SITE.dynamicOgImage && post.data.generateOgImage) {
   ogImageUrl = `${getPath(post.id, post.filePath)}/index.png`;
 }
 
