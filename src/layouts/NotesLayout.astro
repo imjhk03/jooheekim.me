@@ -1,0 +1,341 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Datetime from "@/components/Datetime.astro";
+import { SITE } from "@/config";
+
+interface Props {
+  note?: CollectionEntry<"notes">;
+}
+
+const notebookTitle = "Indie Dev Diaries";
+const notes = (await getCollection("notes", ({ data }) => !data.draft)).sort(
+  (a, b) =>
+    (b.data.updated ?? b.data.date).getTime() -
+      (a.data.updated ?? a.data.date).getTime() || a.id.localeCompare(b.id)
+);
+const selectedNote = Astro.props.note ?? notes[0];
+const rendered = selectedNote ? await render(selectedNote) : undefined;
+const Content = rendered?.Content;
+const isDetailPage = Boolean(Astro.props.note);
+const BrowserHeading = isDetailPage ? "h2" : "h1";
+const ReaderHeading = isDetailPage ? "h1" : "h2";
+// Encode the ID so every entry has a unique, CSS-safe transition name.
+const noteTransitionName = (id: string) =>
+  `diary-${Array.from(id, character => character.codePointAt(0)!.toString(16)).join("-")}`;
+---
+
+<Layout
+  title={`${isDetailPage && selectedNote ? selectedNote.data.title : notebookTitle} | ${SITE.title}`}
+  description="Thoughts from the workbench."
+  noindex
+>
+  <div class="notebook" data-pagefind-ignore="all">
+    <Header />
+    <main
+      id="main-content"
+      class:list={["notes-shell", { "is-detail": isDetailPage }]}
+    >
+      <aside class="notes-browser" aria-label={`Browse ${notebookTitle}`}>
+        <div class="notes-intro">
+          <BrowserHeading>{notebookTitle}</BrowserHeading>
+          <p>Thoughts from the workbench.</p>
+        </div>
+        <ul class="note-grid">
+          {
+            notes.map(note => (
+              <li>
+                <a
+                  href={`/indie-dev-diaries/${note.id}/`}
+                  style={{ "--note-transition": noteTransitionName(note.id) }}
+                  class:list={[
+                    "note-card",
+                    { "is-selected": note.id === selectedNote?.id },
+                  ]}
+                  aria-current={
+                    note.id === selectedNote?.id ? "page" : undefined
+                  }
+                >
+                  <h2 class="text-lg font-medium text-accent">
+                    {note.data.title}
+                  </h2>
+                  <div class="card-meta">
+                    <Datetime
+                      pubDatetime={note.data.date}
+                      modDatetime={note.data.updated}
+                      timezone={SITE.timezone}
+                      class="flex-wrap gap-y-1"
+                    />
+                  </div>
+                  {note.data.image && (
+                    <img
+                      src={note.data.image}
+                      alt={note.data.imageAlt ?? ""}
+                      loading="lazy"
+                      width={note.data.imageWidth}
+                      height={note.data.imageHeight}
+                    />
+                  )}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        {
+          notes.length === 0 && (
+            <p class="empty-notes">A little space for the next thought.</p>
+          )
+        }
+      </aside>
+      {
+        selectedNote && Content && (
+          <article
+            class="note-reader"
+            aria-labelledby="note-title"
+            style={{ "--note-transition": noteTransitionName(selectedNote.id) }}
+          >
+            <a class="back-to-notes" href="/indie-dev-diaries/">
+              Back
+            </a>
+            <ReaderHeading
+              id="note-title"
+              class="block text-2xl font-bold text-accent sm:text-3xl"
+            >
+              {selectedNote.data.title}
+            </ReaderHeading>
+            <div class="reader-meta">
+              <Datetime
+                pubDatetime={selectedNote.data.date}
+                modDatetime={selectedNote.data.updated}
+                timezone={SITE.timezone}
+                size="lg"
+                class="flex-wrap gap-y-1"
+              />
+            </div>
+            <div class="app-prose note-body">
+              <Content />
+            </div>
+            {selectedNote.data.tags.length > 0 && (
+              <ul class="note-tags" aria-label="Tags">
+                {selectedNote.data.tags.map(tag => (
+                  <li>#{tag}</li>
+                ))}
+              </ul>
+            )}
+          </article>
+        )
+      }
+    </main>
+  </div>
+</Layout>
+
+<style>
+  .notebook {
+    --note-secondary: color-mix(
+      in srgb,
+      var(--foreground) 72%,
+      var(--background)
+    );
+    width: min(100%, 1600px);
+    margin-inline: auto;
+  }
+
+  .notebook :global(#nav-container),
+  .notebook :global(header > div:last-child) {
+    max-width: none;
+  }
+
+  .notebook :global(header) {
+    padding-inline: 4.8%;
+  }
+  .notebook :global(#top-nav-wrap) {
+    padding: 19px 0;
+  }
+  .notebook :global(header > div:last-child) {
+    padding: 0;
+  }
+
+  .notes-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 44%) minmax(0, 56%);
+    min-height: calc(100svh - 82px);
+  }
+
+  .notes-browser {
+    padding: 34px 24px 64px 11%;
+  }
+  .notes-intro {
+    margin-bottom: 26px;
+  }
+  .notes-intro :is(h1, h2) {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .notes-intro p {
+    margin-top: 2px;
+    color: var(--note-secondary);
+    font-size: 18px;
+  }
+  .note-grid {
+    columns: 2;
+    column-gap: 16px;
+    list-style: none;
+    padding: 0;
+  }
+  .note-grid li {
+    break-inside: avoid;
+    margin-bottom: 16px;
+  }
+
+  .note-card {
+    display: block;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    text-decoration: none;
+    background: color-mix(in srgb, var(--background), var(--foreground) 2%);
+    transition:
+      border-color 150ms ease,
+      background-color 150ms ease;
+    overflow-wrap: anywhere;
+  }
+
+  .note-card:hover {
+    border-color: var(--accent);
+  }
+  .note-card.is-selected {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 5%, var(--background));
+  }
+  .card-meta,
+  .reader-meta {
+    margin-top: 8px;
+  }
+  .note-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    margin-top: 32px;
+    padding: 0;
+    list-style: none;
+    color: var(--note-secondary);
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+  .note-card img {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+    border-radius: 10px;
+  }
+
+  .note-reader {
+    min-width: 0;
+    border-left: 1px solid var(--border);
+    padding: 40px 9% 80px 8%;
+  }
+  #note-title {
+    overflow-wrap: anywhere;
+  }
+  .note-body {
+    margin-top: 30px;
+    max-width: 65ch;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .note-body :global(h2) {
+    margin-top: 32px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .note-body :global(h3) {
+    font-style: normal;
+  }
+  .note-body :global(img) {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  .note-body :global(pre) {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .back-to-notes {
+    display: none;
+  }
+  .empty-notes {
+    color: var(--note-secondary);
+    margin-top: 32px;
+  }
+
+  @media (min-width: 901px) and (max-width: 1150px) {
+    .note-grid {
+      columns: 1;
+    }
+    .notes-shell {
+      grid-template-columns: minmax(0, 36%) minmax(0, 64%);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .note-card,
+    .note-reader {
+      view-transition-name: var(--note-transition);
+    }
+    .notes-shell {
+      display: block;
+      min-height: auto;
+    }
+    .notes-browser {
+      padding: 30px 5% 48px;
+    }
+    .note-reader {
+      display: none;
+      border: 0;
+      padding: 24px 5% 64px;
+    }
+    .is-detail .notes-browser {
+      display: none;
+    }
+    .is-detail .note-reader {
+      display: block;
+    }
+    .back-to-notes {
+      display: block;
+      width: fit-content;
+      margin-bottom: 30px;
+      color: var(--accent);
+      text-underline-offset: 4px;
+    }
+    .note-body {
+      font-size: 17px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .note-grid {
+      column-gap: 12px;
+    }
+    .note-card {
+      padding: 14px;
+      border-radius: 12px;
+    }
+    .notebook :global(#top-nav-wrap) {
+      padding-block: 16px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .note-card,
+    .note-reader {
+      view-transition-name: none;
+    }
+    .note-card {
+      transition: none;
+    }
+  }
+</style>

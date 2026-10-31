@@ -62,4 +62,28 @@ const wiki = defineCollection({
     }),
 });
 
-export const collections = { blog, films, wiki };
+const notes = defineCollection({
+  loader: glob({
+    pattern: "**/[^_]*.md",
+    base: "./src/data/notes",
+  }),
+  schema: z
+    .object({
+      title: z.string(),
+      tags: z.array(z.string()).default([]),
+      date: z.date(),
+      updated: z.date().optional(),
+      image: z.string().optional(),
+      imageAlt: z.string().optional(),
+      imageWidth: z.number().int().positive().optional(),
+      imageHeight: z.number().int().positive().optional(),
+      draft: z.boolean().default(false),
+    })
+    .refine(data => !data.image || (data.imageWidth && data.imageHeight), {
+      message:
+        "Notes with an image must include its imageWidth and imageHeight.",
+      path: ["image"],
+    }),
+});
+
+export const collections = { blog, films, wiki, notes };

@@ -3,6 +3,13 @@
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
+  "redirects": [
+    {
+      "source": "/notes/:path*",
+      "destination": "/indie-dev-diaries/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
