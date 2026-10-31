@@ -1,0 +1,20 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import DiariesLayout from "@/layouts/DiariesLayout.astro";
+
+export async function getStaticPaths() {
+  const diaries = await getCollection("diaries", ({ data }) => !data.draft);
+  return diaries.map(diary => ({
+    params: { slug: diary.id },
+    props: { diary },
+  }));
+}
+
+interface Props {
+  diary: CollectionEntry<"diaries">;
+}
+
+const { diary } = Astro.props;
+---
+
+<DiariesLayout diary={diary} />

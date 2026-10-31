@@ -1,0 +1,347 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Datetime from "@/components/Datetime.astro";
+import { SITE } from "@/config";
+
+interface Props {
+  diary?: CollectionEntry<"diaries">;
+}
+
+const diariesTitle = "Indie Dev Diaries";
+const diaries = (
+  await getCollection("diaries", ({ data }) => !data.draft)
+).sort(
+  (a, b) =>
+    (b.data.updated ?? b.data.date).getTime() -
+      (a.data.updated ?? a.data.date).getTime() || a.id.localeCompare(b.id)
+);
+const selectedDiary = Astro.props.diary ?? diaries[0];
+const rendered = selectedDiary ? await render(selectedDiary) : undefined;
+const Content = rendered?.Content;
+const isDetailPage = Boolean(Astro.props.diary);
+const BrowserHeading = isDetailPage ? "h2" : "h1";
+const ReaderHeading = isDetailPage ? "h1" : "h2";
+// Encode the ID so every entry has a unique, CSS-safe transition name.
+const diaryTransitionName = (id: string) =>
+  `diary-${Array.from(id, character => character.codePointAt(0)!.toString(16)).join("-")}`;
+---
+
+<Layout
+  title={`${isDetailPage && selectedDiary ? selectedDiary.data.title : diariesTitle} | ${SITE.title}`}
+  description="Thoughts from the workbench."
+  noindex
+>
+  <div class="diaries" data-pagefind-ignore="all">
+    <Header />
+    <main
+      id="main-content"
+      class:list={["diaries-shell", { "is-detail": isDetailPage }]}
+    >
+      <aside class="diaries-browser" aria-label={`Browse ${diariesTitle}`}>
+        <div class="diaries-intro">
+          <BrowserHeading>{diariesTitle}</BrowserHeading>
+          <p>Thoughts from the workbench.</p>
+        </div>
+        <ul class="diary-grid">
+          {
+            diaries.map(diary => (
+              <li>
+                <a
+                  href={`/indie-dev-diaries/${diary.id}/`}
+                  style={{
+                    "--diary-transition": diaryTransitionName(diary.id),
+                  }}
+                  class:list={[
+                    "diary-card",
+                    { "is-selected": diary.id === selectedDiary?.id },
+                  ]}
+                  aria-current={
+                    diary.id === selectedDiary?.id ? "page" : undefined
+                  }
+                >
+                  <h2 class="text-lg font-medium text-accent">
+                    {diary.data.title}
+                  </h2>
+                  <div class="card-meta">
+                    <Datetime
+                      pubDatetime={diary.data.date}
+                      modDatetime={diary.data.updated}
+                      timezone={SITE.timezone}
+                      class="flex-wrap gap-y-1"
+                    />
+                  </div>
+                  {diary.data.image && (
+                    <img
+                      src={diary.data.image}
+                      alt={diary.data.imageAlt ?? ""}
+                      loading="lazy"
+                      width={diary.data.imageWidth}
+                      height={diary.data.imageHeight}
+                    />
+                  )}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        {
+          diaries.length === 0 && (
+            <p class="empty-diaries">A little space for the next thought.</p>
+          )
+        }
+      </aside>
+      {
+        selectedDiary && Content && (
+          <article
+            class="diary-reader"
+            aria-labelledby="diary-title"
+            style={{
+              "--diary-transition": diaryTransitionName(selectedDiary.id),
+            }}
+          >
+            <a class="back-to-diaries" href="/indie-dev-diaries/">
+              Back
+            </a>
+            <ReaderHeading
+              id="diary-title"
+              class="block text-2xl font-bold text-accent sm:text-3xl"
+            >
+              {selectedDiary.data.title}
+            </ReaderHeading>
+            <div class="reader-meta">
+              <Datetime
+                pubDatetime={selectedDiary.data.date}
+                modDatetime={selectedDiary.data.updated}
+                timezone={SITE.timezone}
+                size="lg"
+                class="flex-wrap gap-y-1"
+              />
+            </div>
+            <div class="app-prose diary-body">
+              <Content />
+            </div>
+            {selectedDiary.data.tags.length > 0 && (
+              <ul class="diary-tags" aria-label="Tags">
+                {selectedDiary.data.tags.map(tag => (
+                  <li>#{tag}</li>
+                ))}
+              </ul>
+            )}
+          </article>
+        )
+      }
+    </main>
+  </div>
+</Layout>
+
+<style>
+  .diaries {
+    --diary-secondary: color-mix(
+      in srgb,
+      var(--foreground) 72%,
+      var(--background)
+    );
+    width: min(100%, 1600px);
+    margin-inline: auto;
+  }
+
+  .diaries :global(#nav-container),
+  .diaries :global(header > div:last-child) {
+    max-width: none;
+  }
+
+  .diaries :global(header) {
+    padding-inline: 4.8%;
+  }
+  .diaries :global(#top-nav-wrap) {
+    padding: 19px 0;
+  }
+  .diaries :global(header > div:last-child) {
+    padding: 0;
+  }
+
+  .diaries-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 44%) minmax(0, 56%);
+    min-height: calc(100svh - 82px);
+  }
+
+  .diaries-browser {
+    padding: 34px 24px 64px 11%;
+  }
+  .diaries-intro {
+    margin-bottom: 26px;
+  }
+  .diaries-intro :is(h1, h2) {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .diaries-intro p {
+    margin-top: 2px;
+    color: var(--diary-secondary);
+    font-size: 18px;
+  }
+  .diary-grid {
+    columns: 2;
+    column-gap: 16px;
+    list-style: none;
+    padding: 0;
+  }
+  .diary-grid li {
+    break-inside: avoid;
+    margin-bottom: 16px;
+  }
+
+  .diary-card {
+    display: block;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    text-decoration: none;
+    background: color-mix(in srgb, var(--background), var(--foreground) 2%);
+    transition:
+      border-color 150ms ease,
+      background-color 150ms ease;
+    overflow-wrap: anywhere;
+  }
+
+  .diary-card:hover {
+    border-color: var(--accent);
+  }
+  .diary-card.is-selected {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 5%, var(--background));
+  }
+  .card-meta,
+  .reader-meta {
+    margin-top: 8px;
+  }
+  .diary-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    margin-top: 32px;
+    padding: 0;
+    list-style: none;
+    color: var(--diary-secondary);
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+  .diary-card img {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+    border-radius: 10px;
+  }
+
+  .diary-reader {
+    min-width: 0;
+    border-left: 1px solid var(--border);
+    padding: 40px 9% 80px 8%;
+  }
+  #diary-title {
+    overflow-wrap: anywhere;
+  }
+  .diary-body {
+    margin-top: 30px;
+    max-width: 65ch;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .diary-body :global(h2) {
+    margin-top: 32px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .diary-body :global(h3) {
+    font-style: normal;
+  }
+  .diary-body :global(img) {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  .diary-body :global(pre) {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .back-to-diaries {
+    display: none;
+  }
+  .empty-diaries {
+    color: var(--diary-secondary);
+    margin-top: 32px;
+  }
+
+  @media (min-width: 901px) and (max-width: 1150px) {
+    .diary-grid {
+      columns: 1;
+    }
+    .diaries-shell {
+      grid-template-columns: minmax(0, 36%) minmax(0, 64%);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .diary-card,
+    .diary-reader {
+      view-transition-name: var(--diary-transition);
+    }
+    .diaries-shell {
+      display: block;
+      min-height: auto;
+    }
+    .diaries-browser {
+      padding: 30px 5% 48px;
+    }
+    .diary-reader {
+      display: none;
+      border: 0;
+      padding: 24px 5% 64px;
+    }
+    .is-detail .diaries-browser {
+      display: none;
+    }
+    .is-detail .diary-reader {
+      display: block;
+    }
+    .back-to-diaries {
+      display: block;
+      width: fit-content;
+      margin-bottom: 30px;
+      color: var(--accent);
+      text-underline-offset: 4px;
+    }
+    .diary-body {
+      font-size: 17px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .diary-grid {
+      column-gap: 12px;
+    }
+    .diary-card {
+      padding: 14px;
+      border-radius: 12px;
+    }
+    .diaries :global(#top-nav-wrap) {
+      padding-block: 16px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .diary-card,
+    .diary-reader {
+      view-transition-name: none;
+    }
+    .diary-card {
+      transition: none;
+    }
+  }
+</style>
