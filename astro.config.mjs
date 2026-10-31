@@ -20,7 +20,7 @@ export default defineConfig({
       filter: page => {
         const pathname = new URL(page).pathname;
         return (
-          !/^\/(?:notes|indie-dev-diaries)(?:\/|$)/.test(pathname) &&
+          !/^\/indie-dev-diaries(?:\/|$)/.test(pathname) &&
           (SITE.showArchives || !page.endsWith("/archives"))
         );
       },
