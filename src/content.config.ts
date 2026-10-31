@@ -62,10 +62,10 @@ const wiki = defineCollection({
     }),
 });
 
-const notes = defineCollection({
+const diaries = defineCollection({
   loader: glob({
     pattern: "**/[^_]*.md",
-    base: "./src/data/notes",
+    base: "./src/data/diaries",
   }),
   schema: z
     .object({
@@ -81,9 +81,9 @@ const notes = defineCollection({
     })
     .refine(data => !data.image || (data.imageWidth && data.imageHeight), {
       message:
-        "Notes with an image must include its imageWidth and imageHeight.",
+        "Diaries with an image must include its imageWidth and imageHeight.",
       path: ["image"],
     }),
 });
 
-export const collections = { blog, films, wiki, notes };
+export const collections = { blog, films, wiki, diaries };
