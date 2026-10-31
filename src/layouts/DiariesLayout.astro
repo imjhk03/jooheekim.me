@@ -278,12 +278,39 @@ const diaryTransitionName = (id: string) =>
     margin-top: 32px;
   }
 
+  @media (min-width: 901px) {
+    .diaries {
+      display: flex;
+      flex-direction: column;
+      height: 100dvh;
+    }
+    .diaries :global(header) {
+      flex-shrink: 0;
+    }
+    .diaries-shell {
+      flex: 1;
+      min-height: 0;
+    }
+    .diaries-browser,
+    .diary-reader {
+      min-height: 0;
+      overflow-y: auto;
+      overscroll-behavior-y: contain;
+    }
+  }
+
   @media (min-width: 901px) and (max-width: 1150px) {
     .diary-grid {
       columns: 1;
     }
     .diaries-shell {
       grid-template-columns: minmax(0, 36%) minmax(0, 64%);
+    }
+  }
+
+  @media (min-width: 901px) and (device-posture: folded) {
+    .diaries-shell {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
