@@ -37,9 +37,12 @@ const diaryTransitionName = (id: string) =>
     <Header />
     <main
       id="main-content"
-      class:list={["diaries-shell", { "is-detail": isDetailPage }]}
+      class:list={[
+        "diaries-shell",
+        { "is-detail": isDetailPage, "is-index": !isDetailPage },
+      ]}
     >
-      <aside class="diaries-browser" aria-label={`Browse ${diariesTitle}`}>
+      <section class="diaries-browser" aria-label={`Browse ${diariesTitle}`}>
         <div class="diaries-intro">
           <BrowserHeading>{diariesTitle}</BrowserHeading>
           <p>Thoughts from the workbench.</p>
@@ -91,7 +94,7 @@ const diaryTransitionName = (id: string) =>
             <p class="empty-diaries">A little space for the next thought.</p>
           )
         }
-      </aside>
+      </section>
       {
         selectedDiary && Content && (
           <article
@@ -138,6 +141,7 @@ const diaryTransitionName = (id: string) =>
 
 <style>
   .diaries {
+    --diary-page-gutter: 4.8%;
     --diary-secondary: color-mix(
       in srgb,
       var(--foreground) 72%,
@@ -153,7 +157,7 @@ const diaryTransitionName = (id: string) =>
   }
 
   .diaries :global(header) {
-    padding-inline: 4.8%;
+    padding-inline: var(--diary-page-gutter);
   }
   .diaries :global(#top-nav-wrap) {
     padding: 19px 0;
@@ -167,9 +171,21 @@ const diaryTransitionName = (id: string) =>
     grid-template-columns: minmax(0, 44%) minmax(0, 56%);
     min-height: calc(100svh - 82px);
   }
+  .diaries-shell.is-index {
+    display: block;
+    padding-inline-start: var(--diary-page-gutter);
+  }
+  .diaries-shell.is-index .diary-reader {
+    display: none;
+  }
 
   .diaries-browser {
+    max-width: none;
+    margin: 0;
     padding: 34px 24px 64px 11%;
+  }
+  .diaries-shell.is-index .diaries-browser {
+    padding: 34px 6% 64px 0;
   }
   .diaries-intro {
     margin-bottom: 26px;
@@ -190,9 +206,15 @@ const diaryTransitionName = (id: string) =>
     list-style: none;
     padding: 0;
   }
+  .diaries-shell.is-index .diary-grid {
+    column-gap: 24px;
+  }
   .diary-grid li {
     break-inside: avoid;
     margin-bottom: 16px;
+  }
+  .diaries-shell.is-index .diary-grid li {
+    margin-bottom: 24px;
   }
 
   .diary-card {
@@ -291,11 +313,19 @@ const diaryTransitionName = (id: string) =>
       flex: 1;
       min-height: 0;
     }
+    .diaries-shell.is-index {
+      display: block;
+      overflow-y: auto;
+    }
     .diaries-browser,
     .diary-reader {
       min-height: 0;
       overflow-y: auto;
       overscroll-behavior-y: contain;
+    }
+    .diaries-shell.is-index .diaries-browser {
+      min-height: 100%;
+      overflow-y: visible;
     }
   }
 
@@ -305,6 +335,28 @@ const diaryTransitionName = (id: string) =>
     }
     .diaries-shell {
       grid-template-columns: minmax(0, 36%) minmax(0, 64%);
+    }
+    .diaries-shell.is-index .diary-grid {
+      columns: 2;
+    }
+  }
+
+  @media (min-width: 901px) {
+    .diaries-shell.is-index {
+      display: grid;
+      grid-template-columns: minmax(0, 42%) minmax(0, 58%);
+      overflow: hidden;
+    }
+    .diaries-shell.is-index .diaries-browser {
+      min-height: 0;
+      overflow-y: auto;
+      padding: 34px 24px 64px 0;
+    }
+    .diaries-shell.is-index .diary-grid {
+      columns: 2;
+    }
+    .diaries-shell.is-index .diary-reader {
+      display: block;
     }
   }
 
@@ -325,6 +377,9 @@ const diaryTransitionName = (id: string) =>
     }
     .diaries-browser {
       padding: 30px 5% 48px;
+    }
+    .diaries-shell.is-index .diaries-browser {
+      padding: 30px 5% 48px 0;
     }
     .diary-reader {
       display: none;
@@ -351,6 +406,9 @@ const diaryTransitionName = (id: string) =>
 
   @media (max-width: 450px) {
     .diary-grid {
+      column-gap: 12px;
+    }
+    .diaries-shell.is-index .diary-grid {
       column-gap: 12px;
     }
     .diary-card {
